@@ -39,11 +39,11 @@ From here you can click on the desired cover to start the related scene that wil
 
 ## FAQ
 
-- [Is the code optimized?](#Is-the-code-optimized?) 
-- [How was the code conversion from Python (Pygame) done?](#How-was-the-code-conversion-from-Python-(Pygame)-done?)
-- [Can I submit bugs?](#Can-I-submit-bugs?)
-- [Can I request additional features?](#Can-I-request-additional-features?)
-- [Is there an executable version of the project?](#Is-there-an-executable-version-of-the-project?)
+- [Is the code optimized?](#Is-the-code-optimized) 
+- [How was the code conversion from Python (Pygame) done?](#How-was-the-code-conversion-from-Python-(Pygame)-done)
+- [Can I submit bugs?](#Can-I-submit-bugs)
+- [Can I request additional features?](#Can-I-request-additional-features)
+- [Is there an executable version of the project?](#Is-there-an-executable-version-of-the-project)
 
 ## Is the code optimized?
 
@@ -69,7 +69,7 @@ Certainly, use the **Issues** section.
 
 ## Is there an executable version of the project?
 
-Yes, you can download it from: 
+Yes, you can download it from: https://thp1972.itch.io/wfmagforunity
 
 ## Additional informations
 
