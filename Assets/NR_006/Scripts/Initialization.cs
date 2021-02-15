@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // By Pellegrino ~thp~ Principe
-namespace NR_005
+namespace NR_006
 {
     [ExecuteInEditMode]
     public class Initialization : MonoBehaviour
