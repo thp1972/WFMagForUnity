@@ -26,7 +26,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/NR_006/Scenes/Tail.unity
     guid: 6d282333f44de9744a66f92c8dfb1e6e
-  - enabled: 1
-    path: Assets/NR_007/Scenes/JumpPhysics.unity
-    guid: 8435088c7fe674d43a56a864080c144f
   m_configObjects: {}

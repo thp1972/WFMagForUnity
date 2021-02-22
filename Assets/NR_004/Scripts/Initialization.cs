@@ -11,6 +11,14 @@ namespace NR_004
         const int HEIGHT = 800;
         const float scale = 1;
 
+        void Awake()
+        {
+#if UNITY_EDITOR
+            UnityEditorUtility.ChangeGameViewResolution(WIDTH, HEIGHT, $"WM_{WIDTH}x{HEIGHT}");
+            UnityEditorUtility.ChangeGameViewScale(scale);
+#endif
+        }
+
         private void Start()
         {
 #if !UNITY_EDITOR
@@ -19,7 +27,6 @@ namespace NR_004
             UnityEditorUtility.ChangeGameViewResolution(WIDTH, HEIGHT, $"WM_{WIDTH}x{HEIGHT}");
             UnityEditorUtility.ChangeGameViewScale(scale);
 #endif
-            ScreenUtility.GameResolution = new Vector2(WIDTH, HEIGHT);
         }
     }
 }
