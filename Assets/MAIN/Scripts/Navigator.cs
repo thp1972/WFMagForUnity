@@ -52,6 +52,7 @@ public class Navigator : MonoBehaviour
 
     void UpdateNavigator()
     {
+        print(currentPage + " " + totalPages);
         if (currentPage == 0)
         {
             prevImage.color = new Color(prevImage.color.r, prevImage.color.g, prevImage.color.b, .2f);
@@ -65,7 +66,7 @@ public class Navigator : MonoBehaviour
         else
         {
             prevImage.color = new Color(prevImage.color.r, prevImage.color.g, prevImage.color.b, 1f);
-            nextImage.color = new Color(nextImage.color.r, nextImage.color.g, nextImage.color.b, .1f);
+            nextImage.color = new Color(nextImage.color.r, nextImage.color.g, nextImage.color.b, 1f);
         }
     }
 

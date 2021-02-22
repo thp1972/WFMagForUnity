@@ -1,17 +1,20 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-namespace NR_001
+// By Pellegrino ~thp~ Principe
+namespace NR_007
 {
     [ExecuteInEditMode]
     public class Initialization : MonoBehaviour
     {
         const int WIDTH = 800;
-        const int HEIGHT = 600;
+        const int HEIGHT = 800;
         const float scale = 1;
 
         private void Awake()
         {
-#if !UNITY_EDITOR
+            #if !UNITY_EDITOR
         Screen.SetResolution(WIDTH, HEIGHT, true);
 #else
             UnityEditorUtility.ChangeGameViewResolution(WIDTH, HEIGHT, $"WM_{WIDTH}x{HEIGHT}");
