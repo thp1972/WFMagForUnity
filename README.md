@@ -15,7 +15,7 @@ I hope the idea can be interesting.
 
 ## System Requirements
 
-The project runs on Unity 2020.1.3f1
+The project runs on Unity 2020.2.5f1
 
 ## Usage
 
