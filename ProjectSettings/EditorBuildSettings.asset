@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/NR_007/Scenes/JumpPhysics.unity
     guid: 8435088c7fe674d43a56a864080c144f
+  - enabled: 1
+    path: Assets/NR_008/Scenes/Missiles.unity
+    guid: ccbae292c415d7f4d9ab6f8ba45c4bfd
   m_configObjects: {}

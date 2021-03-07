@@ -6,6 +6,7 @@ namespace Nito.Collections
 {
     /// <summary>
     /// A double-ended queue (deque), which provides O(1) indexed access, O(1) removals from the front and back, amortized O(1) insertions to the front and back, and O(N) insertions and removals anywhere else (with the operations getting slower as the index approaches the middle).
+    /// Once a bounded length deque is full, when new items are added, a corresponding number of items are discarded from the opposite end (Pellegrino ~thp~ Principe)    /// 
     /// </summary>
     /// <typeparam name="T">The type of elements contained in the deque.</typeparam>
     [DebuggerDisplay("Count = {Count}, Capacity = {Capacity}")]
@@ -16,6 +17,11 @@ namespace Nito.Collections
         /// The default capacity.
         /// </summary>
         private const int DefaultCapacity = 8;
+
+        /// <summary>
+        ///  If the deque must be bounded
+        /// </summary>
+        private bool maxLength;
 
         /// <summary>
         /// The circular _buffer that holds the view.
@@ -31,24 +37,31 @@ namespace Nito.Collections
         /// Initializes a new instance of the <see cref="Deque&lt;T&gt;"/> class with the specified capacity.
         /// </summary>
         /// <param name="capacity">The initial capacity. Must be greater than <c>0</c>.</param>
-        public Deque(int capacity)
+        /// <param name="maxLength">If the deque must be bounded</param>
+        public Deque(int capacity, bool maxLength = false)
         {
             if (capacity < 0)
                 throw new ArgumentOutOfRangeException(nameof(capacity), "Capacity may not be negative.");
             _buffer = new T[capacity];
+
+            this.maxLength = maxLength;
         }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Deque&lt;T&gt;"/> class with the elements from the specified collection.
         /// </summary>
         /// <param name="collection">The collection. May not be <c>null</c>.</param>
-        public Deque(IEnumerable<T> collection)
+        /// <param name="maxLength">If the deque must be bounded</param>
+        public Deque(IEnumerable<T> collection, bool maxLength = false)
         {
             if (collection == null)
                 throw new ArgumentNullException(nameof(collection));
 
             var source = CollectionHelpers.ReifyCollection(collection);
             var count = source.Count;
+
+            this.maxLength = maxLength;
+
             if (count > 0)
             {
                 _buffer = new T[count];
@@ -426,7 +439,7 @@ namespace Nito.Collections
         /// </summary>
         /// <returns>The number of elements contained in this deque.</returns>
         public int Count { get; private set; }
-        
+
         /// <summary>
         /// Applies the offset to <paramref name="index"/>, resulting in a buffer index.
         /// </summary>
@@ -680,6 +693,13 @@ namespace Nito.Collections
         /// <param name="value">The element to insert.</param>
         public void AddToBack(T value)
         {
+            if (Count == Capacity && maxLength)
+            {
+                DoAddToBack(value);
+                RemoveFromFront();
+                return;
+            }
+
             EnsureCapacityForOneElement();
             DoAddToBack(value);
         }
@@ -690,6 +710,13 @@ namespace Nito.Collections
         /// <param name="value">The element to insert.</param>
         public void AddToFront(T value)
         {
+            if (Count == Capacity && maxLength)
+            {
+                DoAddToFront(value);
+                RemoveFromBack();
+                return;
+            }
+
             EnsureCapacityForOneElement();
             DoAddToFront(value);
         }

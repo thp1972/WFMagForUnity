@@ -29,5 +29,5 @@ public class ScreenUtility
     public static Vector2 TopLeft
     {
         get { return new Vector2(-gameResolution.x / 2, gameResolution.y / 2); }
-    }
+    }  
 }
