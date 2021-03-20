@@ -1,23 +1,26 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class SpriteUtility
 {
-    SpriteRenderer _spriteRender;
+    SpriteRenderer _spriteRenderer;
     Vector3 _spriteSize;
 
     public enum SpritePosition { LEFT, RIGHT, TOP, BOTTOM };
 
+    public Texture2D t2;
+
     public SpriteUtility(SpriteRenderer spriteRenderer)
     {
-        _spriteRender = spriteRenderer;
+        _spriteRenderer = spriteRenderer;
         _spriteSize = GetSpriteSize();
     }
 
     public float GetSpriteSidePosition(SpritePosition spritePosition)
     {
-        Vector3 centerPos = _spriteRender.bounds.center;
+        Vector3 centerPos = _spriteRenderer.bounds.center;
         float position;
 
         switch (spritePosition)
@@ -32,5 +35,136 @@ public class SpriteUtility
         return position;
     }
 
-    public Vector3 GetSpriteSize() { return _spriteRender.bounds.size; }
+    public Vector3 GetSpriteSize() { return _spriteRenderer.bounds.size; }
+
+    // http://toqoz.fyi/unity-sprite-texture-coordinates.html
+    // adapted by myself --
+    public Vector2 WorldPosToLocalTexturePos(Vector3 worldPos)
+    {
+        var sprite = _spriteRenderer.sprite;
+
+        float ppu = sprite.pixelsPerUnit;
+
+        // Local position on the sprite in pixels.
+        Vector2 localPos = _spriteRenderer.gameObject.transform.InverseTransformPoint(worldPos) * ppu;
+
+        // When the sprite is part of an atlas, the rect defines its offset on the texture.
+        // When the sprite is not part of an atlas, the rect is the same as the texture (x = 0, y = 0, width = tex.width, ...)
+        var texSpacePivot = new Vector2(sprite.rect.x, sprite.rect.y) + sprite.pivot;
+        Vector2 texSpaceCoord = texSpacePivot + localPos;
+
+        return texSpaceCoord;
+    }
+
+    // given the current sprite, convert worldPos of another gameobject
+    // into current sprite UV cooord
+    public Vector2 WorldPosToLocalTexturePosUV(Vector3 worldPos)
+    {
+        var sprite = _spriteRenderer.sprite;
+
+        Texture2D tex = sprite.texture;
+        Vector2 texSpaceCoord = WorldPosToLocalTexturePos(worldPos);
+
+        // Pixels to UV(0-1) conversion.
+        Vector2 uvs = texSpaceCoord;
+        uvs.x /= tex.width;
+        uvs.y /= tex.height;
+
+        return uvs;
+    }
+
+    [Obsolete("WorldToPixelPoint is deprecated, please use WorldPosToLocalTexturePos instead.")]
+    public Vector2 WorldToPixelPoint(Vector2 worldPosition)
+    {
+        var sprite = _spriteRenderer.sprite;
+
+        Texture2D tex = sprite.texture;
+
+        Vector2 pixelPosition = Vector2.zero;
+
+        Vector2 localPosition = Vector2.zero;
+
+        localPosition.x = worldPosition.x - _spriteRenderer.gameObject.transform.position.x;
+        localPosition.y = worldPosition.y - _spriteRenderer.gameObject.transform.position.y;
+
+        // When the sprite is part of an atlas, the rect defines its offset on the texture.
+        // When the sprite is not part of an atlas, the rect is the same as the texture (x = 0, y = 0, width = tex.width, ...)
+        var texSpacePivot = new Vector2(sprite.rect.x, sprite.rect.y) + sprite.pivot;
+
+        pixelPosition = localPosition + texSpacePivot;
+
+        return pixelPosition;
+    }
+
+    public Color GetPixelAt(Vector2 worldPosition)
+    {
+        Vector2 texturePosition = WorldPosToLocalTexturePos(worldPosition);
+        return _spriteRenderer.sprite.texture.GetPixel((int)texturePosition.x, (int)texturePosition.y);
+    }
+
+    [Obsolete("SetPixelAt(SpriteRenderer spriteRenderer, Vector2 worldPosition, Color c) is deprecated, please use public void SetPixelAt(Vector2 worldPosition, Color c) instead.")]
+    public void SetPixelAt(SpriteRenderer spriteRenderer, Vector2 worldPosition, Color c)
+    {
+        var sprite = spriteRenderer.sprite;
+        Vector2 texturePosition = WorldPosToLocalTexturePos(worldPosition);
+        Texture2D texture = new Texture2D(sprite.texture.width, sprite.texture.height);
+        texture.filterMode = FilterMode.Point;
+        texture.wrapMode = TextureWrapMode.Clamp; // important else texture shows strange lines
+        texture.SetPixels(sprite.texture.GetPixels());
+        texture.Apply();
+        texture.SetPixel((int)worldPosition.x, (int)worldPosition.y, c);
+        texture.Apply();
+        var newSprite = Sprite.Create(texture, new Rect(0, 0, sprite.texture.width, sprite.texture.height), sprite.pivot.normalized, sprite.pixelsPerUnit);
+        spriteRenderer.sprite = newSprite;
+    }
+
+    public void SetPixelAt(Vector2 worldPosition, Color c)
+    {
+        var sprite = _spriteRenderer.sprite;
+        Vector2 texturePosition = WorldPosToLocalTexturePos(worldPosition);
+        Texture2D texture = new Texture2D(sprite.texture.width, sprite.texture.height);
+        texture.filterMode = FilterMode.Point;
+        texture.wrapMode = TextureWrapMode.Clamp; // important else texture shows strange lines
+        texture.SetPixels(sprite.texture.GetPixels());
+        texture.Apply();
+        texture.SetPixel((int)worldPosition.x, (int)worldPosition.y, c);
+        texture.Apply();
+        var newSprite = Sprite.Create(texture, new Rect(0, 0, sprite.texture.width, sprite.texture.height), sprite.pivot.normalized, sprite.pixelsPerUnit);
+        _spriteRenderer.sprite = newSprite;
+    }
+
+    public void ErasePixels(Vector2 worldPosition, Sprite shape)
+    {
+        var sprite = _spriteRenderer.sprite;
+        Vector2 texturePosition = WorldPosToLocalTexturePos(worldPosition);
+        Texture2D texture = new Texture2D(sprite.texture.width, sprite.texture.height);
+        texture.filterMode = FilterMode.Point;
+        texture.wrapMode = TextureWrapMode.Clamp; // important else texture shows strange lines
+        texture.SetPixels(sprite.texture.GetPixels());
+        texture.Apply();
+
+        var newSprite = Sprite.Create(texture, new Rect(0, 0, sprite.texture.width, sprite.texture.height), sprite.pivot.normalized, sprite.pixelsPerUnit);
+
+        for (int x = 0; x < shape.texture.width; x++)
+        {
+            for (int y = 0; y < shape.texture.height; y++)
+            {
+                Color c = shape.texture.GetPixel(x, y);
+
+                if (c.a == 1)
+                    texture.SetPixel((int)texturePosition.x + x, (int)texturePosition.y - shape.texture.height + y, Color.clear);
+            }
+        }
+
+        texture.Apply();
+        _spriteRenderer.sprite = newSprite;
+
+        // if there is a collider, recreate it after new texture setting, so the collider adapts to the new shape of the texure
+        PolygonCollider2D coll = _spriteRenderer.gameObject.GetComponent<PolygonCollider2D>();
+        if (coll != null)
+        {
+            GameObject.Destroy(_spriteRenderer.gameObject.GetComponent<PolygonCollider2D>());
+            _spriteRenderer.gameObject.AddComponent<PolygonCollider2D>();
+        }
+    }
 }

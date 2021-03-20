@@ -271,6 +271,7 @@ namespace Nito.Collections
                 Remove((T)value!);
         }
 
+#nullable disable
         object? System.Collections.IList.this[int index]
         {
             get

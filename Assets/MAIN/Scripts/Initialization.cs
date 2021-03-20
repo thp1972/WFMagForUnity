@@ -18,6 +18,7 @@ public class Initialization : MonoBehaviour
             UnityEditorUtility.AddGameViewResolution(800, 600, "WM_800x600");
             UnityEditorUtility.AddGameViewResolution(400, 800, "WM_400x800");
             UnityEditorUtility.AddGameViewResolution(800, 400, "WM_800x400");
+            UnityEditorUtility.AddGameViewResolution(1200, 700, "WM_1200x700");
         }
 #endif
     }
