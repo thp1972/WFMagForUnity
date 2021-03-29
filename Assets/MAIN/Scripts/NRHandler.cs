@@ -30,7 +30,7 @@ public class NRHandler : MonoBehaviour
     void Start()
     {
         // get the number of pages to navigate
-        EventBroker.TriggerOnGetTotalPages((int)Mathf.Ceil((definitions.Length - 1f) / PH_NUMBERS));
+        EventBroker.TriggerOnGetTotalPages((int)Mathf.Ceil((definitions.Length * 1f) / PH_NUMBERS));
         PlaceholderInitialization(0);
     }
 
