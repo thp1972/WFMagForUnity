@@ -36,6 +36,6 @@ EditorBuildSettings:
     path: Assets/NR_009/Scenes/Invaders.unity
     guid: 4607aba178e67c542957db51be175647
   - enabled: 1
-    path: Assets/NR_010/Spawn.unity
+    path: Assets/NR_010/Scenes/Spawn.unity
     guid: 85146c34542bcb94db38d4bfb6e2ae3d
   m_configObjects: {}
