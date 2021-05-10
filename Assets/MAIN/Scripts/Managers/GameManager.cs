@@ -32,6 +32,8 @@ public class GameManager : Singleton<GameManager>
         }
         else if(Input.GetKeyDown(KeyCode.P))
         {
+            print(currentSceneName);
+
             // this scene uses input so no pause is required... 
             if (currentSceneName == "HighScore") return;
 

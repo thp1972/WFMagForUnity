@@ -27,6 +27,16 @@ public class ScreenUtility
     }
 
     /// <summary>
+    ///  it converts pygames coordinates to Unity coordinates where coordinates 0,0
+    /// </summary>
+    /// <param name="position"></param>
+    /// <returns></returns>
+    public static Vector2 Position(Vector2 position)
+    {
+        return Position(position.x, position.y);
+    }
+
+    /// <summary>
     /// it converts Unity coordinates to pygames coordinates
     /// </summary>
     /// <param name="x"></param>
@@ -55,5 +65,17 @@ public class ScreenUtility
     public static Vector2 TopLeft
     {
         get { return new Vector2(-gameResolution.x / 2, gameResolution.y / 2); }
+    }
+
+    /// <summary>
+    /// Draw a gameobject at specific positions
+    /// </summary>
+    /// <param name="g"></param>
+    /// <param name="pos"></param>
+    public static void Blit(GameObject g, (float, float) pos)
+    {
+        g.transform.position = Position(pos.Item1, pos.Item2);
+        if (!g.activeSelf)
+            g.SetActive(true);
     }
 }

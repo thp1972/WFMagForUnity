@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 
 namespace NR_010
 {
@@ -13,9 +15,12 @@ namespace NR_010
         public Actor(string image, Vector2 pos)
         {
             this.pos = pos;
-            GameObject s = AssetDatabase.LoadAssetAtPath<GameObject>($"Assets/NR_010/Prefabs/{image}.prefab");
-            this.image = GameObject.Instantiate(s, pos, Quaternion.identity);
-            this.image.SetActive(false);
+            Addressables.LoadAssetAsync<GameObject>(image).Completed += (AsyncOperationHandle<GameObject> obj) => 
+            {
+                GameObject s = obj.Result;
+                this.image = GameObject.Instantiate(s, pos, Quaternion.identity);
+                this.image.SetActive(false);
+            };  
         }
 
         public abstract void Destroy();
@@ -87,7 +92,7 @@ namespace NR_010
         {
             // draw all enemies in static enemies list
             foreach (var e in Enemy.enemies)
-                e.image.SetActive(true);
+                e.image?.SetActive(true);
 
             //  destroy the first enemy in the enemies list
             if (Input.anyKeyDown)
