@@ -38,5 +38,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/NR_010/Scenes/Spawn.unity
     guid: 85146c34542bcb94db38d4bfb6e2ae3d
+  - enabled: 1
+    path: Assets/NR_011/Scenes/Breakout.unity
+    guid: 448879f79c1e22a4fb8f8ca049638454
+  - enabled: 1
+    path: Assets/NR_012/Bombs.unity
+    guid: cbc049ab64246d44eb6f6cae4895a075
+  - enabled: 1
+    path: Assets/NR_013/Stars.unity
+    guid: ad6e8bb2f47595a4bbdac0026ec71a0b
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 4b6f1e7c3f689e544b05a92095354cf9, type: 2}
