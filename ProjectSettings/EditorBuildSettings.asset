@@ -47,5 +47,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/NR_013/Stars.unity
     guid: ad6e8bb2f47595a4bbdac0026ec71a0b
+  - enabled: 1
+    path: Assets/NR_014/WalkCycle.unity
+    guid: a59cb6fc30da5ff488f09a4f69b3140e
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 4b6f1e7c3f689e544b05a92095354cf9, type: 2}

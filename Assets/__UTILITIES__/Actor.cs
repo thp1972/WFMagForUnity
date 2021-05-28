@@ -11,40 +11,79 @@ namespace PygameZero
 {
     abstract class Actor
     {
+        /// <summary>
+        /// Get the current image, but as a GameObject
+        /// </summary>
         public GameObject image;
-        protected Vector2 pos;
+        public Vector2 pos;
 
-        // every image has a name; i.e. 'walkleft' then 'stand' can have one or more images (i.e. for an animation)
-        // i.e 'walkleft1','walkleft2'
-        protected Dictionary<string, Dictionary<string, GameObject>> images =
-            new Dictionary<string, Dictionary<string, GameObject>>();
+        private Dictionary<string, GameObject> imageStack;
 
-        public Actor(Vector2 pos, string imageNameState, params string[] imageFrameNames)
+        /// <summary>
+        /// Set a new image, but as a String
+        /// </summary>
+        public string Image
         {
-            this.pos = pos;
-
-            if (!ImageAlreadyLoaded(imageNameState))
+            set
             {
-                Addressables.LoadAssetAsync<GameObject>(image).Completed += (AsyncOperationHandle<GameObject> obj) =>
+                GameObject imageToInstantiate = null;
+                image = GetImageFromStack(value);
+                if (!image)
                 {
-                    GameObject s = obj.Result;
-                    this.image = GameObject.Instantiate(s, pos, Quaternion.identity);
-                    this.image.SetActive(false);
-
-                };
+                    var op = Addressables.LoadAssetAsync<GameObject>(value);
+                    imageToInstantiate = op.WaitForCompletion(); // force sync!
+                    image = GameObject.Instantiate(imageToInstantiate, pos, Quaternion.identity);
+                    imageStack[value] = image;
+                }
+                image.SetActive(false);
+                X = pos.x;
+                Y = pos.y;
             }
+        }
+
+        private float x;
+        private float y;
+
+        private GameObject GetImageFromStack(string image)
+        {
+            // first make all disabled...
+            foreach(var i in imageStack)
+                i.Value.SetActive(false);
+      
+            return imageStack.ContainsKey(image) ? imageStack[image] : null;
+        }
+
+        public float X
+        {
+            get => x;
+            set
+            {
+                x = value;
+                pos.x = x;
+                image.transform.position = ScreenUtility.Position(pos);
+            }
+        }
+        public float Y
+        {
+            get => y;
+            set
+            {
+                y = value;
+                pos.y = y;
+                image.transform.position = ScreenUtility.Position(pos);
+            }
+        }
+
+        public Actor(string image, Vector2 pos)
+        {
+            imageStack = new Dictionary<string, GameObject>();
+            this.pos = pos;
+            Image = image;
         }
 
         public virtual void Destroy()
         {
             GameObject.Destroy(image);
         }
-
-        bool ImageAlreadyLoaded(string imageNameState)
-        {
-           var imageFrames = images[imageNameState];
-            return false;
-        }
-
     }
 }

@@ -5,27 +5,10 @@ using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 
+using PygameZero; // contains Actor class
+
 namespace NR_010
 {
-    abstract class Actor
-    {
-        public GameObject image;
-        protected Vector2 pos;
-
-        public Actor(string image, Vector2 pos)
-        {
-            this.pos = pos;
-            Addressables.LoadAssetAsync<GameObject>(image).Completed += (AsyncOperationHandle<GameObject> obj) => 
-            {
-                GameObject s = obj.Result;
-                this.image = GameObject.Instantiate(s, pos, Quaternion.identity);
-                this.image.SetActive(false);
-            };  
-        }
-
-        public abstract void Destroy();
-    }
-
     class Enemy : Actor
     {
         // static list, to keep track of all enemies
@@ -37,7 +20,7 @@ namespace NR_010
 
         public override void Destroy()
         {
-            GameObject.Destroy(image);
+            base.Destroy();
             // remove self from the enemies list
             enemies.Remove(this);
         }

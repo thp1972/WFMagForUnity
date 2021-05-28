@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3ddcacf81b1544e8095b581e0b1886, type: 3}
+  m_Name: NRDefinition_014
+  m_EditorClassIdentifier: 
+  width: 800
+  height: 600
+  scale: 1
+  in3D: 0
+  cover: {fileID: 21300000, guid: c9929c1f40377a74f92099869e1139d9, type: 3}
+  coverSwap: {fileID: 21300000, guid: c9c0d810084e8c14db505e05109566ba, type: 3}
+  sceneName: WalkCycle
