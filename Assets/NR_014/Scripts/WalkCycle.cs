@@ -66,11 +66,6 @@ namespace NR_014
 
             Draw();
         }
-
-        public void Draw()
-        {
-            image?.SetActive(true);
-        }
     }
 
     public class WalkCycle : MonoBehaviour

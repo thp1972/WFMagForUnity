@@ -29,26 +29,6 @@ MonoBehaviour:
     m_Address: small_enemy
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 7ff8e2c6fb3dada4bb8061499b1ac6a1
-    m_Address: bomb
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 32d21c630dd12e34ea37972930115b58
-    m_Address: brick
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: b0f0e0b94f56ecf4c84ba56c12e5162f
-    m_Address: explosion
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: a579b638a282f244f8a7f55760a30403
-    m_Address: ground
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 36b2b958e7cfe6345b1a6415f9a9424f
-    m_Address: wall
-    m_ReadOnly: 0
-    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: f2751a55290bee545b46fd366dfe6b4f, type: 2}
   m_SchemaSet:

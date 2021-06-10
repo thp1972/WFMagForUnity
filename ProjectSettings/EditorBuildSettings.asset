@@ -42,13 +42,19 @@ EditorBuildSettings:
     path: Assets/NR_011/Scenes/Breakout.unity
     guid: 448879f79c1e22a4fb8f8ca049638454
   - enabled: 1
-    path: Assets/NR_012/Bombs.unity
+    path: Assets/NR_012/Scenes/Bombs.unity
     guid: cbc049ab64246d44eb6f6cae4895a075
   - enabled: 1
-    path: Assets/NR_013/Stars.unity
+    path: Assets/NR_013/Scenes/Stars.unity
     guid: ad6e8bb2f47595a4bbdac0026ec71a0b
   - enabled: 1
-    path: Assets/NR_014/WalkCycle.unity
+    path: Assets/NR_014/Scenes/WalkCycle.unity
     guid: a59cb6fc30da5ff488f09a4f69b3140e
+  - enabled: 1
+    path: Assets/NR_015/Scenes/IsometricMap.unity
+    guid: 13acbca2f87a15b40b9ba96682950457
+  - enabled: 1
+    path: Assets/NR_016/Scenes/SpriteFollowing.unity
+    guid: 262f58ced5a720246b7839bafe6bfb28
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 4b6f1e7c3f689e544b05a92095354cf9, type: 2}

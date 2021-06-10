@@ -67,15 +67,58 @@ public class ScreenUtility
         get { return new Vector2(-gameResolution.x / 2, gameResolution.y / 2); }
     }
 
+    // blitter objects memory
+    static Dictionary<string, GameObject> blitterObjects = new Dictionary<string, GameObject>();
     /// <summary>
     /// Draw a gameobject at specific positions
     /// </summary>
-    /// <param name="g"></param>
-    /// <param name="pos"></param>
-    public static void Blit(GameObject g, (float, float) pos)
+    /// <param name="g">GameObject to draw</param>
+    /// <param name="pos">GameObject postion as tuple</param>
+    /// <param name="blitRef">GameObject name reference</param>
+    /// <param name="instantiate">Does instantiate the GameObject?</param>
+    public static void Blit(GameObject g, (float, float) pos, string blitRef = "", bool instantiate = false)
     {
-        g.transform.position = Position(pos.Item1, pos.Item2);
-        if (!g.activeSelf)
-            g.SetActive(true);
+        var blitterObj = g; // already instance?
+        if (instantiate)
+        {
+            blitterObj = GameObject.Instantiate(g);
+            if (blitRef.Length != 0)
+            {
+                blitterObjects[blitRef] = blitterObj;
+                blitterObj.name = blitRef;
+            }
+        }
+        else // takes form the memory, but if not found take g
+        {
+            GameObject go;
+            var res = blitterObjects.TryGetValue(blitRef, out go);
+            if (res)
+                blitterObj = go;
+        }
+
+        blitterObj.transform.position = Position(pos.Item1, pos.Item2);
+        if (!blitterObj.activeSelf)
+            blitterObj.SetActive(true);
+    }
+
+    /// <summary>
+    /// Removes all objects from the scene: useful if you need to draw lots of objects that are constantly moving around.
+    /// </summary>
+    /// <param name="gameobjectName">object name to search</param>
+    public static void BlitClear(string gameobjectName)
+    {
+        foreach (var g in GameObject.FindObjectsOfType<GameObject>())
+        {
+            if (g.name.IndexOf(gameobjectName) != -1)
+            {
+                g.SetActive(false);
+                GameObject.Destroy(g);
+            }
+        } 
+    }
+
+    public static void Fill((byte, byte, byte) color)
+    {
+        Camera.main.backgroundColor = new Color32(color.Item1, color.Item2, color.Item3, 255);
     }
 }
