@@ -909,7 +909,7 @@ GameObject:
   - component: {fileID: 883323655}
   - component: {fileID: 883323654}
   m_Layer: 5
-  m_Name: TextGoPage
+  m_Name: PageIndicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1058,6 +1058,7 @@ MonoBehaviour:
   nextImage: {fileID: 1832643093}
   prevBtn: {fileID: 0}
   nextBtn: {fileID: 0}
+  pageIndicator: {fileID: 883323654}
 --- !u!1 &993282383
 GameObject:
   m_ObjectHideFlags: 0
@@ -2201,7 +2202,19 @@ MonoBehaviour:
       m_Calls: []
   m_OnSubmit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 913981734}
+        m_TargetAssemblyTypeName: Navigator, Assembly-CSharp
+        m_MethodName: GoToNumber
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
