@@ -12,7 +12,7 @@ public class NRHandler : MonoBehaviour
     public Vector2 hotSpot = Vector2.zero;
     public NRDefinitions[] definitions;
 
-    const int PH_NUMBERS = 3;
+    public static int PH_NUMBERS = 3;
     Transform[] placeHolders = new Transform[PH_NUMBERS];
 
     private void OnEnable()
@@ -31,6 +31,7 @@ public class NRHandler : MonoBehaviour
     {
         // get the number of pages to navigate
         EventBroker.TriggerOnGetTotalPages((int)Mathf.Ceil((definitions.Length * 1f) / PH_NUMBERS));
+        EventBroker.TriggerOnGetTotalNumbers(definitions.Length);
         PlaceholderInitialization(0);
     }
 
@@ -44,6 +45,7 @@ public class NRHandler : MonoBehaviour
 
             var ph = transform.GetChild(i);
             ph.GetComponent<Image>().sprite = definitions[defCounter].cover;
+            ph.transform.GetChild(0).GetComponent<Text>().text = definitions[defCounter].NrAndDate;
 
             var button = ph.GetComponent<Button>();
             button.spriteState = new SpriteState() { highlightedSprite = definitions[defCounter].coverSwap };

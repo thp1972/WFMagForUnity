@@ -19,3 +19,4 @@ MonoBehaviour:
   cover: {fileID: 21300000, guid: 15c4543b1de37eb4685258414649e5c7, type: 3}
   coverSwap: {fileID: 21300000, guid: 684a38dd32475464488e986ee4e7a8c7, type: 3}
   sceneName: Invaders
+  NrAndDate: ' Issue 9 March 14th, 2019'

@@ -19,3 +19,4 @@ MonoBehaviour:
   cover: {fileID: 21300000, guid: 74a0bec2afe91b14896c6b1dd1764d0a, type: 3}
   coverSwap: {fileID: 21300000, guid: 6f7c09c73a8e4f54d856728b90914d36, type: 3}
   sceneName: ThrusterMotion
+  NrAndDate: ' Issue 4 December 20th, 2018'

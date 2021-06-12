@@ -15,11 +15,11 @@ E:/DEVELOPING/UNITY/PROJECTS/WireFrameMag
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-60675
+50448
 Successfully changed project path to: E:/DEVELOPING/UNITY/PROJECTS/WireFrameMag
 E:/DEVELOPING/UNITY/PROJECTS/WireFrameMag
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 54.28 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 104.25 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.1.4f1 (4cd64a618c1b)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.1.4f1/Editor/Data/Resources/UnitySubsystems
@@ -35,102 +35,1113 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.1.4f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.1.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.1.4f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56712
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56984
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.4f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.004212 seconds.
+Registered in 0.005190 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 50.64 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 55.69 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.159 seconds
+- Completed reload, in  3.673 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001064 seconds.
+Registered in 0.001415 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.52 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.731 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
+Refreshing native plugins compatible for Editor in 0.89 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1654 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 76.7 MB.
+System memory in use after: 76.8 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2123.
+Total: 4.544800 ms (FindLiveObjects: 0.283800 ms CreateObjectMapping: 0.091600 ms MarkObjects: 4.127600 ms  DeleteObjects: 0.039500 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/NR_016/Scripts/SpriteFollowing.cs
+  artifactKey: Guid(7a9be714cb25f5e45acc65c6092b825b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NR_016/Scripts/SpriteFollowing.cs using Guid(7a9be714cb25f5e45acc65c6092b825b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ceb7c91509d1ae525cee0b8a1c2a90cc') in 0.061605 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 204.111291 seconds.
+  path: Assets/NR_016/Scripts/SpriteFollowing.cs
+  artifactKey: Guid(7a9be714cb25f5e45acc65c6092b825b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NR_016/Scripts/SpriteFollowing.cs using Guid(7a9be714cb25f5e45acc65c6092b825b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c788b37859fcf21e7e9b42d0f49cd52c') in 0.122233 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001218 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.564 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.56 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1629 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 76.3 MB.
+System memory in use after: 76.5 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2126.
+Total: 3.555500 ms (FindLiveObjects: 0.297200 ms CreateObjectMapping: 0.070500 ms MarkObjects: 3.162300 ms  DeleteObjects: 0.023400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 28.056107 seconds.
+  path: Assets/NR_016/Scripts/SpriteFollowing.cs
+  artifactKey: Guid(7a9be714cb25f5e45acc65c6092b825b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NR_016/Scripts/SpriteFollowing.cs using Guid(7a9be714cb25f5e45acc65c6092b825b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b38b1db3a7580fb332e52924847b1cd') in 0.020550 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001036 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.53 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.568 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1629 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 76.4 MB.
+System memory in use after: 76.5 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2129.
+Total: 3.995200 ms (FindLiveObjects: 0.269000 ms CreateObjectMapping: 0.072500 ms MarkObjects: 3.628800 ms  DeleteObjects: 0.023000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003450 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.46 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.379 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1629 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 76.4 MB.
+System memory in use after: 76.5 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2132.
+Total: 3.261800 ms (FindLiveObjects: 0.258300 ms CreateObjectMapping: 0.071800 ms MarkObjects: 2.901400 ms  DeleteObjects: 0.027800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001111 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.48 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.040 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.53 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1629 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 76.4 MB.
+System memory in use after: 76.5 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2135.
+Total: 15.147900 ms (FindLiveObjects: 0.356500 ms CreateObjectMapping: 0.073600 ms MarkObjects: 14.691300 ms  DeleteObjects: 0.024500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 516.098221 seconds.
+  path: Assets/NR_016/Scripts/SpriteFollowing.cs
+  artifactKey: Guid(7a9be714cb25f5e45acc65c6092b825b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NR_016/Scripts/SpriteFollowing.cs using Guid(7a9be714cb25f5e45acc65c6092b825b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5596ac86ea5277a42238c06f6e178719') in 0.031361 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001051 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.572 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1629 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 76.4 MB.
+System memory in use after: 76.5 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2138.
+Total: 3.375600 ms (FindLiveObjects: 0.258300 ms CreateObjectMapping: 0.072800 ms MarkObjects: 3.019800 ms  DeleteObjects: 0.023100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 147.219993 seconds.
+  path: Assets/NR_016/Scripts/SpriteFollowing.cs
+  artifactKey: Guid(7a9be714cb25f5e45acc65c6092b825b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NR_016/Scripts/SpriteFollowing.cs using Guid(7a9be714cb25f5e45acc65c6092b825b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf7412a9e90e7a63be0dffc15e14b44a') in 0.026520 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001053 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.613 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1629 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 76.4 MB.
+System memory in use after: 76.6 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2141.
+Total: 3.437700 ms (FindLiveObjects: 0.274800 ms CreateObjectMapping: 0.073800 ms MarkObjects: 3.063300 ms  DeleteObjects: 0.023200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.175794 seconds.
+  path: Assets/NR_016/Scripts/SpriteFollowing.cs
+  artifactKey: Guid(7a9be714cb25f5e45acc65c6092b825b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NR_016/Scripts/SpriteFollowing.cs using Guid(7a9be714cb25f5e45acc65c6092b825b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4d8b4978affdad2c7ce7475d473b415') in 0.019334 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001053 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.641 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1629 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 76.5 MB.
+System memory in use after: 76.6 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2144.
+Total: 3.314500 ms (FindLiveObjects: 0.279400 ms CreateObjectMapping: 0.071900 ms MarkObjects: 2.933800 ms  DeleteObjects: 0.027600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 114.334832 seconds.
+  path: Assets/NR_016/Scripts/SpriteFollowing.cs
+  artifactKey: Guid(7a9be714cb25f5e45acc65c6092b825b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NR_016/Scripts/SpriteFollowing.cs using Guid(7a9be714cb25f5e45acc65c6092b825b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5dcdda62b702ce74810ee982ade3542b') in 0.032446 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 116.869663 seconds.
+  path: Assets/NR_016/Scripts/SpriteFollowing.cs
+  artifactKey: Guid(7a9be714cb25f5e45acc65c6092b825b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NR_016/Scripts/SpriteFollowing.cs using Guid(7a9be714cb25f5e45acc65c6092b825b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3886f4c9e2d7b9e56b85fe7ce1e98de6') in 0.095454 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001197 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.55 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.712 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1629 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 76.5 MB.
+System memory in use after: 76.6 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2147.
+Total: 4.036500 ms (FindLiveObjects: 0.264200 ms CreateObjectMapping: 0.074900 ms MarkObjects: 3.671600 ms  DeleteObjects: 0.023300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001132 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.743 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.48 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1629 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 76.5 MB.
+System memory in use after: 76.6 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2150.
+Total: 3.289000 ms (FindLiveObjects: 0.259500 ms CreateObjectMapping: 0.072300 ms MarkObjects: 2.932200 ms  DeleteObjects: 0.023000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 121.546887 seconds.
+  path: Assets/NR_016/Scripts/SpriteFollowing.cs
+  artifactKey: Guid(7a9be714cb25f5e45acc65c6092b825b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NR_016/Scripts/SpriteFollowing.cs using Guid(7a9be714cb25f5e45acc65c6092b825b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0b357ad6fce81f3f4a196ed893183bf') in 0.011739 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001291 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.68 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.799 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.69 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1629 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 76.5 MB.
+System memory in use after: 76.6 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2153.
+Total: 3.740100 ms (FindLiveObjects: 0.259700 ms CreateObjectMapping: 0.072900 ms MarkObjects: 3.373000 ms  DeleteObjects: 0.031900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001022 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.38 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.805 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.52 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1629 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 76.5 MB.
+System memory in use after: 76.6 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2156.
+Total: 5.840500 ms (FindLiveObjects: 0.265700 ms CreateObjectMapping: 0.076000 ms MarkObjects: 5.466000 ms  DeleteObjects: 0.030200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 31.638185 seconds.
+  path: Assets/NR_016/Scripts/SpriteFollowing.cs
+  artifactKey: Guid(7a9be714cb25f5e45acc65c6092b825b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NR_016/Scripts/SpriteFollowing.cs using Guid(7a9be714cb25f5e45acc65c6092b825b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23d88f44e4989880d1227d3ecfe26bb7') in 0.016804 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 48.611992 seconds.
+  path: Assets/NR_016/Scripts/SpriteFollowing.cs
+  artifactKey: Guid(7a9be714cb25f5e45acc65c6092b825b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NR_016/Scripts/SpriteFollowing.cs using Guid(7a9be714cb25f5e45acc65c6092b825b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66f46b9fbf48d7667211d336e2a9cb96') in 0.022418 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 15.988474 seconds.
+  path: Assets/NR_016/Scripts/SpriteFollowing.cs
+  artifactKey: Guid(7a9be714cb25f5e45acc65c6092b825b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NR_016/Scripts/SpriteFollowing.cs using Guid(7a9be714cb25f5e45acc65c6092b825b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c288a389250a502d6dc5a06ae7634b40') in 0.017900 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001059 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.54 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.546 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1629 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 76.5 MB.
+System memory in use after: 76.6 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2159.
+Total: 3.496800 ms (FindLiveObjects: 0.275400 ms CreateObjectMapping: 0.092600 ms MarkObjects: 3.094500 ms  DeleteObjects: 0.030900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001171 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.53 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.147 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.52 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1629 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 76.5 MB.
+System memory in use after: 76.6 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2162.
+Total: 3.595300 ms (FindLiveObjects: 0.323300 ms CreateObjectMapping: 0.078700 ms MarkObjects: 3.161200 ms  DeleteObjects: 0.028900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002054 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.575 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1629 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 76.5 MB.
+System memory in use after: 76.6 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2165.
+Total: 3.806800 ms (FindLiveObjects: 0.268000 ms CreateObjectMapping: 0.072200 ms MarkObjects: 3.439800 ms  DeleteObjects: 0.024300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001089 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.59 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.675 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1629 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 76.5 MB.
+System memory in use after: 76.6 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2168.
+Total: 3.548000 ms (FindLiveObjects: 0.266300 ms CreateObjectMapping: 0.074200 ms MarkObjects: 3.184900 ms  DeleteObjects: 0.020600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001316 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.56 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.721 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1629 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 76.5 MB.
+System memory in use after: 76.6 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2171.
+Total: 3.341200 ms (FindLiveObjects: 0.277900 ms CreateObjectMapping: 0.082500 ms MarkObjects: 2.953900 ms  DeleteObjects: 0.024300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001046 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.771 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.52 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1629 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 76.5 MB.
+System memory in use after: 76.7 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2174.
+Total: 3.713700 ms (FindLiveObjects: 0.277200 ms CreateObjectMapping: 0.080900 ms MarkObjects: 3.321800 ms  DeleteObjects: 0.031000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001362 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.52 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.930 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1629 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 76.5 MB.
+System memory in use after: 76.7 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2177.
+Total: 3.692200 ms (FindLiveObjects: 0.386300 ms CreateObjectMapping: 0.207600 ms MarkObjects: 3.071900 ms  DeleteObjects: 0.023800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001110 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.52 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.662 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.52 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1629 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 76.6 MB.
+System memory in use after: 76.7 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2180.
+Total: 3.459800 ms (FindLiveObjects: 0.288600 ms CreateObjectMapping: 0.082400 ms MarkObjects: 3.060800 ms  DeleteObjects: 0.025000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 640.764309 seconds.
+  path: Assets/NR_016/Images/spaceship.png
+  artifactKey: Guid(3d440142f8bb767488e9d2b3da8a660c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NR_016/Images/spaceship.png using Guid(3d440142f8bb767488e9d2b3da8a660c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bf134ebe0d5dd75c89fbf52ed9c13a1') in 0.218438 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001061 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.774 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1630 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 80.8 MB.
+System memory in use after: 81.0 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2204.
+Total: 3.494500 ms (FindLiveObjects: 0.277700 ms CreateObjectMapping: 0.075500 ms MarkObjects: 3.113400 ms  DeleteObjects: 0.026100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.152367 seconds.
+  path: Assets/NR_016/Images/powerup.png
+  artifactKey: Guid(9f52faf9dc21cec4185319e3d257ec57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NR_016/Images/powerup.png using Guid(9f52faf9dc21cec4185319e3d257ec57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e5d92feaee9a31559bf268b83bfda16') in 0.093085 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001169 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.55 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.795 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.52 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1630 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 81.3 MB.
+System memory in use after: 81.4 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2225.
+Total: 13.691700 ms (FindLiveObjects: 0.315300 ms CreateObjectMapping: 0.081100 ms MarkObjects: 13.257900 ms  DeleteObjects: 0.035000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001069 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.57 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.606 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.53 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1629 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 81.2 MB.
+System memory in use after: 81.3 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2228.
+Total: 3.647200 ms (FindLiveObjects: 0.279900 ms CreateObjectMapping: 0.078000 ms MarkObjects: 3.264700 ms  DeleteObjects: 0.022300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001082 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.713 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.52 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1629 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 81.2 MB.
+System memory in use after: 81.3 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2231.
+Total: 3.860100 ms (FindLiveObjects: 0.272600 ms CreateObjectMapping: 0.070400 ms MarkObjects: 3.483700 ms  DeleteObjects: 0.030300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001053 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.53 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.613 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1629 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 81.3 MB.
+System memory in use after: 81.4 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2234.
+Total: 3.478100 ms (FindLiveObjects: 0.290500 ms CreateObjectMapping: 0.082100 ms MarkObjects: 3.069900 ms  DeleteObjects: 0.032600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001235 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.59 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.111 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.62 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1629 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 81.3 MB.
+System memory in use after: 81.4 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2237.
+Total: 9.639600 ms (FindLiveObjects: 0.766200 ms CreateObjectMapping: 0.187300 ms MarkObjects: 8.650100 ms  DeleteObjects: 0.033300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001042 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.726 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.63 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1629 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 81.3 MB.
+System memory in use after: 81.4 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2240.
+Total: 3.928200 ms (FindLiveObjects: 0.272500 ms CreateObjectMapping: 0.082300 ms MarkObjects: 3.546900 ms  DeleteObjects: 0.024700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003728 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.834 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.58 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1629 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 81.3 MB.
+System memory in use after: 81.4 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2243.
+Total: 4.124800 ms (FindLiveObjects: 0.284100 ms CreateObjectMapping: 0.075600 ms MarkObjects: 3.731100 ms  DeleteObjects: 0.031600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001239 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.721 seconds
+- Completed reload, in  1.762 seconds
 Platform modules already initialized, skipping
-========================================================================
-Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 0.54 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1646 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 76.4 MB.
-System memory in use after: 76.5 MB.
+Unloading 1629 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 81.3 MB.
+System memory in use after: 81.4 MB.
 
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2115.
-Total: 3.400300 ms (FindLiveObjects: 0.264900 ms CreateObjectMapping: 0.071800 ms MarkObjects: 3.020500 ms  DeleteObjects: 0.041000 ms)
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2246.
+Total: 4.118600 ms (FindLiveObjects: 0.297600 ms CreateObjectMapping: 0.080500 ms MarkObjects: 3.710800 ms  DeleteObjects: 0.027400 ms)
 
-========================================================================
-Received Import Request.
-  path: Assets/NR_015/README.md
-  artifactKey: Guid(a05be76fa881cb54fb32cb600ceed7a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NR_015/README.md using Guid(a05be76fa881cb54fb32cb600ceed7a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b17384253a2f51b540ed18973ad60f97') in 0.054758 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000478 seconds.
-  path: Assets/NR_015/LICENCE.md
-  artifactKey: Guid(545ac5d4cfb51c3458f5b07d48858a3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NR_015/LICENCE.md using Guid(545ac5d4cfb51c3458f5b07d48858a3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1df70653d3d17238a67fb20275c82ab9') in 0.014127 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 8.498503 seconds.
-  path: Assets/NR_016
-  artifactKey: Guid(07d8cfd99a9a0a5499c463501339626a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NR_016 using Guid(07d8cfd99a9a0a5499c463501339626a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7076cb808e50383efc4665af7b8e0900') in 0.014340 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 85.913956 seconds.
-  path: Assets/NR_016/README.md
-  artifactKey: Guid(230536a6cac66204998452ffcf21495c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NR_016/README.md using Guid(230536a6cac66204998452ffcf21495c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6299dbc39e504cdbb1cefaa6b14e0e07') in 0.013318 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 11.221666 seconds.
-  path: Assets/NR_016/Images
-  artifactKey: Guid(9134d3dce3f28344f904ac74570be21a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NR_016/Images using Guid(9134d3dce3f28344f904ac74570be21a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad3e82a1faf6fdb7dc3c9db5eaa0e6b7') in 0.016115 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 18.742843 seconds.
-  path: Assets/NR_016/Images/powerup.png
-  artifactKey: Guid(9f52faf9dc21cec4185319e3d257ec57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NR_016/Images/powerup.png using Guid(9f52faf9dc21cec4185319e3d257ec57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15284265f2b92a68efe8bec918814685') in 0.125536 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.211076 seconds.
-  path: Assets/NR_016/Images/spaceship.png
-  artifactKey: Guid(3d440142f8bb767488e9d2b3da8a660c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NR_016/Images/spaceship.png using Guid(3d440142f8bb767488e9d2b3da8a660c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6d6d34fcc8605b37c65becca1839cc3') in 0.036183 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 26.472430 seconds.
-  path: Assets/NR_016/Images/spaceship.png
-  artifactKey: Guid(3d440142f8bb767488e9d2b3da8a660c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NR_016/Images/spaceship.png using Guid(3d440142f8bb767488e9d2b3da8a660c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e47c9550a7441e01fc8dc1994b1495ce') in 0.078284 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 24.176968 seconds.
-  path: Assets/NR_016/SpriteFollowing.unity
-  artifactKey: Guid(262f58ced5a720246b7839bafe6bfb28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NR_016/SpriteFollowing.unity using Guid(262f58ced5a720246b7839bafe6bfb28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40eb1d9ce9a57a46b87805dc67eda1fa') in 0.017940 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001041 seconds.
+Registered in 0.001095 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.56 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.52 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.982 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.55 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1629 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 81.3 MB.
+System memory in use after: 81.4 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2249.
+Total: 3.600900 ms (FindLiveObjects: 0.299400 ms CreateObjectMapping: 0.075500 ms MarkObjects: 3.200800 ms  DeleteObjects: 0.023400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002606 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.20 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.937 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1629 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 81.3 MB.
+System memory in use after: 81.4 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2252.
+Total: 4.271000 ms (FindLiveObjects: 0.288600 ms CreateObjectMapping: 0.082700 ms MarkObjects: 3.868600 ms  DeleteObjects: 0.028700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001091 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.48 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.976 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1629 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 81.3 MB.
+System memory in use after: 81.4 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2255.
+Total: 4.358000 ms (FindLiveObjects: 0.519000 ms CreateObjectMapping: 0.213500 ms MarkObjects: 3.597400 ms  DeleteObjects: 0.025000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001069 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.53 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.770 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1629 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 81.3 MB.
+System memory in use after: 81.5 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2258.
+Total: 3.425800 ms (FindLiveObjects: 0.277600 ms CreateObjectMapping: 0.076000 ms MarkObjects: 3.046800 ms  DeleteObjects: 0.023500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001451 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.702 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.54 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1629 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 81.3 MB.
+System memory in use after: 81.5 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2261.
+Total: 5.569700 ms (FindLiveObjects: 0.277000 ms CreateObjectMapping: 0.081400 ms MarkObjects: 5.184400 ms  DeleteObjects: 0.025100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001055 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.52 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.767 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1629 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 81.4 MB.
+System memory in use after: 81.5 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2264.
+Total: 3.508600 ms (FindLiveObjects: 0.301900 ms CreateObjectMapping: 0.100100 ms MarkObjects: 3.081300 ms  DeleteObjects: 0.023700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001685 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.53 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.647 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.73 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1629 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 81.4 MB.
+System memory in use after: 81.5 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2267.
+Total: 6.930500 ms (FindLiveObjects: 1.010600 ms CreateObjectMapping: 0.109500 ms MarkObjects: 5.747600 ms  DeleteObjects: 0.060300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001049 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.751 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.52 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1629 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 81.4 MB.
+System memory in use after: 81.5 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2270.
+Total: 4.617300 ms (FindLiveObjects: 0.294700 ms CreateObjectMapping: 0.077600 ms MarkObjects: 4.210800 ms  DeleteObjects: 0.031600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001545 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.835 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.48 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1629 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 81.4 MB.
+System memory in use after: 81.5 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2273.
+Total: 3.368600 ms (FindLiveObjects: 0.279300 ms CreateObjectMapping: 0.076200 ms MarkObjects: 2.987500 ms  DeleteObjects: 0.023500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001792 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.53 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.848 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.53 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1629 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 81.4 MB.
+System memory in use after: 81.5 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2276.
+Total: 4.580000 ms (FindLiveObjects: 1.021600 ms CreateObjectMapping: 0.102900 ms MarkObjects: 3.421700 ms  DeleteObjects: 0.030700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 10884.205701 seconds.
+  path: Assets/NR_012/Scenes
+  artifactKey: Guid(7c1689c898093d143836de3efdc90e88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NR_012/Scenes using Guid(7c1689c898093d143836de3efdc90e88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3499940fcf0f2314ee7de3dfa89c9d40') in 0.030994 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001072 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.52 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.692 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1629 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 81.4 MB.
+System memory in use after: 81.5 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2279.
+Total: 3.663100 ms (FindLiveObjects: 0.297700 ms CreateObjectMapping: 0.086800 ms MarkObjects: 3.248100 ms  DeleteObjects: 0.027700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 36.321945 seconds.
+  path: Assets/NR_013/Scenes
+  artifactKey: Guid(b5cfe2cf268fa084ca89cb881cdd732e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NR_013/Scenes using Guid(b5cfe2cf268fa084ca89cb881cdd732e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f0fa778bde809c35c1d6d7e2d2f3e1a') in 0.033235 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001023 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.632 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1629 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 81.4 MB.
+System memory in use after: 81.5 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2282.
+Total: 4.050700 ms (FindLiveObjects: 0.375300 ms CreateObjectMapping: 0.495000 ms MarkObjects: 3.156000 ms  DeleteObjects: 0.022500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.171732 seconds.
+  path: Assets/NR_014/Scenes
+  artifactKey: Guid(9ca0bcaae3968d447a7775cd00d4cf3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NR_014/Scenes using Guid(9ca0bcaae3968d447a7775cd00d4cf3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6cdbdf3b0b8f5bff0785fdb7aa5fabc') in 0.019697 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001065 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.63 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.669 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.48 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1629 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 81.4 MB.
+System memory in use after: 81.6 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2285.
+Total: 3.603200 ms (FindLiveObjects: 0.287500 ms CreateObjectMapping: 0.078500 ms MarkObjects: 3.209200 ms  DeleteObjects: 0.025400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.329151 seconds.
+  path: Assets/NR_015/Scenes
+  artifactKey: Guid(c40939b804a8a80418ab39697b40a76f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NR_015/Scenes using Guid(c40939b804a8a80418ab39697b40a76f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'baf2b38ae4edc9698d1a0b1d118d7bc2') in 0.022934 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001030 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.673 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.53 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1629 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 81.4 MB.
+System memory in use after: 81.6 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2288.
+Total: 3.588800 ms (FindLiveObjects: 0.288200 ms CreateObjectMapping: 0.087200 ms MarkObjects: 3.187500 ms  DeleteObjects: 0.023600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.314056 seconds.
+  path: Assets/NR_016/Scenes
+  artifactKey: Guid(110183defe7125a4db682ef94d422d1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NR_016/Scenes using Guid(110183defe7125a4db682ef94d422d1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78fd99cdc6999133265b2bb0095cff50') in 0.014859 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001048 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.682 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1629 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 81.5 MB.
+System memory in use after: 81.6 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2291.
+Total: 3.527200 ms (FindLiveObjects: 0.287300 ms CreateObjectMapping: 0.098300 ms MarkObjects: 3.108900 ms  DeleteObjects: 0.029800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 36.589564 seconds.
+  path: Assets/MAIN/Data/NRDefinition_015 1.asset
+  artifactKey: Guid(3d299dc80842e8842b4ec9c6823fb9b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MAIN/Data/NRDefinition_015 1.asset using Guid(3d299dc80842e8842b4ec9c6823fb9b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fdda8f4b9aa20e578674f1ae9883496') in 0.063312 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.793950 seconds.
+  path: Assets/MAIN/Data/NRDefinition_016.asset
+  artifactKey: Guid(3d299dc80842e8842b4ec9c6823fb9b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MAIN/Data/NRDefinition_016.asset using Guid(3d299dc80842e8842b4ec9c6823fb9b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c073551a13aab348d3ca43845e0726d1') in 0.019751 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 147.219039 seconds.
+  path: Assets/MAIN/Images/NR_016
+  artifactKey: Guid(0622cb33375b933419aa4593bce2c2dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MAIN/Images/NR_016 using Guid(0622cb33375b933419aa4593bce2c2dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c4598dbf81b7a384cf51ebc9376e395') in 0.018665 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.038868 seconds.
+  path: Assets/MAIN/Images/NR_016/Cover_NR_016.jpg
+  artifactKey: Guid(f59e08a70b338a24a9effbb04548f97c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MAIN/Images/NR_016/Cover_NR_016.jpg using Guid(f59e08a70b338a24a9effbb04548f97c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b88efc957e6b41929f16bf297b407a10') in 0.071363 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.250547 seconds.
+  path: Assets/MAIN/Images/NR_016/SpriteFollowing.png
+  artifactKey: Guid(188ee194e8d99c9498a154f800dd4188) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MAIN/Images/NR_016/SpriteFollowing.png using Guid(188ee194e8d99c9498a154f800dd4188) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb0f29989a5aea82b90f9e517c6e212d') in 0.047529 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.621768 seconds.
+  path: Assets/MAIN/Images/NR_016/SpriteFollowing.png
+  artifactKey: Guid(188ee194e8d99c9498a154f800dd4188) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MAIN/Images/NR_016/SpriteFollowing.png using Guid(188ee194e8d99c9498a154f800dd4188) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0eec50fef99e4a915c3ef38ff704d172') in 0.066429 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.657176 seconds.
+  path: Assets/MAIN/Images/NR_016/SpriteFollowing.png
+  artifactKey: Guid(188ee194e8d99c9498a154f800dd4188) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MAIN/Images/NR_016/SpriteFollowing.png using Guid(188ee194e8d99c9498a154f800dd4188) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89587bd7820dc02dbd2b08017f29bf3f') in 0.052762 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 23.248132 seconds.
+  path: Assets/MAIN/Data/NRDefinition_016.asset
+  artifactKey: Guid(3d299dc80842e8842b4ec9c6823fb9b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MAIN/Data/NRDefinition_016.asset using Guid(3d299dc80842e8842b4ec9c6823fb9b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09f7461abe882bb2ffe87f4c7fe3a9f1') in 0.012127 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001206 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.54 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Refresh completed but there are assets queued up for importing. Check for code that modifies assets which gets called after OnPostProcessAllAssets. Additional details in Log file
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
@@ -155,1247 +1166,132 @@ com.pellegrinoprincipe.SceneSelector:InitSceneSelector () (at Assets/Editor/com.
 [Assets/Editor/com.pellegrinoprincipe/SceneSelector.cs line 96]
 
 Mono: successfully reloaded assembly
-- Completed reload, in  1.809 seconds
+- Completed reload, in  2.158 seconds
 Platform modules already initialized, skipping
 Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1631 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.2 MB.
+System memory in use after: 91.3 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2355.
+Total: 4.465500 ms (FindLiveObjects: 0.326200 ms CreateObjectMapping: 0.091200 ms MarkObjects: 4.014400 ms  DeleteObjects: 0.031000 ms)
+
+========================================================================
+Received Prepare
+Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
+Registering precompiled user dll's ...
+Registered in 0.001225 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
 Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1629 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 81.6 MB.
-System memory in use after: 81.7 MB.
+Refresh completed but there are assets queued up for importing. Check for code that modifies assets which gets called after OnPostProcessAllAssets. Additional details in Log file
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.AssetDatabase:ImportAsset (string)
+com.pellegrinoprincipe.SceneSelector:CreateFileThatGeneratesMenu () (at Assets/Editor/com.pellegrinoprincipe/SceneSelector.cs:96)
+com.pellegrinoprincipe.SceneSelector:SearchScenes () (at Assets/Editor/com.pellegrinoprincipe/SceneSelector.cs:54)
+com.pellegrinoprincipe.SceneSelector:InitSceneSelector () (at Assets/Editor/com.pellegrinoprincipe/SceneSelector.cs:26)
 
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2169.
-Total: 3.236800 ms (FindLiveObjects: 0.266200 ms CreateObjectMapping: 0.073300 ms MarkObjects: 2.872900 ms  DeleteObjects: 0.022700 ms)
+[Assets/Editor/com.pellegrinoprincipe/SceneSelector.cs line 96]
+
+Assets queued for import after Refresh completed:
+	Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs
+RefreshInfo: StopAssetImportingV2(NoUpdateAssetOptions) scanfilter: 
+RefreshProfiler: Total: 0.000ms
+Assertion failed on expression: 'm_Ptr'
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.AssetDatabase:ImportAsset (string)
+com.pellegrinoprincipe.SceneSelector:CreateFileThatGeneratesMenu () (at Assets/Editor/com.pellegrinoprincipe/SceneSelector.cs:96)
+com.pellegrinoprincipe.SceneSelector:SearchScenes () (at Assets/Editor/com.pellegrinoprincipe/SceneSelector.cs:54)
+com.pellegrinoprincipe.SceneSelector:InitSceneSelector () (at Assets/Editor/com.pellegrinoprincipe/SceneSelector.cs:26)
+
+[Assets/Editor/com.pellegrinoprincipe/SceneSelector.cs line 96]
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.780 seconds
+Platform modules already initialized, skipping
+Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
+Refreshing native plugins compatible for Editor in 0.76 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1628 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.1 MB.
+System memory in use after: 91.2 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2358.
+Total: 4.409600 ms (FindLiveObjects: 0.306200 ms CreateObjectMapping: 0.090900 ms MarkObjects: 3.983500 ms  DeleteObjects: 0.026800 ms)
 
 ========================================================================
 Received Prepare
 Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
 Registering precompiled user dll's ...
-Registered in 0.001026 seconds.
+Registered in 0.001035 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.53 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.739 seconds
-Platform modules already initialized, skipping
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Refreshing native plugins compatible for Editor in 0.54 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1626 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 81.5 MB.
-System memory in use after: 81.6 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2172.
-Total: 3.257600 ms (FindLiveObjects: 0.265300 ms CreateObjectMapping: 0.077800 ms MarkObjects: 2.889200 ms  DeleteObjects: 0.022900 ms)
-
-========================================================================
-Received Prepare
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Registering precompiled user dll's ...
-Registered in 0.001043 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.55 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.777 seconds
-Platform modules already initialized, skipping
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1626 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 81.5 MB.
-System memory in use after: 81.6 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2175.
-Total: 3.665600 ms (FindLiveObjects: 0.322100 ms CreateObjectMapping: 0.079000 ms MarkObjects: 3.232300 ms  DeleteObjects: 0.029000 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 56.352238 seconds.
-  path: Assets/NR_015/Scripts/Initialization1.cs
-  artifactKey: Guid(27c97f90c29fe2b45bf2d3d749c9f97b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NR_015/Scripts/Initialization1.cs using Guid(27c97f90c29fe2b45bf2d3d749c9f97b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f09bc9912c51655f0bccb121423a50d') in 0.029393 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 12.039654 seconds.
-  path: Assets/NR_016/Sceipts
-  artifactKey: Guid(309c11db92c94f145bd3bda3a97f6f52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NR_016/Sceipts using Guid(309c11db92c94f145bd3bda3a97f6f52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bbe0c69842b51369f22c431ff1a901f') in 0.015893 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 6.259919 seconds.
-  path: Assets/NR_016/Initialization.cs
-  artifactKey: Guid(27c97f90c29fe2b45bf2d3d749c9f97b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NR_016/Initialization.cs using Guid(27c97f90c29fe2b45bf2d3d749c9f97b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23b930af6a9cc693c45f11f236707a02') in 0.016117 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 34.706423 seconds.
-  path: Assets/NR_016/Initialization.cs
-  artifactKey: Guid(27c97f90c29fe2b45bf2d3d749c9f97b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NR_016/Initialization.cs using Guid(27c97f90c29fe2b45bf2d3d749c9f97b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8eb6d11d2240d4a159ddbb31a10a965d') in 0.052549 seconds 
-========================================================================
-Received Prepare
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Registering precompiled user dll's ...
-Registered in 0.001076 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.56 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  3.747 seconds
-Platform modules already initialized, skipping
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
 Refreshing native plugins compatible for Editor in 0.57 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1627 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 81.6 MB.
-System memory in use after: 81.7 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2179.
-Total: 3.852700 ms (FindLiveObjects: 0.292200 ms CreateObjectMapping: 0.080300 ms MarkObjects: 3.443700 ms  DeleteObjects: 0.033400 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 22.484206 seconds.
-  path: Assets/NR_016/SpriteFollowing.unity
-  artifactKey: Guid(262f58ced5a720246b7839bafe6bfb28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NR_016/SpriteFollowing.unity using Guid(262f58ced5a720246b7839bafe6bfb28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74e705fdb3682ee4de71d070993d7fd6') in 0.029846 seconds 
-========================================================================
-Received Prepare
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Registering precompiled user dll's ...
-Registered in 0.002260 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.52 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.761 seconds
+- Completed reload, in  1.660 seconds
 Platform modules already initialized, skipping
 Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Refreshing native plugins compatible for Editor in 0.61 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.56 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1627 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 81.6 MB.
-System memory in use after: 81.7 MB.
+Unloading 1628 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.1 MB.
+System memory in use after: 91.2 MB.
 
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2182.
-Total: 3.308800 ms (FindLiveObjects: 0.273100 ms CreateObjectMapping: 0.072500 ms MarkObjects: 2.937900 ms  DeleteObjects: 0.023400 ms)
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2361.
+Total: 4.068800 ms (FindLiveObjects: 0.443400 ms CreateObjectMapping: 0.108600 ms MarkObjects: 3.485800 ms  DeleteObjects: 0.028600 ms)
 
-========================================================================
-Received Import Request.
-  Time since last request: 70.098533 seconds.
-  path: Assets/NR_016/Scripts
-  artifactKey: Guid(309c11db92c94f145bd3bda3a97f6f52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NR_016/Scripts using Guid(309c11db92c94f145bd3bda3a97f6f52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e7917c11389cea6e54ec5cc8ddb9ce0') in 0.016403 seconds 
 ========================================================================
 Received Prepare
 Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
 Registering precompiled user dll's ...
 Registered in 0.001129 seconds.
 Begin MonoManager ReloadAssembly
+Symbol file data-0000014BD714DE30 doesn't match image E:\DEVELOPING\UNITY\PROJECTS\WireFrameMag\Library\ScriptAssemblies\Assembly-CSharp.dll
+Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.39 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.145 seconds
-Platform modules already initialized, skipping
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Script is not up to date after domain reload: guid(7a9be714cb25f5e45acc65c6092b825b) path("Assets/NR_016/Scripts/SpriteFollowing.cs") state(2)
-Refreshing native plugins compatible for Editor in 0.55 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1627 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 81.6 MB.
-System memory in use after: 81.7 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2185.
-Total: 5.058400 ms (FindLiveObjects: 0.337300 ms CreateObjectMapping: 0.533800 ms MarkObjects: 4.157100 ms  DeleteObjects: 0.027900 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 13.408939 seconds.
-  path: Assets/NR_016/Scripts/SpriteFollowing.cs
-  artifactKey: Guid(7a9be714cb25f5e45acc65c6092b825b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NR_016/Scripts/SpriteFollowing.cs using Guid(7a9be714cb25f5e45acc65c6092b825b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '546cf49f009d01f483a8db8d2e69727e') in 0.034503 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 205.981967 seconds.
-  path: Assets/NR_016/Scripts/SpriteFollowing.cs
-  artifactKey: Guid(7a9be714cb25f5e45acc65c6092b825b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NR_016/Scripts/SpriteFollowing.cs using Guid(7a9be714cb25f5e45acc65c6092b825b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e3a7f477431ac6ee44de5dae67c6d20') in 0.013574 seconds 
-========================================================================
-Received Prepare
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Registering precompiled user dll's ...
-Registered in 0.001790 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.53 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.624 seconds
-Platform modules already initialized, skipping
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1628 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 81.7 MB.
-System memory in use after: 81.8 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2189.
-Total: 3.451300 ms (FindLiveObjects: 0.269400 ms CreateObjectMapping: 0.071400 ms MarkObjects: 3.082400 ms  DeleteObjects: 0.025900 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 800.853475 seconds.
-  path: Assets/AddressableAssetsData/AddressableAssetSettings.asset
-  artifactKey: Guid(f2751a55290bee545b46fd366dfe6b4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AddressableAssetsData/AddressableAssetSettings.asset using Guid(f2751a55290bee545b46fd366dfe6b4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0cea7ee61b03d81f65d9909e1d1fce4') in 0.100307 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 20.651871 seconds.
-  path: Assets/AddressableAssetsData/AddressableAssetSettings.asset
-  artifactKey: Guid(f2751a55290bee545b46fd366dfe6b4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AddressableAssetsData/AddressableAssetSettings.asset using Guid(f2751a55290bee545b46fd366dfe6b4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b025623e335be2417fb2b6a260b50f86') in 0.025859 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.983275 seconds.
-  path: Assets/AddressableAssetsData/AssetGroups/Packed Assets.asset
-  artifactKey: Guid(bd0fec8da9133fd4fb8c15e626e97748) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AddressableAssetsData/AssetGroups/Packed Assets.asset using Guid(bd0fec8da9133fd4fb8c15e626e97748) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1f412a7260912c9ad24f3caacb4d7de') in 0.042299 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 10.861796 seconds.
-  path: Assets/AddressableAssetsData/AssetGroups/ADDRSSABLE_NR_016.asset
-  artifactKey: Guid(bd0fec8da9133fd4fb8c15e626e97748) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AddressableAssetsData/AssetGroups/ADDRSSABLE_NR_016.asset using Guid(bd0fec8da9133fd4fb8c15e626e97748) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '588d88ba452723de095e46a284d0f4ed') in 0.025414 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 9.687667 seconds.
-  path: Assets/NR_016/Images/powerup.png
-  artifactKey: Guid(9f52faf9dc21cec4185319e3d257ec57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NR_016/Images/powerup.png using Guid(9f52faf9dc21cec4185319e3d257ec57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec6b3c4a33d702c455e3e95352e029cc') in 0.089874 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 52.415238 seconds.
-  path: Assets/AddressableAssetsData/AssetGroups/ADDRESSABLE_NR_016.asset
-  artifactKey: Guid(bd0fec8da9133fd4fb8c15e626e97748) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AddressableAssetsData/AssetGroups/ADDRESSABLE_NR_016.asset using Guid(bd0fec8da9133fd4fb8c15e626e97748) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f91fdea176e9962ef5bcd9a33e5d59b') in 0.027019 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 7.874679 seconds.
-  path: Assets/AddressableAssetsData/AssetGroups/ADDRESSABLE_NR_016.asset
-  artifactKey: Guid(bd0fec8da9133fd4fb8c15e626e97748) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AddressableAssetsData/AssetGroups/ADDRESSABLE_NR_016.asset using Guid(bd0fec8da9133fd4fb8c15e626e97748) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bc5e60d351fdeea6af232dc8cad1ff4') in 0.020287 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 3.010069 seconds.
-  path: Assets/AddressableAssetsData/AssetGroups/Packed Assets.asset
-  artifactKey: Guid(e5d0e89f4dbec804895ed30aa52f97df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AddressableAssetsData/AssetGroups/Packed Assets.asset using Guid(e5d0e89f4dbec804895ed30aa52f97df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35f120b6bd5c034f7342b4d431dc3d9c') in 0.025294 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 11.295792 seconds.
-  path: Assets/AddressableAssetsData/AssetGroups/ADDRESSABLE_NR_012.asset
-  artifactKey: Guid(e5d0e89f4dbec804895ed30aa52f97df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AddressableAssetsData/AssetGroups/ADDRESSABLE_NR_012.asset using Guid(e5d0e89f4dbec804895ed30aa52f97df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58de826c526a8f1f1a1c36dc3114808e') in 0.031632 seconds 
-========================================================================
-Received Prepare
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Registering precompiled user dll's ...
-Registered in 0.001121 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.52 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.690 seconds
-Platform modules already initialized, skipping
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Refreshing native plugins compatible for Editor in 0.58 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1635 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.2 MB.
-System memory in use after: 82.3 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2216.
-Total: 4.237900 ms (FindLiveObjects: 0.776100 ms CreateObjectMapping: 0.266100 ms MarkObjects: 3.170500 ms  DeleteObjects: 0.023200 ms)
-
-========================================================================
-Received Prepare
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Registering precompiled user dll's ...
-Registered in 0.001042 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.59 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.657 seconds
-Platform modules already initialized, skipping
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1628 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.1 MB.
-System memory in use after: 82.2 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2219.
-Total: 3.870800 ms (FindLiveObjects: 0.281500 ms CreateObjectMapping: 0.085500 ms MarkObjects: 3.480200 ms  DeleteObjects: 0.021000 ms)
-
-========================================================================
-Received Prepare
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Registering precompiled user dll's ...
-Registered in 0.002071 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.573 seconds
-Platform modules already initialized, skipping
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1628 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.1 MB.
-System memory in use after: 82.2 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2222.
-Total: 4.687300 ms (FindLiveObjects: 0.269900 ms CreateObjectMapping: 0.074300 ms MarkObjects: 4.309600 ms  DeleteObjects: 0.031000 ms)
-
-========================================================================
-Received Prepare
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Registering precompiled user dll's ...
-Registered in 0.001062 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.84 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.588 seconds
-Platform modules already initialized, skipping
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Refreshing native plugins compatible for Editor in 0.54 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1628 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.1 MB.
-System memory in use after: 82.2 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2225.
-Total: 3.484700 ms (FindLiveObjects: 0.278300 ms CreateObjectMapping: 0.081700 ms MarkObjects: 3.093000 ms  DeleteObjects: 0.029400 ms)
-
-========================================================================
-Received Prepare
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Registering precompiled user dll's ...
-Registered in 0.001118 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.57 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.617 seconds
-Platform modules already initialized, skipping
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Refreshing native plugins compatible for Editor in 0.52 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1628 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.1 MB.
-System memory in use after: 82.2 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2228.
-Total: 4.249700 ms (FindLiveObjects: 0.306800 ms CreateObjectMapping: 0.091500 ms MarkObjects: 3.820900 ms  DeleteObjects: 0.029000 ms)
-
-========================================================================
-Received Prepare
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Registering precompiled user dll's ...
-Registered in 0.001102 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.45 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.562 seconds
-Platform modules already initialized, skipping
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Refreshing native plugins compatible for Editor in 0.56 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1628 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.1 MB.
-System memory in use after: 82.2 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2231.
-Total: 4.038100 ms (FindLiveObjects: 0.272700 ms CreateObjectMapping: 0.073500 ms MarkObjects: 3.666700 ms  DeleteObjects: 0.023100 ms)
-
-========================================================================
-Received Prepare
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Registering precompiled user dll's ...
-Registered in 0.001044 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.52 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.617 seconds
-Platform modules already initialized, skipping
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1628 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.1 MB.
-System memory in use after: 82.3 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2234.
-Total: 3.414000 ms (FindLiveObjects: 0.294700 ms CreateObjectMapping: 0.085100 ms MarkObjects: 3.008600 ms  DeleteObjects: 0.023500 ms)
-
-========================================================================
-Received Prepare
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Registering precompiled user dll's ...
-Registered in 0.001608 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.61 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.101 seconds
-Platform modules already initialized, skipping
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Refreshing native plugins compatible for Editor in 0.56 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1628 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.2 MB.
-System memory in use after: 82.3 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2237.
-Total: 3.504600 ms (FindLiveObjects: 0.276000 ms CreateObjectMapping: 0.084500 ms MarkObjects: 3.113200 ms  DeleteObjects: 0.023400 ms)
-
-========================================================================
-Received Prepare
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Registering precompiled user dll's ...
-Registered in 0.001156 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.596 seconds
-Platform modules already initialized, skipping
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Refreshing native plugins compatible for Editor in 0.52 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1628 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.2 MB.
-System memory in use after: 82.3 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2240.
-Total: 3.398600 ms (FindLiveObjects: 0.271100 ms CreateObjectMapping: 0.087100 ms MarkObjects: 3.016400 ms  DeleteObjects: 0.021900 ms)
-
-========================================================================
-Received Prepare
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Registering precompiled user dll's ...
-Registered in 0.001056 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.53 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.826 seconds
-Platform modules already initialized, skipping
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Refreshing native plugins compatible for Editor in 0.54 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1628 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.2 MB.
-System memory in use after: 82.3 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2243.
-Total: 4.432400 ms (FindLiveObjects: 0.294100 ms CreateObjectMapping: 0.091700 ms MarkObjects: 4.010300 ms  DeleteObjects: 0.033900 ms)
-
-========================================================================
-Received Prepare
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Registering precompiled user dll's ...
-Registered in 0.001128 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.53 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.600 seconds
-Platform modules already initialized, skipping
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1628 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.2 MB.
-System memory in use after: 82.3 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2246.
-Total: 3.614100 ms (FindLiveObjects: 0.283200 ms CreateObjectMapping: 0.109600 ms MarkObjects: 3.196400 ms  DeleteObjects: 0.022500 ms)
-
-========================================================================
-Received Prepare
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Registering precompiled user dll's ...
-Registered in 0.001051 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.52 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.685 seconds
-Platform modules already initialized, skipping
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1628 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.2 MB.
-System memory in use after: 82.3 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2249.
-Total: 4.624000 ms (FindLiveObjects: 0.610300 ms CreateObjectMapping: 0.185600 ms MarkObjects: 3.797500 ms  DeleteObjects: 0.028600 ms)
-
-========================================================================
-Received Prepare
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Registering precompiled user dll's ...
-Registered in 0.001534 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.595 seconds
-Platform modules already initialized, skipping
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Refreshing native plugins compatible for Editor in 0.58 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1628 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.2 MB.
-System memory in use after: 82.3 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2252.
-Total: 3.563500 ms (FindLiveObjects: 0.318300 ms CreateObjectMapping: 0.073500 ms MarkObjects: 3.148400 ms  DeleteObjects: 0.021200 ms)
-
-========================================================================
-Received Prepare
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Registering precompiled user dll's ...
-Registered in 0.001149 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.52 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.580 seconds
-Platform modules already initialized, skipping
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1628 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.2 MB.
-System memory in use after: 82.4 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2255.
-Total: 3.498200 ms (FindLiveObjects: 0.282300 ms CreateObjectMapping: 0.083600 ms MarkObjects: 3.109700 ms  DeleteObjects: 0.020000 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 2751.693334 seconds.
-  path: Assets/AddressableAssetsData/AssetGroups/ADDRESSABLE_NR_014.asset
-  artifactKey: Guid(f65fe4f167400dc4dbac32cefcb77463) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AddressableAssetsData/AssetGroups/ADDRESSABLE_NR_014.asset using Guid(f65fe4f167400dc4dbac32cefcb77463) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '158550eb48b47f16e976522d2254d23f') in 0.032776 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 25.531189 seconds.
-  path: Assets/NR_016/Prefabs
-  artifactKey: Guid(224df04c5c5749d48b1ad2402ace76cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NR_016/Prefabs using Guid(224df04c5c5749d48b1ad2402ace76cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c219832060191615b2f5545fd69bf0cf') in 0.022250 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 16.200271 seconds.
-  path: Assets/NR_016/Prefabs/powerup.prefab
-  artifactKey: Guid(8a20eab235d1793428483473a6956e28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NR_016/Prefabs/powerup.prefab using Guid(8a20eab235d1793428483473a6956e28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c04d02bcbb39c79a45de20dbc1be9d0') in 0.090827 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 7.082530 seconds.
-  path: Assets/NR_016/Prefabs/spaceship.prefab
-  artifactKey: Guid(de7ce4ecc2582fe45accc3100a930660) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NR_016/Prefabs/spaceship.prefab using Guid(de7ce4ecc2582fe45accc3100a930660) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'faebf81acf71b9423b1008bf003285ea') in 0.042602 seconds 
-========================================================================
-Received Prepare
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Registering precompiled user dll's ...
-Registered in 0.001061 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.776 seconds
-Platform modules already initialized, skipping
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1628 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.3 MB.
-System memory in use after: 82.4 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2262.
-Total: 4.032200 ms (FindLiveObjects: 0.294500 ms CreateObjectMapping: 0.086500 ms MarkObjects: 3.624500 ms  DeleteObjects: 0.024400 ms)
-
-========================================================================
-Received Prepare
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Registering precompiled user dll's ...
-Registered in 0.001042 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.57 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.667 seconds
-Platform modules already initialized, skipping
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Refreshing native plugins compatible for Editor in 0.56 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1628 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.3 MB.
-System memory in use after: 82.4 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2265.
-Total: 4.434100 ms (FindLiveObjects: 0.282800 ms CreateObjectMapping: 0.082900 ms MarkObjects: 4.039000 ms  DeleteObjects: 0.027100 ms)
-
-========================================================================
-Received Prepare
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Registering precompiled user dll's ...
-Registered in 0.001048 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.941 seconds
-Platform modules already initialized, skipping
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Refreshing native plugins compatible for Editor in 0.54 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1628 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.3 MB.
-System memory in use after: 82.4 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2268.
-Total: 3.579900 ms (FindLiveObjects: 0.278700 ms CreateObjectMapping: 0.073300 ms MarkObjects: 3.202800 ms  DeleteObjects: 0.023500 ms)
-
-========================================================================
-Received Prepare
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Registering precompiled user dll's ...
-Registered in 0.001077 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.714 seconds
-Platform modules already initialized, skipping
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
 Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1628 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.3 MB.
-System memory in use after: 82.4 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2271.
-Total: 4.103100 ms (FindLiveObjects: 0.278100 ms CreateObjectMapping: 0.072700 ms MarkObjects: 3.702100 ms  DeleteObjects: 0.048100 ms)
-
-========================================================================
-Received Prepare
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Registering precompiled user dll's ...
-Registered in 0.002237 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.735 seconds
+- Completed reload, in  2.095 seconds
 Platform modules already initialized, skipping
 Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1628 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.3 MB.
-System memory in use after: 82.4 MB.
+System memory in use before: 91.1 MB.
+System memory in use after: 91.2 MB.
 
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2274.
-Total: 3.561300 ms (FindLiveObjects: 0.287800 ms CreateObjectMapping: 0.075900 ms MarkObjects: 3.163000 ms  DeleteObjects: 0.031400 ms)
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2364.
+Total: 4.033400 ms (FindLiveObjects: 0.312400 ms CreateObjectMapping: 0.078600 ms MarkObjects: 3.615100 ms  DeleteObjects: 0.024900 ms)
 
 ========================================================================
 Received Prepare
 Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
 Registering precompiled user dll's ...
-Registered in 0.001135 seconds.
+Registered in 0.001739 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.624 seconds
-Platform modules already initialized, skipping
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1628 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.3 MB.
-System memory in use after: 82.4 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2277.
-Total: 4.002500 ms (FindLiveObjects: 0.276300 ms CreateObjectMapping: 0.079400 ms MarkObjects: 3.620000 ms  DeleteObjects: 0.024700 ms)
-
-========================================================================
-Received Prepare
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Registering precompiled user dll's ...
-Registered in 0.001066 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.673 seconds
-Platform modules already initialized, skipping
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Refreshing native plugins compatible for Editor in 0.56 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1628 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.3 MB.
-System memory in use after: 82.5 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2280.
-Total: 3.599700 ms (FindLiveObjects: 0.292300 ms CreateObjectMapping: 0.079800 ms MarkObjects: 3.196000 ms  DeleteObjects: 0.029200 ms)
-
-========================================================================
-Received Prepare
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Registering precompiled user dll's ...
-Registered in 0.001065 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.55 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.973 seconds
-Platform modules already initialized, skipping
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1628 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.4 MB.
-System memory in use after: 82.5 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2283.
-Total: 3.548000 ms (FindLiveObjects: 0.281000 ms CreateObjectMapping: 0.073500 ms MarkObjects: 3.161600 ms  DeleteObjects: 0.029700 ms)
-
-========================================================================
-Received Prepare
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Registering precompiled user dll's ...
-Registered in 0.001203 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.956 seconds
-Platform modules already initialized, skipping
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1628 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.4 MB.
-System memory in use after: 82.5 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2286.
-Total: 3.669400 ms (FindLiveObjects: 0.305200 ms CreateObjectMapping: 0.105300 ms MarkObjects: 3.225400 ms  DeleteObjects: 0.030600 ms)
-
-========================================================================
-Received Prepare
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Registering precompiled user dll's ...
-Registered in 0.001154 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.582 seconds
-Platform modules already initialized, skipping
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Refreshing native plugins compatible for Editor in 0.53 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1628 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.4 MB.
-System memory in use after: 82.5 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2289.
-Total: 3.776700 ms (FindLiveObjects: 0.288100 ms CreateObjectMapping: 0.079400 ms MarkObjects: 3.374800 ms  DeleteObjects: 0.030900 ms)
-
-========================================================================
-Received Prepare
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Registering precompiled user dll's ...
-Registered in 0.001054 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.761 seconds
-Platform modules already initialized, skipping
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1628 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.4 MB.
-System memory in use after: 82.5 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2292.
-Total: 3.626800 ms (FindLiveObjects: 0.280900 ms CreateObjectMapping: 0.074000 ms MarkObjects: 3.238600 ms  DeleteObjects: 0.030600 ms)
-
-========================================================================
-Received Prepare
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Registering precompiled user dll's ...
-Registered in 0.001051 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.60 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.627 seconds
-Platform modules already initialized, skipping
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Refreshing native plugins compatible for Editor in 0.53 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1628 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.4 MB.
-System memory in use after: 82.5 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2295.
-Total: 3.477100 ms (FindLiveObjects: 0.308900 ms CreateObjectMapping: 0.086000 ms MarkObjects: 3.055800 ms  DeleteObjects: 0.024000 ms)
-
-========================================================================
-Received Prepare
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Registering precompiled user dll's ...
-Registered in 0.001175 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.572 seconds
-Platform modules already initialized, skipping
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1628 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.4 MB.
-System memory in use after: 82.5 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2298.
-Total: 3.368300 ms (FindLiveObjects: 0.286800 ms CreateObjectMapping: 0.073400 ms MarkObjects: 2.975700 ms  DeleteObjects: 0.029600 ms)
-
-========================================================================
-Received Prepare
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Registering precompiled user dll's ...
-Registered in 0.001146 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.64 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.752 seconds
-Platform modules already initialized, skipping
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Refreshing native plugins compatible for Editor in 0.55 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1628 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.4 MB.
-System memory in use after: 82.5 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2301.
-Total: 3.703600 ms (FindLiveObjects: 0.398100 ms CreateObjectMapping: 0.154000 ms MarkObjects: 3.118400 ms  DeleteObjects: 0.030300 ms)
-
-========================================================================
-Received Prepare
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Registering precompiled user dll's ...
-Registered in 0.001193 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.94 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.855 seconds
-Platform modules already initialized, skipping
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1628 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.4 MB.
-System memory in use after: 82.6 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2304.
-Total: 3.854100 ms (FindLiveObjects: 0.291500 ms CreateObjectMapping: 0.075700 ms MarkObjects: 3.453600 ms  DeleteObjects: 0.031000 ms)
-
-========================================================================
-Received Prepare
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Registering precompiled user dll's ...
-Registered in 0.001040 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.571 seconds
-Platform modules already initialized, skipping
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Refreshing native plugins compatible for Editor in 0.52 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1628 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.5 MB.
-System memory in use after: 82.6 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2307.
-Total: 3.461100 ms (FindLiveObjects: 0.292100 ms CreateObjectMapping: 0.084500 ms MarkObjects: 3.059500 ms  DeleteObjects: 0.022800 ms)
-
-========================================================================
-Received Prepare
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Registering precompiled user dll's ...
-Registered in 0.001369 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 2.30 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.726 seconds
-Platform modules already initialized, skipping
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1628 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.5 MB.
-System memory in use after: 82.6 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2310.
-Total: 5.090200 ms (FindLiveObjects: 0.347800 ms CreateObjectMapping: 0.084100 ms MarkObjects: 4.630300 ms  DeleteObjects: 0.025300 ms)
-
-========================================================================
-Received Prepare
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Registering precompiled user dll's ...
-Registered in 0.001042 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.56 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.108 seconds
+- Completed reload, in  1.631 seconds
 Platform modules already initialized, skipping
 Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
 Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1628 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.5 MB.
-System memory in use after: 82.6 MB.
+System memory in use before: 91.1 MB.
+System memory in use after: 91.2 MB.
 
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2313.
-Total: 3.591100 ms (FindLiveObjects: 0.283000 ms CreateObjectMapping: 0.074100 ms MarkObjects: 3.201700 ms  DeleteObjects: 0.029800 ms)
-
-========================================================================
-Received Prepare
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Registering precompiled user dll's ...
-Registered in 0.001143 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.619 seconds
-Platform modules already initialized, skipping
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Refreshing native plugins compatible for Editor in 0.52 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1628 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.6 MB.
-System memory in use after: 82.7 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2316.
-Total: 3.533300 ms (FindLiveObjects: 0.311700 ms CreateObjectMapping: 0.085900 ms MarkObjects: 3.102500 ms  DeleteObjects: 0.030300 ms)
-
-========================================================================
-Received Prepare
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Registering precompiled user dll's ...
-Registered in 0.001173 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.49 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.472 seconds
-Platform modules already initialized, skipping
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Refreshing native plugins compatible for Editor in 1.71 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1628 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.6 MB.
-System memory in use after: 82.7 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2319.
-Total: 3.286500 ms (FindLiveObjects: 0.291100 ms CreateObjectMapping: 0.070800 ms MarkObjects: 2.899400 ms  DeleteObjects: 0.023100 ms)
-
-========================================================================
-Received Prepare
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Registering precompiled user dll's ...
-Registered in 0.001137 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.588 seconds
-Platform modules already initialized, skipping
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Refreshing native plugins compatible for Editor in 0.58 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1628 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.6 MB.
-System memory in use after: 82.8 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2322.
-Total: 3.661800 ms (FindLiveObjects: 0.380800 ms CreateObjectMapping: 0.087700 ms MarkObjects: 3.159300 ms  DeleteObjects: 0.030900 ms)
-
-========================================================================
-Received Prepare
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Registering precompiled user dll's ...
-Registered in 0.001074 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.53 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.630 seconds
-Platform modules already initialized, skipping
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Refreshing native plugins compatible for Editor in 0.53 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1628 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.6 MB.
-System memory in use after: 82.8 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2325.
-Total: 3.983100 ms (FindLiveObjects: 0.292700 ms CreateObjectMapping: 0.087200 ms MarkObjects: 3.568300 ms  DeleteObjects: 0.031900 ms)
-
-========================================================================
-Received Prepare
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Registering precompiled user dll's ...
-Registered in 0.001256 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.575 seconds
-Platform modules already initialized, skipping
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1628 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.7 MB.
-System memory in use after: 82.8 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2328.
-Total: 3.794300 ms (FindLiveObjects: 0.296800 ms CreateObjectMapping: 0.085900 ms MarkObjects: 3.377600 ms  DeleteObjects: 0.030600 ms)
-
-========================================================================
-Received Prepare
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Registering precompiled user dll's ...
-Registered in 0.001209 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.377 seconds
-Platform modules already initialized, skipping
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1628 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.7 MB.
-System memory in use after: 82.8 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2331.
-Total: 3.601100 ms (FindLiveObjects: 0.288600 ms CreateObjectMapping: 0.074400 ms MarkObjects: 3.212600 ms  DeleteObjects: 0.023400 ms)
-
-========================================================================
-Received Prepare
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Registering precompiled user dll's ...
-Registered in 0.005640 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.52 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.751 seconds
-Platform modules already initialized, skipping
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1628 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.8 MB.
-System memory in use after: 82.9 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2334.
-Total: 3.577600 ms (FindLiveObjects: 0.327000 ms CreateObjectMapping: 0.093600 ms MarkObjects: 3.129200 ms  DeleteObjects: 0.025500 ms)
-
-========================================================================
-Received Prepare
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Registering precompiled user dll's ...
-Registered in 0.001034 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.56 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.646 seconds
-Platform modules already initialized, skipping
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Refreshing native plugins compatible for Editor in 0.58 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1628 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.7 MB.
-System memory in use after: 82.8 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2337.
-Total: 3.500100 ms (FindLiveObjects: 0.299000 ms CreateObjectMapping: 0.084000 ms MarkObjects: 3.083400 ms  DeleteObjects: 0.031100 ms)
-
-========================================================================
-Received Prepare
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Registering precompiled user dll's ...
-Registered in 0.001034 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.61 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.602 seconds
-Platform modules already initialized, skipping
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Refreshing native plugins compatible for Editor in 0.52 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1628 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.7 MB.
-System memory in use after: 82.8 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2340.
-Total: 3.634300 ms (FindLiveObjects: 0.380400 ms CreateObjectMapping: 0.096600 ms MarkObjects: 3.131600 ms  DeleteObjects: 0.023600 ms)
-
-========================================================================
-Received Prepare
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Registering precompiled user dll's ...
-Registered in 0.001161 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.63 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  8.705 seconds
-Platform modules already initialized, skipping
-Script is not up to date after domain reload: guid(09a394d8182783f4096aeb5c9d64a54b) path("Assets/Editor/com.pellegrinoprincipe/SceneMenuItems.cs") state(2)
-Refreshing native plugins compatible for Editor in 0.58 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1628 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 82.7 MB.
-System memory in use after: 82.8 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2343.
-Total: 5.092300 ms (FindLiveObjects: 0.364300 ms CreateObjectMapping: 0.112400 ms MarkObjects: 4.561000 ms  DeleteObjects: 0.050700 ms)
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2367.
+Total: 3.610900 ms (FindLiveObjects: 0.297000 ms CreateObjectMapping: 0.073600 ms MarkObjects: 3.204700 ms  DeleteObjects: 0.032900 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

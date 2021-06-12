@@ -19,3 +19,4 @@ MonoBehaviour:
   cover: {fileID: 21300000, guid: a0290604795e0c342ba1344228f5fcad, type: 3}
   coverSwap: {fileID: 21300000, guid: b63cc59f9cb6dce4580dfd466447eece, type: 3}
   sceneName: Galaxian
+  NrAndDate: ' Issue 2 November 22nd, 2018'

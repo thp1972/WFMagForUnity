@@ -19,3 +19,4 @@ MonoBehaviour:
   cover: {fileID: 21300000, guid: 4ebe519c7d177a249b44a744607388b9, type: 3}
   coverSwap: {fileID: 21300000, guid: 779f22cce6f5c3c4ba25c45a08c78cee, type: 3}
   sceneName: Missiles
+  NrAndDate: Issue 8 February 28th, 2019

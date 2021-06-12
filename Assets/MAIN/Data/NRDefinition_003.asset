@@ -19,3 +19,4 @@ MonoBehaviour:
   cover: {fileID: 21300000, guid: 48e264ef328410c4482d13e02ef7f3d1, type: 3}
   coverSwap: {fileID: 21300000, guid: 1a3e1cda40553f1419f7cc0147120e5c, type: 3}
   sceneName: ParallaxScrolling
+  NrAndDate: Issue 3 December 6th, 2018

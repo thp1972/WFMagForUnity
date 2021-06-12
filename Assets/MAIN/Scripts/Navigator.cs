@@ -7,6 +7,7 @@ public class Navigator : MonoBehaviour
 {
     int currentPage;
     int totalPages;
+    int totalNumbers;
 
     public Image prevImage;
     public Image nextImage;
@@ -14,14 +15,18 @@ public class Navigator : MonoBehaviour
     public Button prevBtn;
     public Button nextBtn;
 
+    public Text pageIndicator;
+
     private void OnEnable()
     {
         EventBroker.OnGetTotalPages += HandlerOnGetTotalPages;
+        EventBroker.OnGetTotalNumbers += HandlerOnGetTotalNumbers;
     }
 
     private void OnDisable()
     {
         EventBroker.OnGetTotalPages -= HandlerOnGetTotalPages;
+        EventBroker.OnGetTotalNumbers -= HandlerOnGetTotalNumbers;
     }
 
     private void Start()
@@ -50,9 +55,20 @@ public class Navigator : MonoBehaviour
         UpdateNavigator();
     }
 
+    public void GoToNumber(string nr)
+    {
+        int currentNr;
+        bool conv = int.TryParse(nr, out currentNr);
+        if (!conv || currentNr < 1 || currentNr > totalNumbers) return;
+
+        currentPage = Mathf.CeilToInt(currentNr * totalPages * 1f / totalNumbers);
+        currentPage = currentPage > 0 ? currentPage - 1 : currentPage; // cause, array definitions starts to 0...
+        EventBroker.TriggerOnGoToPage(currentPage);
+        UpdateNavigator();
+    }
+
     void UpdateNavigator()
     {
-        print(currentPage + " " + totalPages);
         if (currentPage == 0)
         {
             prevImage.color = new Color(prevImage.color.r, prevImage.color.g, prevImage.color.b, .2f);
@@ -68,11 +84,22 @@ public class Navigator : MonoBehaviour
             prevImage.color = new Color(prevImage.color.r, prevImage.color.g, prevImage.color.b, 1f);
             nextImage.color = new Color(nextImage.color.r, nextImage.color.g, nextImage.color.b, 1f);
         }
+        SetPageIndicator(currentPage + 1, totalPages);
+    }
+
+    private void SetPageIndicator(int left, int right)
+    {
+        pageIndicator.text = $"Page {left} of {right}";
     }
 
     private void HandlerOnGetTotalPages(int tp)
     {
         totalPages = tp;
+    }
+
+    private void HandlerOnGetTotalNumbers(int tn)
+    {
+        totalNumbers = tn;
     }
 
     public void SetCursor(Button from)

@@ -19,3 +19,4 @@ MonoBehaviour:
   cover: {fileID: 21300000, guid: 85eeb344320186b46b3c7c49b4efab28, type: 3}
   coverSwap: {fileID: 21300000, guid: b25f4b28e659dbc4fb83f7ef00f515f0, type: 3}
   sceneName: Bombs
+  NrAndDate: ' Issue 12 April 25th, 2019'

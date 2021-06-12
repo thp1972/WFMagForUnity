@@ -13,5 +13,7 @@ public class NRDefinitions : ScriptableObject
     public Sprite cover;
     public Sprite coverSwap;
 
-    public string sceneName; 
+    public string sceneName;
+
+    public string NrAndDate;
 }

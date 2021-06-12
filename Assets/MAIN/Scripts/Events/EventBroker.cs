@@ -11,6 +11,12 @@ public class EventBroker
         OnGetTotalPages?.Invoke(tp);
     }
 
+    public static event Action<int> OnGetTotalNumbers;
+    public static void TriggerOnGetTotalNumbers(int tn)
+    {
+        OnGetTotalNumbers?.Invoke(tn);
+    }
+
     public static event Action<int> OnGoToPage;
     public static void TriggerOnGoToPage(int page)
     {
