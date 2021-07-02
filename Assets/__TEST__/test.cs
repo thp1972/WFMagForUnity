@@ -5,22 +5,42 @@ using UnityEngine;
 
 public class test : MonoBehaviour
 {
-    public Texture2D myTexture;
+    public SpriteRenderer myTexture;
+    public GameObject pixel;
+
+    public int posX;
+    public int posY;
+
+
     RenderTexture rTex;
 
     List<(float, float)> previouspositions;
 
+    SpriteUtility su;
+
+    static List<List<Color>> pixels;
 
     // Start is called before the first frame update
     void Start()
     {
-        previouspositions = (from i in Enumerable.Range(0, 100) select (400f - i * 4, 100f)).ToList();
-        print(previouspositions);
+        su = new SpriteUtility(myTexture);
 
-        previouspositions.Insert(0, (404, 100));
-        previouspositions.RemoveAt(previouspositions.Count - 1);
+        pixels = (from x in Enumerable.Range(0, 11)
+                  select (from y in Enumerable.Range(0, 11)
+                          select su.GetPixelAt(x, 10-y)).ToList()).ToList();
 
-        print(previouspositions);
+        int ix = 0;
+        int iy = 0;
+        foreach (List<Color> j in pixels)
+        {
+            foreach (Color x in j)
+            {
+                print($"[{ix}][{iy}] = {x}");
+                iy++;
+            }
+            ix++;
+            iy = 0;
+        }
 
     }
 
@@ -32,6 +52,29 @@ public class test : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        var pos = Input.mousePosition;
+        var cpos = Camera.main.ScreenToWorldPoint(pos);
+
+        Color c = su.GetPixelAt(5, 6);
+
+        //print(c);
+        /*
+        su.SetPixelAt(new Vector2(-300, 160), Color.black);
+
+        c = su.GetPixelAt(100, 560);
+        print(c);
+        */
+        /*Color32 c2 = new Color32((byte)(c.r * 255), (byte)(c.g * 255), (byte)(c.b * 255), (byte)(c.a * 255));
+
+
+        pixel.transform.position = ScreenUtility.Position(posX, posY);
+
+        print($"color at screen {pos} and world {cpos} = {c2}");
+        */
+
+        // print(pos + " " + su.WorldPosToLocalTexturePos(cpos));
+
+        //print(su.WorldPosToLocalTexturePos(new Vector2(397f, -398.5f)));
 
     }
 }

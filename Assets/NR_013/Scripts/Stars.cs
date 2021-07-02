@@ -7,7 +7,6 @@ using UTILITY;
 
 namespace NR_013
 {
-
     public class Stars : MonoBehaviour
     {
         class Star

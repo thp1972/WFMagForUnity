@@ -76,7 +76,7 @@ public class ScreenUtility
     /// <param name="pos">GameObject postion as tuple</param>
     /// <param name="blitRef">GameObject name reference</param>
     /// <param name="instantiate">Does instantiate the GameObject?</param>
-    public static void Blit(GameObject g, (float, float) pos, string blitRef = "", bool instantiate = false)
+    public static void Blit(GameObject g, (float, float) pos, string blitRef = "", bool instantiate = false, bool isActive = true)
     {
         var blitterObj = g; // already instance?
         if (instantiate)
@@ -97,8 +97,7 @@ public class ScreenUtility
         }
 
         blitterObj.transform.position = Position(pos.Item1, pos.Item2);
-        if (!blitterObj.activeSelf)
-            blitterObj.SetActive(true);
+        blitterObj.SetActive(isActive);
     }
 
     /// <summary>
@@ -114,7 +113,7 @@ public class ScreenUtility
                 g.SetActive(false);
                 GameObject.Destroy(g);
             }
-        } 
+        }
     }
 
     public static void Fill((byte, byte, byte) color)

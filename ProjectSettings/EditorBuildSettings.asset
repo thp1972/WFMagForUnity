@@ -56,5 +56,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/NR_016/Scenes/SpriteFollowing.unity
     guid: 262f58ced5a720246b7839bafe6bfb28
+  - enabled: 1
+    path: Assets/NR_017/Scenes/Lemmings.unity
+    guid: a26e4d2e7ad55cc4d882fc77c2c5b95b
+  - enabled: 1
+    path: Assets/NR_018/Scenes/MonsterMaze.unity
+    guid: 3ad89cb85de22f04cbbb85a23515fc97
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 4b6f1e7c3f689e544b05a92095354cf9, type: 2}

@@ -40,6 +40,19 @@ namespace PygameZero
 
         private Dictionary<string, GameObject> imageStack;
 
+        public SpriteUtility.PivotPosition Anchor
+        {
+            set
+            {
+                var spriteRenderer = image.GetComponent<SpriteRenderer>();
+                if(spriteRenderer)
+                {
+                    var su = new SpriteUtility(spriteRenderer);
+                    su.SetPivot(value);
+                }
+            }
+        }
+
         /// <summary>
         /// Set a new image, but as a String
         /// </summary>
@@ -97,14 +110,20 @@ namespace PygameZero
 
         public Actor() { }
 
-        public Actor(string image, Vector2 pos = default(Vector2))
+        public Actor(string image, Vector2 pos = default(Vector2), 
+                     SpriteUtility.PivotPosition anchor = SpriteUtility.PivotPosition.TOPLEFT)
         {
             imageStack = new Dictionary<string, GameObject>();
             this.pos = pos;
             Image = image;
+
+            // default is TOPLEFT also in Editor settings
+            if (anchor != SpriteUtility.PivotPosition.TOPLEFT) Anchor = anchor;
+
         }
 
-        public Actor(string image, (float, float) pos = default((float, float))) : this(image, new Vector2(pos.Item1, pos.Item2)) { }
+        public Actor(string image, (float, float) pos = default((float, float)), 
+            SpriteUtility.PivotPosition anchor = SpriteUtility.PivotPosition.TOPLEFT) : this(image, new Vector2(pos.Item1, pos.Item2), anchor) { }
 
         public virtual void Destroy()
         {

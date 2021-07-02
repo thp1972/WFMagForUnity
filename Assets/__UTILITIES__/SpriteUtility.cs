@@ -73,6 +73,50 @@ public class SpriteUtility
         return uvs;
     }
 
+    public enum PivotPosition
+    {
+        CENTER,
+        TOPLEFT,
+        TOPCENTER,
+        TOPRIGHT,
+        LEFTCENTER,
+        RIGHTCENTER,
+        BOTTOMLEFT,
+        BOTTOMCENTER,
+        BOTTOMRIGHT,
+        CUSTOM
+    }
+
+    public void SetPivot(PivotPosition pivotPosition, Vector2 custom = default(Vector2))
+    {
+        float x = 0, y = 0;
+        switch (pivotPosition)
+        {
+            case PivotPosition.CENTER: x = 0.5f; y = 0.5f; break;
+            case PivotPosition.TOPLEFT: x = 0f; y = 1f; break;
+            case PivotPosition.TOPCENTER: x = 0.5f; y = 1f; break;
+            case PivotPosition.TOPRIGHT: x = 1f; y = 1f; break;
+            case PivotPosition.LEFTCENTER: x = 0f; y = 0.5f; break;
+            case PivotPosition.RIGHTCENTER: x = 1f; y = 0.5f; break;
+            case PivotPosition.BOTTOMLEFT: x = 0f; y = 0f; break;
+            case PivotPosition.BOTTOMCENTER: x = 0.5f; y = 0f; break;
+            case PivotPosition.BOTTOMRIGHT: x = 0.5f; y = 0f; break;
+            case PivotPosition.CUSTOM: x = custom.x; y = custom.y; break;
+        }
+
+        Vector2 newPivot = new Vector2(x, y);
+
+        var sprite = _spriteRenderer.sprite;
+        Texture2D texture = new Texture2D(sprite.texture.width, sprite.texture.height);
+        texture.filterMode = FilterMode.Point;
+        texture.wrapMode = TextureWrapMode.Clamp; // important else texture shows strange lines
+        texture.SetPixels(sprite.texture.GetPixels());
+        texture.Apply();
+        texture.Apply();
+        var newSprite = Sprite.Create(texture, new Rect(0, 0, sprite.texture.width, sprite.texture.height), newPivot, sprite.pixelsPerUnit);
+        _spriteRenderer.sprite = newSprite;
+    }
+
     [Obsolete("WorldToPixelPoint is deprecated, please use WorldPosToLocalTexturePos instead.")]
     public Vector2 WorldToPixelPoint(Vector2 worldPosition)
     {
@@ -96,6 +140,22 @@ public class SpriteUtility
         return pixelPosition;
     }
 
+    /// <summary>
+    /// Get the pixel color inside this renderer, based on the coordinates of the texture itself
+    /// </summary>
+    /// <param name="posX">X coord</param>
+    /// <param name="posY">Y coord</param>
+    /// <returns></returns>
+    public Color GetPixelAt(int posX, int posY)
+    {
+        return _spriteRenderer.sprite.texture.GetPixel(posX, posY);
+    }
+
+    /// <summary>
+    /// Get the pixel color inside this renderer, based on the coordinates of the world position
+    /// </summary>
+    /// <param name="worldPosition">the world position</param>
+    /// <returns></returns>
     public Color GetPixelAt(Vector2 worldPosition)
     {
         Vector2 texturePosition = WorldPosToLocalTexturePos(worldPosition);
@@ -127,10 +187,11 @@ public class SpriteUtility
         texture.wrapMode = TextureWrapMode.Clamp; // important else texture shows strange lines
         texture.SetPixels(sprite.texture.GetPixels());
         texture.Apply();
-        texture.SetPixel((int)worldPosition.x, (int)worldPosition.y, c);
+        texture.SetPixel((int)texturePosition.x, (int)texturePosition.y, c);
         texture.Apply();
         var newSprite = Sprite.Create(texture, new Rect(0, 0, sprite.texture.width, sprite.texture.height), sprite.pivot.normalized, sprite.pixelsPerUnit);
         _spriteRenderer.sprite = newSprite;
+
     }
 
     public void ErasePixels(Vector2 worldPosition, Sprite shape)
