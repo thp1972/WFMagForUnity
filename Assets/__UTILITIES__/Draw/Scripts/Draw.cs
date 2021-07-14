@@ -81,10 +81,50 @@ namespace UTILITY
         }
         #endregion
 
+        #region TEXT DEFINITIONS
+        // FOR TOP
+        Vector2 topLeftAnchorMin = new Vector2(0, 1);
+        Vector2 topLeftAnchorMax = new Vector2(0, 1);
+        Vector2 topLeftPivot = new Vector2(0, 1);
+        Vector2 topRightAnchorMin = new Vector2(1, 1);
+        Vector2 topRightAnchorMax = new Vector2(1, 1);
+        Vector2 topRightPivot = new Vector2(1, 1);
+        // in Unity TOP,CENTER
+        Vector2 midTopAnchorMin = new Vector2(.5f, 1);
+        Vector2 midTopAnchorMax = new Vector2(.5f, 1);
+        Vector2 midTopPivot = new Vector2(.5f, 1);
+        //----------------------------------------------------
+
+        // FOR CENTER
+        Vector2 midLeftAnchorMin = new Vector2(0, 0.5f);
+        Vector2 midLeftAnchorMax = new Vector2(0, 0.5f);
+        Vector2 midLeftPivot = new Vector2(0, 0.5f);
+        Vector2 midRightAnchorMin = new Vector2(1, 0.5f);
+        Vector2 midRightAnchorMax = new Vector2(1, 0.5f);
+        Vector2 midRightPivot = new Vector2(1, 0.5f);
+        // in Unity MIDDLE,CENTER
+        Vector2 centerAnchorMin = new Vector2(.5f, 0.5f);
+        Vector2 centerAnchorMax = new Vector2(.5f, 0.5f);
+        Vector2 centerPivot = new Vector2(.5f, 0.5f);
+        //---------------------------------------------------
+
+        // FOR BOTTOM
+        Vector2 bottomLeftAnchorMin = new Vector2(0, 0);
+        Vector2 bottomLeftAnchorMax = new Vector2(0, 0);
+        Vector2 bottomLeftPivot = new Vector2(0, 0);
+        Vector2 bottomRightAnchorMin = new Vector2(1, 0);
+        Vector2 bottomRightAnchorMax = new Vector2(1, 0);
+        Vector2 bottomRightPivot = new Vector2(1, 0);
+        // in Unity BOTTOM,CENTER
+        Vector2 midBottomAnchorMin = new Vector2(.5f, 0);
+        Vector2 midBottomAnchorMax = new Vector2(.5f, 0);
+        Vector2 midBottomPivot = new Vector2(.5f, 0);
+        #endregion
+
         #region TEXT CREATION
-        
+
         // if text is empty then use DrawText to draw dynamic text else text is static
-        public Text CreateText(int fontSize, (byte, byte, byte) color, string text = "")
+        public Text CreateText(int fontSize, (byte, byte, byte) color, string text = "", bool isActive = true)
         {
             // find the Canvas
             var canvas = GameObject.Find("Canvas");
@@ -102,23 +142,86 @@ namespace UTILITY
             textComponent.color = new Color32(color.Item1, color.Item2, color.Item3, 255);
             textComponent.fontSize = fontSize;
             textComponent.alignByGeometry = true;
+            textComponent.gameObject.SetActive(isActive);
             return textComponent;
         }
         #endregion
 
         #region TEXT DRAWING
 
-        // if text is empty then the text is static, initialized on CreateText
-        public void DrawTex(Text textComponent, (float, float) midBottom, string text = "")
+        // if text is empty then the text is static, initialized on CreateText   
+        public void DrawTex(Text textComponent,
+            (float, float) topLeft = default,
+            (float, float) topRight = default,
+            (float, float) midTop = default,
+            (float, float) bottomLeft = default,
+            (float, float) bottomRight = default,
+            (float, float) midBottom = default,
+            (float, float) midLeft = default,
+            (float, float) center = default,
+            (float, float) midRight = default,
+            string text = "", bool isActive = true)
         {
-            var pos = midBottom;
-            textComponent.rectTransform.anchorMin = new Vector2(0.5f, 0);
-            textComponent.rectTransform.anchorMax = new Vector2(0.5f, 0);
-            textComponent.rectTransform.pivot = new Vector2(0.5f, 0);
+            (float, float) pos = default;
+            if (topLeft != default)
+            {
+                SetAnchorAndPivot(topLeftAnchorMin, topLeftAnchorMax, topLeftPivot);
+                pos = topLeft;
+            }
+            else if (topRight != default)
+            {
+                SetAnchorAndPivot(topRightAnchorMin, topRightAnchorMax, topRightPivot);
+                pos = topRight;
+            }
+            else if (midTop != default)
+            {
+                SetAnchorAndPivot(midTopAnchorMin, midTopAnchorMax, midTopPivot);
+                pos = midTop;
+            }
+            else if (bottomLeft != default)
+            {
+                SetAnchorAndPivot(bottomLeftAnchorMin, bottomLeftAnchorMax, bottomLeftPivot);
+                pos = bottomLeft;
+            }
+            else if (bottomRight != default)
+            {
+                SetAnchorAndPivot(bottomRightAnchorMin, bottomRightAnchorMax, bottomRightPivot);
+                pos = bottomRight;
+            }
+            else if (midBottom != default)
+            {
+                SetAnchorAndPivot(midBottomAnchorMin, midBottomAnchorMax, midBottomPivot);
+                pos = midBottom;
+            }
+            else if (midLeft != default)
+            {
+                SetAnchorAndPivot(midLeftAnchorMin, midLeftAnchorMax, midLeftPivot);
+                pos = midLeft;
+            }
+            else if (center != default)
+            {
+                SetAnchorAndPivot(centerAnchorMin, centerAnchorMax, centerPivot);
+                pos = center;
+            }
+            else if (midRight != default)
+            {
+                SetAnchorAndPivot(midRightAnchorMin, midRightAnchorMax, midRightPivot);
+                pos = midRight;
+            }
+
             textComponent.rectTransform.position = Camera.main.WorldToScreenPoint(ScreenUtility.Position(pos.Item1, pos.Item2));
 
-            if(text.Length > 0)
+            if (text.Length > 0)
                 textComponent.text = text;
+
+            textComponent.gameObject.SetActive(isActive);
+
+            void SetAnchorAndPivot(Vector2 anchorMin, Vector2 anchorMax, Vector2 pivot)
+            {
+                textComponent.rectTransform.anchorMin = anchorMin;
+                textComponent.rectTransform.anchorMax = anchorMax;
+                textComponent.rectTransform.pivot = pivot;
+            }
         }
 
         #endregion

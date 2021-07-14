@@ -15,7 +15,7 @@ public class Initialization : MonoBehaviour
         {
             UnityEditorUtility.AddGameViewResolution(1920, 1080, "WM_1920x1080");
             UnityEditorUtility.AddGameViewResolution(800, 800, "WM_800x800");
-            UnityEditorUtility.AddGameViewResolution(800, 600, "WM_800x600");
+            UnityEditorUtility.AddGameViewResolution(800, 600, "WM_800x600"); // default pygame
             UnityEditorUtility.AddGameViewResolution(400, 800, "WM_400x800");
             UnityEditorUtility.AddGameViewResolution(800, 400, "WM_800x400");
             UnityEditorUtility.AddGameViewResolution(1200, 700, "WM_1200x700");
