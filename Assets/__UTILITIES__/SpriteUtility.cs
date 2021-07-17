@@ -191,7 +191,6 @@ public class SpriteUtility
         texture.Apply();
         var newSprite = Sprite.Create(texture, new Rect(0, 0, sprite.texture.width, sprite.texture.height), sprite.pivot.normalized, sprite.pixelsPerUnit);
         _spriteRenderer.sprite = newSprite;
-
     }
 
     public void ErasePixels(Vector2 worldPosition, Sprite shape)

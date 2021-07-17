@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: ADDRESSABLE_NR_020
+  m_EditorClassIdentifier: 
+  m_GroupName: ADDRESSABLE_NR_020
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 0ec6a12874206354c9e2a454464c4e0d
+  m_SerializeEntries:
+  - m_GUID: 8134fc5011e7240418119096f0d7ce5b
+    m_Address: bullet
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 70bb9a22b274c9f498bc988b52185a69
+    m_Address: crosshair
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6cf2a0a297af72c45abd5f4e4382c2b1
+    m_Address: enemy
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: f2751a55290bee545b46fd366dfe6b4f, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 7d4e22994257ba349a8d7ed0f344415b, type: 2}
+    - {fileID: 11400000, guid: 50d26cbd54cd6024c95e0c7d42e6b4ab, type: 2}

@@ -47,6 +47,17 @@ public class ScreenUtility
         return new Vector2(Mathf.Abs(TopLeft.x - x), TopLeft.y - y);
     }
 
+    /// <summary>
+    /// Convert pixel coordinate on Y from Unity to Pygame; Y in Unity starts bottom while in Pygame starts on top
+    /// </summary>
+    /// <param name="pos"></param>
+    /// <returns></returns>
+    public static Vector2 InvertYOnPixelPosition(Vector2 pos)
+    {
+       var y =  ScreenUtility.GameResolution.y - pos.y;
+        return new Vector2(pos.x, y);
+    }
+
     public static Vector2 BottomRight
     {
         get { return new Vector2(gameResolution.x / 2, -gameResolution.y / 2); }
