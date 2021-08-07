@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: ADDRESSABLE_NR_021
+  m_EditorClassIdentifier: 
+  m_GroupName: ADDRESSABLE_NR_021
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 65ff655c9afeb974a8b31ebe758f0e8e
+  m_SerializeEntries:
+  - m_GUID: d34cd84e8416d914292add3b17ebdcd8
+    m_Address: car0
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ccb18689f149d8c4fa9add09372d3b42
+    m_Address: car1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 42f07d0548ef4514395f136e72a68861
+    m_Address: car2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7d32a71db40baf54faf2c985830bb184
+    m_Address: car3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: bbe64e8782ed0484fb3de345701bb250
+    m_Address: guide1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b68bd138f256f2247b44ad6b363d27af
+    m_Address: guide2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: f2751a55290bee545b46fd366dfe6b4f, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: a1550c67875ee7a48959aaa7e5c0ae76, type: 2}
+    - {fileID: 11400000, guid: fc8ef70d84cbfec458d0d334e75e40ef, type: 2}

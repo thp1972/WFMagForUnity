@@ -11,7 +11,7 @@ namespace PygameZero
 {
     // NOTE:
     // Actor in Pygame defaults to CENTER pivot
-    abstract class Actor
+    public class Actor
     {
         /// <summary>
         /// Get the current image, but as a GameObject
@@ -79,6 +79,7 @@ namespace PygameZero
 
         private float x;
         private float y;
+        private int angle;
 
         private GameObject GetImageFromStack(string image)
         {
@@ -106,6 +107,51 @@ namespace PygameZero
             {
                 y = value;
                 pos.y = y;
+                image.transform.position = ScreenUtility.Position(pos);
+            }
+        }
+
+        /// <summary>
+        /// Get/set angle in degree
+        /// </summary>
+        public float Angle
+        {
+            set
+            {
+                angle = (int)image.transform.rotation.eulerAngles.z;
+                image.transform.Rotate(Vector3.forward * value);
+            }
+            get { return angle; }
+        }
+
+        public Vector2 center;
+        /// <summary>
+        /// Get/Set the center position, but as a Tuple
+        /// </summary>
+        public (float, float) Center
+        {
+            get
+            {
+                var su = new SpriteUtility(spriteRenderer);
+                if (su.GetPivotPosition() != SpriteUtility.PivotPosition.CENTER)
+                {
+                    return (spriteRenderer.sprite.bounds.center.x, spriteRenderer.sprite.bounds.center.y);
+                }
+                else
+                    return Pos;
+            }
+            set
+            {
+                var su = new SpriteUtility(spriteRenderer);
+                if (su.GetPivotPosition() != SpriteUtility.PivotPosition.CENTER)
+                {
+                    Anchor = SpriteUtility.PivotPosition.CENTER;
+                    center = new Vector2(value.Item1, value.Item2);
+                    Pos = value;
+                }
+                else
+                    Pos = value;
+
                 image.transform.position = ScreenUtility.Position(pos);
             }
         }
@@ -155,6 +201,13 @@ namespace PygameZero
                    // Is the bottom edge of sprite 1 lower down
                    // than the top edge of sprite 2(y1 + h1 > y2) ?
                    r1.y + r1.height > r2.y;
+        }
+
+        public bool CollidePoint((float, float) point)
+        {
+            Vector2 _point = new Vector2(point.Item1, point.Item2);
+            var r1 = new Rect(pos.x, pos.y, spriteRenderer.sprite.rect.width, spriteRenderer.sprite.rect.height);
+            return r1.Contains(_point);
         }
     }
 }

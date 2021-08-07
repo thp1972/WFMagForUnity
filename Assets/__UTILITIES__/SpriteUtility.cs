@@ -100,7 +100,7 @@ public class SpriteUtility
             case PivotPosition.RIGHTCENTER: x = 1f; y = 0.5f; break;
             case PivotPosition.BOTTOMLEFT: x = 0f; y = 0f; break;
             case PivotPosition.BOTTOMCENTER: x = 0.5f; y = 0f; break;
-            case PivotPosition.BOTTOMRIGHT: x = 0.5f; y = 0f; break;
+            case PivotPosition.BOTTOMRIGHT: x = 1f; y = 0f; break;
             case PivotPosition.CUSTOM: x = custom.x; y = custom.y; break;
         }
 
@@ -112,9 +112,32 @@ public class SpriteUtility
         texture.wrapMode = TextureWrapMode.Clamp; // important else texture shows strange lines
         texture.SetPixels(sprite.texture.GetPixels());
         texture.Apply();
-        texture.Apply();
         var newSprite = Sprite.Create(texture, new Rect(0, 0, sprite.texture.width, sprite.texture.height), newPivot, sprite.pixelsPerUnit);
         _spriteRenderer.sprite = newSprite;
+    }
+
+    public PivotPosition GetPivotPosition()
+    {
+        var sprite = _spriteRenderer.sprite;
+
+        // this makes the stuff because sprite.pivot returns datas in pixels not as normalized value
+        Bounds bounds = sprite.bounds;
+        var pivotX = -bounds.center.x / bounds.extents.x / 2 + 0.5f;
+        var pivotY = -bounds.center.y / bounds.extents.y / 2 + 0.5f;
+        //------------------
+
+        Vector2 pivotNormalized = new Vector2(pivotX, pivotY);
+
+        if (pivotNormalized.x == 0.5f && pivotNormalized.y == 0.5f) return PivotPosition.CENTER;
+        else if (pivotNormalized.x == 0f && pivotNormalized.y == 1f) return PivotPosition.TOPLEFT;
+        else if (pivotNormalized.x == 0.5f && pivotNormalized.y == 1f) return PivotPosition.TOPCENTER;
+        else if (pivotNormalized.x == 1f && pivotNormalized.y == 1f) return PivotPosition.TOPRIGHT;
+        else if (pivotNormalized.x == 0f && pivotNormalized.y == 0.5f) return PivotPosition.LEFTCENTER;
+        else if (pivotNormalized.x == 1f && pivotNormalized.y == 0.5f) return PivotPosition.RIGHTCENTER;
+        else if (pivotNormalized.x == 0f && pivotNormalized.y == 0f) return PivotPosition.BOTTOMLEFT;
+        else if (pivotNormalized.x == 0.5f && pivotNormalized.y == 0f) return PivotPosition.BOTTOMCENTER;
+        else if (pivotNormalized.x == 1f && pivotNormalized.y == 0f) return PivotPosition.BOTTOMRIGHT;
+        else return PivotPosition.CUSTOM;
     }
 
     [Obsolete("WorldToPixelPoint is deprecated, please use WorldPosToLocalTexturePos instead.")]
