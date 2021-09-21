@@ -54,6 +54,12 @@ namespace PygameZero
             }
         }
 
+        public int SortingOrder
+        {
+            get { return spriteRenderer.sortingOrder; }
+            set { spriteRenderer.sortingOrder = value; }
+        }
+
         /// <summary>
         /// Set a new image, but as a String
         /// </summary>

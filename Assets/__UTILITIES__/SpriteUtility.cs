@@ -250,4 +250,9 @@ public class SpriteUtility
             _spriteRenderer.gameObject.AddComponent<PolygonCollider2D>();
         }
     }
+
+    public void SetSortingOrder(int order)
+    {
+        _spriteRenderer.sortingOrder = order;
+    }
 }
