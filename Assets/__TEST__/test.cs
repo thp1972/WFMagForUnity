@@ -20,12 +20,14 @@ public class test : MonoBehaviour
 
     static List<List<Color>> pixels;
 
+    private Texture2D texture;
+
     // Start is called before the first frame update
     void Start()
     {
         su = new SpriteUtility(myTexture);
 
-        pixels = (from x in Enumerable.Range(0, 11)
+        /*pixels = (from x in Enumerable.Range(0, 11)
                   select (from y in Enumerable.Range(0, 11)
                           select su.GetPixelAt(x, 10-y)).ToList()).ToList();
 
@@ -40,8 +42,10 @@ public class test : MonoBehaviour
             }
             ix++;
             iy = 0;
-        }
+        }*/
 
+         su.SetPixelAt_TEST(new Vector2(0,0), Color.white);
+         su.SetPixelAt_TEST(new Vector2(1, 0), Color.clear);
     }
 
     float HypotenuseLength(float sideALength, float sideBLength)
@@ -52,10 +56,17 @@ public class test : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var pos = Input.mousePosition;
-        var cpos = Camera.main.ScreenToWorldPoint(pos);
 
-        Color c = su.GetPixelAt(5, 6);
+       // su.SetPixelAt(new Vector2(0,0), Color.white);
+       // su.SetPixelAt(new Vector2(1, 0), Color.yellow);
+
+
+
+
+        //var pos = Input.mousePosition;
+        //var cpos = Camera.main.ScreenToWorldPoint(pos);
+
+        //Color c = su.GetPixelAt(5, 6);
 
         //print(c);
         /*

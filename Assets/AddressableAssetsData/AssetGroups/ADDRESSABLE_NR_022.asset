@@ -17,12 +17,12 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: ba075100a1ddfc04b99dcc1d668a1a89
   m_SerializeEntries:
-  - m_GUID: aea03b4d5b0836a4186c87c0b84a8a48
-    m_Address: Surface
-    m_ReadOnly: 0
-    m_SerializedLabels: []
   - m_GUID: 71d339294f565554da822c19cada3bbe
     m_Address: jet
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: af7d71dbb92fa0b45b7b4287536c4f43
+    m_Address: Surface800x600
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

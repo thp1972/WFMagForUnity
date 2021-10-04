@@ -29,6 +29,10 @@ MonoBehaviour:
     m_Address: small_enemy
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 9dfa2246ede2f3344813e70e82bbe1ab
+    m_Address: Assets/__UTILITIES__/Draw/Sprites/Surface800x600.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: f2751a55290bee545b46fd366dfe6b4f, type: 2}
   m_SchemaSet:
