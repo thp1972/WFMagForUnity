@@ -26,14 +26,12 @@ public class Scramble : MonoBehaviour
 
         jet.SortingOrder = 1;
         space = Instantiate(spacePrefab);
-
-        UpdateLand();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //UpdateLand();
+        UpdateLand();
         Draw();
     }
 
@@ -54,7 +52,6 @@ public class Scramble : MonoBehaviour
         DrawLand();
     }
 
-
     private void Draw()
     {
         if (crash)
@@ -66,7 +63,6 @@ public class Scramble : MonoBehaviour
             ScreenUtility.Blit(space, (0, 0));
             jet.Draw();
         }
-
     }
 
     void DrawLand()
@@ -78,17 +74,17 @@ public class Scramble : MonoBehaviour
             {
                 var g = Limit(i - landLevel, 0, 255);
                 c = (255, g, 0, 255);
-                // print("land " + c);
             }
             else if (i < roofLevel)
             {
                 var r = Limit(roofLevel - i, 0, 255);
                 c = (255, r, 0, 255);
-                // print("roof " + c);
             }
 
             scrambleSurface.SetAt((799, i), c);
         }
+
+        scrambleSurface.Apply(); // write the pixels effectively
     }
 
     private byte Limit(int n, int minn, int maxn)

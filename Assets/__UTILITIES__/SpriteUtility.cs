@@ -9,6 +9,7 @@ public class SpriteUtility
     Vector3 _spriteSize;
     Texture2D _newTexture;
     Sprite _newSprite;
+    Material _material;
 
     public enum SpritePosition { LEFT, RIGHT, TOP, BOTTOM };
 
@@ -18,6 +19,7 @@ public class SpriteUtility
     {
         _spriteRenderer = spriteRenderer;
         _spriteSize = GetSpriteSize();
+        _material = _spriteRenderer.material;
 
         InitSpriteAndTexureForPixelManipulation();
     }
@@ -217,8 +219,8 @@ public class SpriteUtility
         spriteRenderer.sprite = newSprite;
     }
 
-
-    public void SetPixelAt(Vector2 worldPosition, Color c, bool batch = false)
+    // TO REMOVE
+    /*public void SetPixelAt(Vector2 worldPosition, Color c, bool batch = false)
     {
         var sprite = _spriteRenderer.sprite;
         Vector2 texturePosition = WorldPosToLocalTexturePos(worldPosition);
@@ -232,9 +234,9 @@ public class SpriteUtility
         texture.Apply();
         var newSprite = Sprite.Create(texture, new Rect(0, 0, sprite.texture.width, sprite.texture.height), sprite.pivot.normalized, sprite.pixelsPerUnit);
         _spriteRenderer.sprite = newSprite;
-    }
+    }*/
 
-    public void SetPixelAt_TEST(Vector2 worldPosition, Color c)
+    public void SetPixelAt(Vector2 worldPosition, Color c)
     {
         Vector2 texturePosition = WorldPosToLocalTexturePos(worldPosition);
         _newTexture.SetPixel((int)texturePosition.x, (int)texturePosition.y, c);
@@ -285,5 +287,13 @@ public class SpriteUtility
     public void SetSortingOrder(int order)
     {
         _spriteRenderer.sortingOrder = order;
+    }
+
+    public void Scroll(float speedX, int speedY)
+    {
+        //if(_material.GetTextureOffset("_MainTex").x >= 1)
+          //  _material.SetTextureOffset("_MainTex", new Vector2(0, 0));
+
+        _material.SetTextureOffset("_MainTex", new Vector2(speedX, 0));
     }
 }

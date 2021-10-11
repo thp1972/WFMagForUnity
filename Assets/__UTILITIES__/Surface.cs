@@ -36,14 +36,11 @@ namespace PygameZero
 
         private void MakeAllTextureTransparent((int, int) size)
         {
-            //_spriteUtility.SetPixelAt_TEST(ScreenUtility.Position(Vector3.zero), Color.white);
-
-            
             for (int x = 0; x < size.Item1; x++)
             {
                 for (int y = 0; y < size.Item2; y++)
                 {
-                    _spriteUtility.SetPixelAt_TEST(ScreenUtility.Position(new Vector2(x, y)), Color.clear);
+                    _spriteUtility.SetPixelAt(ScreenUtility.Position(new Vector2(x, y)), Color.clear);
                 }
             }
 
@@ -53,18 +50,25 @@ namespace PygameZero
         public void SetAt((int, int) coords, (byte, byte, byte, byte) color)
         {
             Vector2 pos = ScreenUtility.Position(new Vector2(coords.Item1, coords.Item2));
-            _spriteUtility.SetPixelAt_TEST(pos, new Color32(color.Item1, color.Item2, color.Item3, color.Item4));
+            _spriteUtility.SetPixelAt(pos, new Color32(color.Item1, color.Item2, color.Item3, color.Item4));
         }
+
+        public void Apply()
+        {
+            _spriteUtility.Apply();
+        }
+
 
         public void Scroll(int x, int y)
         {
-            /*ti.StartCoroutine(_Scroll());
+            ti.StartCoroutine(_Scroll());
 
             IEnumerator _Scroll()
             {
                 yield return new WaitForEndOfFrame();
-                _surface.transform.Translate(ScreenUtility.Position(new Vector2(x, y)));
-            }*/
+                float offset = Time.time * 1f;
+                _spriteUtility.Scroll(offset, y);
+            }
         }
     }
 }

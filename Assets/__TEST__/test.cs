@@ -44,8 +44,8 @@ public class test : MonoBehaviour
             iy = 0;
         }*/
 
-         su.SetPixelAt_TEST(new Vector2(0,0), Color.white);
-         su.SetPixelAt_TEST(new Vector2(1, 0), Color.clear);
+         su.SetPixelAt(new Vector2(0,0), Color.white);
+         su.SetPixelAt(new Vector2(1, 0), Color.clear);
     }
 
     float HypotenuseLength(float sideALength, float sideBLength)
