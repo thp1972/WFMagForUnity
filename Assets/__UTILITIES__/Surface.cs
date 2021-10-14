@@ -66,7 +66,7 @@ namespace PygameZero
             IEnumerator _Scroll()
             {
                 yield return new WaitForEndOfFrame();
-                float offset = Time.time * 1f;
+                float offset = Time.deltaTime * 1f;
                 _spriteUtility.Scroll(offset, y);
             }
         }

@@ -16,7 +16,7 @@ public class test : MonoBehaviour
 
     List<(float, float)> previouspositions;
 
-    SpriteUtility su;
+    SpriteUtility _spriteUtility;
 
     static List<List<Color>> pixels;
 
@@ -25,7 +25,7 @@ public class test : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        su = new SpriteUtility(myTexture);
+        _spriteUtility = new SpriteUtility(myTexture);
 
         /*pixels = (from x in Enumerable.Range(0, 11)
                   select (from y in Enumerable.Range(0, 11)
@@ -44,8 +44,19 @@ public class test : MonoBehaviour
             iy = 0;
         }*/
 
-         su.SetPixelAt(new Vector2(0,0), Color.white);
-         su.SetPixelAt(new Vector2(1, 0), Color.clear);
+        //su.SetPixelAt(new Vector2(0,0), Color.white);
+        //su.SetPixelAt(new Vector2(1, 0), Color.clear);
+
+
+        for (int x = 0; x < 800; x++)
+        {
+            for (int y = 0; y < 600; y++)
+            {
+                _spriteUtility.SetPixelAt(ScreenUtility.Position(new Vector2(x, y)), Color.red);
+            }
+        }
+
+        _spriteUtility.Apply();
     }
 
     float HypotenuseLength(float sideALength, float sideBLength)

@@ -31,7 +31,11 @@ public class Scramble : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        UpdateLand();
+        foreach (var _ in Enumerable.Range(0, (int)Mathf.Ceil(speed)))
+        {
+            UpdateLand();
+        }
+        
         Draw();
     }
 
@@ -47,8 +51,7 @@ public class Scramble : MonoBehaviour
 
         if (roofLevel > landLevel - 200) roofLevel = landLevel - 200;
 
-        scrambleSurface.Scroll(-1, 0);
-
+        //scrambleSurface.Scroll(-1, 0);
         DrawLand();
     }
 
@@ -67,28 +70,36 @@ public class Scramble : MonoBehaviour
 
     void DrawLand()
     {
+
         foreach (var i in Enumerable.Range(0, 600))
         {
             (byte, byte, byte, byte) c = (0, 0, 0, 0);
+
+            print(landLevel + " " + roofLevel);
+
             if (i > landLevel)
             {
-                var g = Limit(i - landLevel, 0, 255);
+                var g = (byte)Limit(i - landLevel, 0, 255);
                 c = (255, g, 0, 255);
             }
             else if (i < roofLevel)
             {
-                var r = Limit(roofLevel - i, 0, 255);
+                var r = (byte)Limit(roofLevel - i, 0, 255);
                 c = (255, r, 0, 255);
             }
 
             scrambleSurface.SetAt((799, i), c);
         }
 
-        scrambleSurface.Apply(); // write the pixels effectively
+        scrambleSurface.Apply();
+
+        //(byte, byte, byte, byte) c = ((byte)Random.Range(0,255), (byte)Random.Range(0, 255), (byte)Random.Range(0, 255), 255);
+        //scrambleSurface.SetAt((799, (int)Random.Range(10, 500)), c);
+        //scrambleSurface.Apply(); // write the pixels effectively
     }
 
-    private byte Limit(int n, int minn, int maxn)
+    private int Limit(int n, int minn, int maxn)
     {
-        return (byte)Mathf.Max(Mathf.Min(maxn, n), minn);
+        return Mathf.Max(Mathf.Min(maxn, n), minn);
     }
 }

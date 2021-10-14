@@ -240,6 +240,72 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bdb143e74884654194e9b7974d48da3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &305219169
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4286887717458879428, guid: af7d71dbb92fa0b45b7b4287536c4f43, type: 3}
+      propertyPath: m_Name
+      value: Surface800x600
+      objectReference: {fileID: 0}
+    - target: {fileID: 4286887717458879428, guid: af7d71dbb92fa0b45b7b4287536c4f43, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4604690870085626495, guid: af7d71dbb92fa0b45b7b4287536c4f43, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4604690870085626495, guid: af7d71dbb92fa0b45b7b4287536c4f43, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -400
+      objectReference: {fileID: 0}
+    - target: {fileID: 4604690870085626495, guid: af7d71dbb92fa0b45b7b4287536c4f43, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 4604690870085626495, guid: af7d71dbb92fa0b45b7b4287536c4f43, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4604690870085626495, guid: af7d71dbb92fa0b45b7b4287536c4f43, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4604690870085626495, guid: af7d71dbb92fa0b45b7b4287536c4f43, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4604690870085626495, guid: af7d71dbb92fa0b45b7b4287536c4f43, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4604690870085626495, guid: af7d71dbb92fa0b45b7b4287536c4f43, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4604690870085626495, guid: af7d71dbb92fa0b45b7b4287536c4f43, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4604690870085626495, guid: af7d71dbb92fa0b45b7b4287536c4f43, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4604690870085626495, guid: af7d71dbb92fa0b45b7b4287536c4f43, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: af7d71dbb92fa0b45b7b4287536c4f43, type: 3}
+--- !u!212 &443870754 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 5830120749483403060, guid: af7d71dbb92fa0b45b7b4287536c4f43, type: 3}
+  m_PrefabInstance: {fileID: 305219169}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1728143583
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,6 +316,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1728143585}
   - component: {fileID: 1728143584}
+  - component: {fileID: 1728143586}
   m_Layer: 0
   m_Name: space
   m_TagString: Untagged
@@ -317,12 +384,28 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1728143583}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -403, y: 303, z: 0}
+  m_LocalPosition: {x: -400, y: 300, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1728143586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728143583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bfba35c24de251489497281a31b5811, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myTexture: {fileID: 443870754}
+  pixel: {fileID: 0}
+  posX: 0
+  posY: 0
 --- !u!1 &1777781818
 GameObject:
   m_ObjectHideFlags: 0
