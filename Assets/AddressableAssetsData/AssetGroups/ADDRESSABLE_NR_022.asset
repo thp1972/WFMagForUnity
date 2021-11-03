@@ -21,8 +21,8 @@ MonoBehaviour:
     m_Address: jet
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: af7d71dbb92fa0b45b7b4287536c4f43
-    m_Address: Surface800x600
+  - m_GUID: 1bdf308652789b64a9c6962d5f9f71fc
+    m_Address: Surface
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

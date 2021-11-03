@@ -26,6 +26,8 @@ public class Scramble : MonoBehaviour
 
         jet.SortingOrder = 1;
         space = Instantiate(spacePrefab);
+
+        Draw();
     }
 
     // Update is called once per frame
@@ -41,8 +43,8 @@ public class Scramble : MonoBehaviour
 
     void UpdateLand()
     {
-        if (Random.Range(0f, 10f) == 3) roofChange = (int)Random.Range(0f, 6f) - 3;
-        if (Random.Range(0f, 10f) == 3) landChange = (int)Random.Range(0f, 6f) - 3;
+        if (MathUtility.RandInt(0, 10) == 3) roofChange = MathUtility.RandInt(0, 6) - 3;
+        if (MathUtility.RandInt(0, 10) == 3) landChange = MathUtility.RandInt(0, 6) - 3;
 
         roofLevel += roofChange;
         landLevel += landChange;
@@ -51,7 +53,7 @@ public class Scramble : MonoBehaviour
 
         if (roofLevel > landLevel - 200) roofLevel = landLevel - 200;
 
-        //scrambleSurface.Scroll(-1, 0);
+        //scrambleSurface.Scroll2(-50, 0);
         DrawLand();
     }
 
@@ -66,16 +68,21 @@ public class Scramble : MonoBehaviour
             ScreenUtility.Blit(space, (0, 0));
             jet.Draw();
         }
+
+        /*scrambleSurface.SetAt((0, 0),  (255, 0, 0, 255));
+
+        scrambleSurface.Apply();
+
+        scrambleSurface.Scroll(1, 0);
+        */
     }
 
+    int ii = 0;
     void DrawLand()
     {
-
         foreach (var i in Enumerable.Range(0, 600))
         {
             (byte, byte, byte, byte) c = (0, 0, 0, 0);
-
-            print(landLevel + " " + roofLevel);
 
             if (i > landLevel)
             {
@@ -88,18 +95,21 @@ public class Scramble : MonoBehaviour
                 c = (255, r, 0, 255);
             }
 
-            scrambleSurface.SetAt((799, i), c);
+            scrambleSurface.SetAt((799-ii, i), c);
         }
 
         scrambleSurface.Apply();
-
-        //(byte, byte, byte, byte) c = ((byte)Random.Range(0,255), (byte)Random.Range(0, 255), (byte)Random.Range(0, 255), 255);
-        //scrambleSurface.SetAt((799, (int)Random.Range(10, 500)), c);
-        //scrambleSurface.Apply(); // write the pixels effectively
+        ii++;
+        if (ii == 799)
+        {
+            scrambleSurface.SurfaceClear();
+            ii = 0;
+        }
     }
 
     private int Limit(int n, int minn, int maxn)
     {
+        // this is the same as Unity's Mathf.Clamp
         return Mathf.Max(Mathf.Min(maxn, n), minn);
     }
 }

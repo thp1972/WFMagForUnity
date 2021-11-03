@@ -292,8 +292,13 @@ public class SpriteUtility
     public void Scroll(float speedX, int speedY)
     {
         //if(_material.GetTextureOffset("_MainTex").x >= 1)
-          //  _material.SetTextureOffset("_MainTex", new Vector2(0, 0));
+        //  _material.SetTextureOffset("_MainTex", new Vector2(0, 0));
 
-        _material.SetTextureOffset("_MainTex", new Vector2(speedX, 0));
+        //_material.SetTextureOffset("_MainTex", new Vector2(speedX, 0));
+        _spriteRenderer.drawMode = SpriteDrawMode.Tiled;
+  
+        Vector2 size = _spriteRenderer.size;
+        size.x += speedX;
+        _spriteRenderer.size = size;
     }
 }

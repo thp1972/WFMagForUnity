@@ -2,7 +2,7 @@
 using UnityEngine;
 
 [ExecuteInEditMode]
-public class Initialization : MonoBehaviour
+public class SurfaceInit : MonoBehaviour
 {
     const int WIDTH = 1920;
     const int HEIGHT = 1080;
