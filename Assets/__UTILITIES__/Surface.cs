@@ -33,6 +33,22 @@ namespace PygameZero
             ti = go.AddComponent<TimeUtilityImpl>();
         }
 
+        private void SurfaceInit()
+        {
+            meshRenderer = _surface.GetComponent<MeshRenderer>();
+
+            texture = new Texture2D(meshRenderer.material.mainTexture.width,
+                                    meshRenderer.material.mainTexture.height,
+                                    TextureFormat.RGBA32, false);
+
+            texture.filterMode = FilterMode.Point;
+            texture.wrapMode = TextureWrapMode.Repeat;
+            texture.SetPixels(((Texture2D)meshRenderer.material.mainTexture).GetPixels());
+            texture.Apply();
+
+            meshRenderer.material.mainTexture = texture;
+        }
+
         // convert Unity texture bottom/left to pygame top,left
         Vector2 BottomLeftToTopLeft(Vector3 worldPos)
         {
@@ -44,6 +60,23 @@ namespace PygameZero
         {
             Vector2 texturePosition = BottomLeftToTopLeft(worldPosition);
             texture.SetPixel((int)texturePosition.x, (int)texturePosition.y, c);
+        }
+
+        public void SetAt((int, int) coords, (byte, byte, byte, byte) color)
+        {
+            Vector2 pos = (new Vector2(coords.Item1, coords.Item2));
+            SetPixelAt(pos, new Color32(color.Item1, color.Item2, color.Item3, color.Item4));
+        }
+
+        (byte, byte, byte, byte) GetPixelAt(Vector2 worldPosition)
+        {
+            Color32 c = texture.GetPixel((int)worldPosition.x, (int)worldPosition.y);
+            return (c.r, c.g, c.b, c.a);
+        }
+        public (byte, byte, byte, byte) GetAt((int, int) coords)
+        {
+            Vector2 pos = (new Vector2(coords.Item1, coords.Item2));
+            return GetPixelAt(pos);
         }
 
         public void SurfaceClear()
@@ -61,21 +94,7 @@ namespace PygameZero
 
         }
 
-        private void SurfaceInit()
-        {
-            meshRenderer = _surface.GetComponent<MeshRenderer>();
 
-            texture = new Texture2D(meshRenderer.material.mainTexture.width,
-                                    meshRenderer.material.mainTexture.height,
-                                    TextureFormat.RGBA32, false);
-
-            texture.filterMode = FilterMode.Point;
-            texture.wrapMode = TextureWrapMode.Repeat;
-            texture.SetPixels(((Texture2D)meshRenderer.material.mainTexture).GetPixels());
-            texture.Apply();
-
-            meshRenderer.material.mainTexture = texture;
-        }
 
         private void MakeAllTextureTransparent((int, int) size)
         {
@@ -90,11 +109,9 @@ namespace PygameZero
             Apply();
         }
 
-        public void SetAt((int, int) coords, (byte, byte, byte, byte) color)
-        {
-            Vector2 pos = (new Vector2(coords.Item1, coords.Item2));
-            SetPixelAt(pos, new Color32(color.Item1, color.Item2, color.Item3, color.Item4));
-        }
+
+
+
 
         public void Apply()
         {

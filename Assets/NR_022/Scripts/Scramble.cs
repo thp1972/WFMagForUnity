@@ -11,7 +11,7 @@ public class Scramble : MonoBehaviour
     int roofLevel = 10;
     int landChange = -3;
     int roofChange = 3;
-    int speed = 3;
+    float speed = 3;
     bool crash = false;
 
     Actor jet;
@@ -33,11 +33,24 @@ public class Scramble : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(crash == false)
+        {
+            if (EventsDetector.Keyboard.Up) jet.Y -= speed;
+            if (EventsDetector.Keyboard.Down) jet.Y += speed;
+            if (EventsDetector.Keyboard.Left) speed = Limit(speed - 0.1f, 1f, 10f);
+            if (EventsDetector.Keyboard.Right) speed = Limit(speed + 0.1f, 1f, 10f);
+
+            jet.X = 310 + (speed * 30);
+        }
+
         foreach (var _ in Enumerable.Range(0, (int)Mathf.Ceil(speed)))
         {
             UpdateLand();
         }
-        
+
+        if (scrambleSurface.GetAt(((int)Mathf.Ceil(jet.X + 32), (int)Mathf.Ceil(jet.Y))) != (0, 0, 0, 0))
+            crash = true;
+
         Draw();
     }
 
@@ -61,7 +74,7 @@ public class Scramble : MonoBehaviour
     {
         if (crash)
         {
-
+            ScreenUtility.Fill(((byte)Random.Range(100, 200 + 1), 0, 0));
         }
         else
         {
@@ -102,12 +115,18 @@ public class Scramble : MonoBehaviour
         ii++;
         if (ii == 799)
         {
-            scrambleSurface.SurfaceClear();
+            //scrambleSurface.SurfaceClear(); 
             ii = 0;
         }
     }
 
     private int Limit(int n, int minn, int maxn)
+    {
+        // this is the same as Unity's Mathf.Clamp
+        return Mathf.Max(Mathf.Min(maxn, n), minn);
+    }
+
+    private float Limit(float n, float minn, float maxn)
     {
         // this is the same as Unity's Mathf.Clamp
         return Mathf.Max(Mathf.Min(maxn, n), minn);
