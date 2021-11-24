@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 
 // this class assumes that screen coordinates 0,0 starts from TOP-LEFT
 // as stated by Pygame documentation
@@ -54,7 +55,7 @@ public class ScreenUtility
     /// <returns></returns>
     public static Vector2 InvertYOnPixelPosition(Vector2 pos)
     {
-       var y =  ScreenUtility.GameResolution.y - pos.y;
+        var y = ScreenUtility.GameResolution.y - pos.y;
         return new Vector2(pos.x, y);
     }
 
@@ -127,10 +128,31 @@ public class ScreenUtility
         }
     }
 
-    public static void Fill((byte, byte, byte) color)
+    static bool useTextureAlreadyInstantiated;
+    static GameObject fill_surface;
+    public static void Fill((byte, byte, byte) color, bool useTexture = false)
     {
-        Camera.main.backgroundColor = new Color32(color.Item1, color.Item2, color.Item3, 255);
+        if (useTexture) // if use texture
+        {
+            // put a texture in front of all other objects with a semi-transp.
+            if (!useTextureAlreadyInstantiated)
+            {
+                var op = Addressables.LoadAssetAsync<GameObject>("Fill");
+                var imageToInstantiate = op.WaitForCompletion(); // force sync!
+                fill_surface = GameObject.Instantiate(imageToInstantiate, Vector3.zero, Quaternion.identity);
+                fill_surface.transform.localScale = new Vector3(GameResolution.x, GameResolution.y, 1);
+                fill_surface.transform.position = new Vector3(fill_surface.transform.position.x,
+                                                              fill_surface.transform.position.y,
+                                                              Camera.main.transform.position.z + 1);
+                useTextureAlreadyInstantiated = true;
+            }
+            // you can change color, i.e. in an Update with random colors
+            fill_surface.GetComponent<MeshRenderer>().material.SetColor("_Color", new Color(color.Item1 / 255f,
+                                                                                            color.Item2 / 255f,
+                                                                                            color.Item3 / 255f,
+                                                                                            0.75f));
+        }
+        else Camera.main.backgroundColor = new Color32(color.Item1, color.Item2, color.Item3, 255);
     }
 
-    
 }

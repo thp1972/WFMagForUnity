@@ -18,14 +18,20 @@ public class Scramble : MonoBehaviour
     public GameObject spacePrefab;
     GameObject space;
 
+
     // Start is called before the first frame update
     void Awake()
     {
-        scrambleSurface = new Surface((800, 600), SRCALPHA: true);
+        scrambleSurface = new Surface((2800, 600), SRCALPHA: true);
+        scrambleSurface.SetOrigin(new Vector2(1800, 0));
+
+
         jet = new Actor("jet", (400, 300));
 
         jet.SortingOrder = 1;
         space = Instantiate(spacePrefab);
+
+        //DrawLand();
 
         Draw();
     }
@@ -48,10 +54,15 @@ public class Scramble : MonoBehaviour
             UpdateLand();
         }
 
+        //print($"{jet.X + 32} {jet.Y}");
+
         if (scrambleSurface.GetAt(((int)Mathf.Ceil(jet.X + 32), (int)Mathf.Ceil(jet.Y))) != (0, 0, 0, 0))
             crash = true;
 
         Draw();
+
+        if(Input.GetMouseButton(0))
+        print(scrambleSurface.GetAt(((int)Input.mousePosition.x, (int)Input.mousePosition.y)));
     }
 
     void UpdateLand()
@@ -66,7 +77,7 @@ public class Scramble : MonoBehaviour
 
         if (roofLevel > landLevel - 200) roofLevel = landLevel - 200;
 
-        //scrambleSurface.Scroll2(-50, 0);
+        //scrambleSurface.Scroll(-100, 0);
         DrawLand();
     }
 
@@ -74,25 +85,24 @@ public class Scramble : MonoBehaviour
     {
         if (crash)
         {
-            ScreenUtility.Fill(((byte)Random.Range(100, 200 + 1), 0, 0));
+            ScreenUtility.Fill(((byte)Random.Range(100, 200 + 1), 0, 0), useTexture : true);
         }
         else
         {
             ScreenUtility.Blit(space, (0, 0));
             jet.Draw();
         }
-
-        /*scrambleSurface.SetAt((0, 0),  (255, 0, 0, 255));
-
-        scrambleSurface.Apply();
-
-        scrambleSurface.Scroll(1, 0);
-        */
     }
 
+    public int XX = 0;
     int ii = 0;
     void DrawLand()
     {
+        if (ii == 2800)
+        {        
+            return;
+        }
+
         foreach (var i in Enumerable.Range(0, 600))
         {
             (byte, byte, byte, byte) c = (0, 0, 0, 0);
@@ -108,16 +118,17 @@ public class Scramble : MonoBehaviour
                 c = (255, r, 0, 255);
             }
 
-            scrambleSurface.SetAt((799-ii, i), c);
+            scrambleSurface.SetAt((ii, i), c);
+            //scrambleSurface.SetAt((2800, i), c);
         }
-
         scrambleSurface.Apply();
+
         ii++;
-        if (ii == 799)
+        /*if (ii == 2800)
         {
             //scrambleSurface.SurfaceClear(); 
             ii = 0;
-        }
+        }*/
     }
 
     private int Limit(int n, int minn, int maxn)

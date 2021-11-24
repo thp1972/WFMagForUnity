@@ -8,7 +8,7 @@ namespace PygameZero
 {
     public class Surface
     {
-        GameObject _surface;
+        public GameObject _surface;
         Texture2D texture;
         MeshRenderer meshRenderer;
         Coroutine scrollCor;
@@ -16,15 +16,20 @@ namespace PygameZero
         class TimeUtilityImpl : MonoBehaviour { }
         static TimeUtilityImpl ti;
 
-        public Surface((int, int) size, bool SRCALPHA = false)
+        // The surface is a QUAD mesh scaled based on size
+        // it has a Surface Material wich has a Shader Unlit/Transparent
+        // the main texture is sized based on QUAD size
+        public Surface((int, int) size, Texture2D texture = null, bool SRCALPHA = false)
         {
             var op = Addressables.LoadAssetAsync<GameObject>("Surface");
             var imageToInstantiate = op.WaitForCompletion(); // force sync!
             _surface = GameObject.Instantiate(imageToInstantiate, Vector3.zero, Quaternion.identity);
-
             _surface.transform.localScale = new Vector3(size.Item1, size.Item2, 1);
 
-            SurfaceInit();
+            if (texture != null)
+                SurfaceInitWithTexture(texture);
+            else
+                SurfaceInit(size);
 
             if (SRCALPHA)
                 MakeAllTextureTransparent(size);
@@ -33,26 +38,52 @@ namespace PygameZero
             ti = go.AddComponent<TimeUtilityImpl>();
         }
 
-        private void SurfaceInit()
+        public void SetOrigin(Vector2 position)
+        {
+            _surface.transform.position = position;
+        }
+
+        private void SurfaceInitWithTexture(Texture2D textureInit)
         {
             meshRenderer = _surface.GetComponent<MeshRenderer>();
 
-            texture = new Texture2D(meshRenderer.material.mainTexture.width,
-                                    meshRenderer.material.mainTexture.height,
+            texture = new Texture2D(textureInit.width,
+                                    textureInit.height,
                                     TextureFormat.RGBA32, false);
 
             texture.filterMode = FilterMode.Point;
             texture.wrapMode = TextureWrapMode.Repeat;
-            texture.SetPixels(((Texture2D)meshRenderer.material.mainTexture).GetPixels());
+            texture.SetPixels(textureInit.GetPixels());
             texture.Apply();
 
             meshRenderer.material.mainTexture = texture;
         }
 
+        private void SurfaceInit((int, int) size)
+        {
+            meshRenderer = _surface.GetComponent<MeshRenderer>();
+
+            texture = new Texture2D(size.Item1,
+                                    size.Item2,
+                                    TextureFormat.RGBA32, false);
+
+            texture.filterMode = FilterMode.Point;
+            texture.wrapMode = TextureWrapMode.Repeat;
+
+            meshRenderer.material.mainTexture = texture;
+        }
+
         // convert Unity texture bottom/left to pygame top,left
-        Vector2 BottomLeftToTopLeft(Vector3 worldPos)
+        public Vector2 BottomLeftToTopLeft(Vector3 worldPos)
         {
             Vector2 texSpaceCoord = new Vector2(worldPos.x, (texture.height - worldPos.y) - 1);
+            return texSpaceCoord;
+        }
+
+        // convert Unity texture bottom/left to pygame top,left
+        public Vector2 TopLeftToBottomLeft(Vector3 worldPos)
+        {
+            Vector2 texSpaceCoord = new Vector2(worldPos.x, (Mathf.Abs(worldPos.y - texture.height)) - 1);
             return texSpaceCoord;
         }
 
@@ -70,13 +101,51 @@ namespace PygameZero
 
         (byte, byte, byte, byte) GetPixelAt(Vector2 worldPosition)
         {
-            Color32 c = texture.GetPixel((int)worldPosition.x, (int)worldPosition.y);
+            Vector2 texturePosition = TopLeftToBottomLeft(worldPosition);
+            Color32 c = texture.GetPixel((int)texturePosition.x, (int)texturePosition.y);
             return (c.r, c.g, c.b, c.a);
         }
+
+        (byte, byte, byte, byte) GetPixelAt2(Vector2 worldPosition)
+        {
+            Vector2 texturePosition = worldPosition;// TopLeftToBottomLeft(worldPosition);
+            Color32 c = texture.GetPixel((int)texturePosition.x, (int)texturePosition.y);
+            return (c.r, c.g, c.b, c.a);
+        }
+
+        public (byte, byte, byte, byte) GetAt2((int, int) coords)
+        {
+            Vector2 pos = (new Vector2(coords.Item1, coords.Item2));
+
+            if (_surface.transform.localScale.x > ScreenUtility.GameResolution.x ||
+               _surface.transform.localScale.y > ScreenUtility.GameResolution.y)
+                ReCalculateSurfacePosition(ref pos);
+
+            return GetPixelAt2(pos);
+        }
+
+
         public (byte, byte, byte, byte) GetAt((int, int) coords)
         {
             Vector2 pos = (new Vector2(coords.Item1, coords.Item2));
             return GetPixelAt(pos);
+        }
+
+
+        // this is important if the texture is wider than screen game resolution
+        // infact this recalculate the object positions that want to test respect this texture pixels
+        private void ReCalculateSurfacePosition(ref Vector2 pos)
+        {
+            var screenWidth = ScreenUtility.GameResolution.x;
+            var screenHeight = ScreenUtility.GameResolution.y;
+
+            var surfaceWidth = _surface.transform.localScale.x;
+            var surfaceHeight = _surface.transform.localScale.y;
+
+            var xPosition = -_surface.transform.position.x;
+            var yPosition = -_surface.transform.position.y;
+
+            pos = new Vector2(pos.x + ((surfaceWidth / 2 - screenWidth / 2) + xPosition), pos.y);
         }
 
         public void SurfaceClear()
@@ -89,12 +158,21 @@ namespace PygameZero
                 }
             }
 
-
             MakeAllTextureTransparent(((int)_surface.transform.localScale.x, (int)_surface.transform.localScale.y));
-
         }
 
+        public void SurfaceColor(Color32 color)
+        {
+            for (int x = 0; x < _surface.transform.localScale.x; x++)
+            {
+                for (int y = 0; y < _surface.transform.localScale.y; y++)
+                {
+                    SetPixelAt(new Vector2(x, y), color);
+                }
+            }
 
+            Apply();
+        }
 
         private void MakeAllTextureTransparent((int, int) size)
         {
@@ -110,20 +188,17 @@ namespace PygameZero
         }
 
 
-
-
-
         public void Apply()
         {
             texture.Apply();
         }
 
-        public void Scroll(int x, int y)
+        public void Scroll(int x, int y, bool texture = false)
         {
             if (scrollCor != null) return;
+            scrollCor = ti.StartCoroutine(texture ? _ScrollTexture() : _ScrollTransform());
 
-            scrollCor = ti.StartCoroutine(_Scroll());
-            IEnumerator _Scroll()
+            IEnumerator _ScrollTexture()
             {
                 Vector2 scrollOffset = Vector2.zero;
                 while (true)
@@ -141,14 +216,8 @@ namespace PygameZero
                 ti.StopCoroutine(scrollCor);
                 yield return null;
             }
-        }
 
-        public void Scroll2(int x, int y)
-        {
-            if (scrollCor != null) return;
-
-            scrollCor = ti.StartCoroutine(_Scroll());
-            IEnumerator _Scroll()
+            IEnumerator _ScrollTransform()
             {
                 Vector2 scrollOffset = Vector2.zero;
                 while (true)
@@ -160,12 +229,13 @@ namespace PygameZero
 
                     _surface.transform.Translate(scrollOffset);
 
-                    if (Mathf.Abs(_surface.transform.position.x) >= 800) _surface.transform.position = new Vector3(0, 0, 0);
+                    //if (Mathf.Abs(_surface.transform.position.x) >= 800) _surface.transform.position = new Vector3(0, 0, 0);
                 }
 
                 ti.StopCoroutine(scrollCor);
                 yield return null;
             }
+
         }
     }
 }
