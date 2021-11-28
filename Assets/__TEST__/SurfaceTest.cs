@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using PygameZero;
 
+
 public class SurfaceTest : MonoBehaviour
 {
     Surface scrambleSurface;
@@ -13,10 +14,14 @@ public class SurfaceTest : MonoBehaviour
     public bool scroll;
 
     public Texture2D texture;
+
+    public float off;
     void Start()
     {
-        scrambleSurface = new Surface((1800, 600), texture, SRCALPHA: false);
-        jet = new Actor("jet", (10, 300));
+        scrambleSurface = new Surface((800, 600), texture, SRCALPHA: false);
+        jet = new Actor("jet", (0, 0));
+
+        scrambleSurface.SetOrigin(new Vector2(400, 0));
 
         jet.SortingOrder = 1;
         jet.Draw();
@@ -36,18 +41,17 @@ public class SurfaceTest : MonoBehaviour
             //scrambleSurface.SetOrigin(new Vector2(1300, 0));
             scrambleSurface.Scroll(-40, 0);
 
-        if (crash == false)
-        {
+       // if (crash == false)
+       // {
             if (EventsDetector.Keyboard.Up) jet.Y -= speed;
             if (EventsDetector.Keyboard.Down) jet.Y += speed;
-            if (EventsDetector.Keyboard.Left) speed = Limit(speed - 0.1f, 1f, 10f);
-            if (EventsDetector.Keyboard.Right) speed = Limit(speed + 0.1f, 1f, 10f);
+            if (EventsDetector.Keyboard.Left) speed = Limit(speed - 0.1f, 1f, 100f);
+            if (EventsDetector.Keyboard.Right) speed = Limit(speed + 0.1f, 1f, 100f);
 
-            jet.X = 210 + (speed * 30);
+           jet.X = 10 + (speed * 30);
 
-            // jet.X = speed * 30;
-        }
-
+           
+       // }
 
 
 
@@ -73,21 +77,35 @@ public class SurfaceTest : MonoBehaviour
        }
 
 
-        var xx = (int)Mathf.Ceil((jet.X) + ( (900 - 800 / 2)  ));
+        var xx = (int)Mathf.Ceil(jet.X + 32);
         var yy = (int)Mathf.Ceil(jet.Y);
 
-        Vector2 p = (new Vector2((int)Input.mousePosition.x /*+ ((900 - 800 / 2) + off )*/, (int)Input.mousePosition.y));
-        print($"mouse {p.x} {p.y} {scrambleSurface.GetAt2(((int)p.x, (int)p.y))}");
 
 
+        //Vector2 p = (new Vector2((int)Input.mousePosition.x, (int)Input.mousePosition.y));
+        //print($"mouse {p.x} {p.y} {scrambleSurface.GetAt2(((int)p.x, (int)p.y))}");
 
+        var ox = xx - scrambleSurface._surface.transform.position.x;
+        var oy = yy - scrambleSurface._surface.transform.position.y;
+
+
+        print("jet " + ox + " " + oy);
+
+        if (ox >= 0 && oy >= 0)
 
         if (scrambleSurface.GetAt((xx, yy)) != (0, 0, 0, 255))
         {
             crash = true;
-            speed = 0;
+           // speed = 0;
             print("crash");
         }
+        else
+        {
+            crash = false;
+           // speed = 0;
+            print("NOT crash");
+        }
+            
     }
 
 

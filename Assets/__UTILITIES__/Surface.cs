@@ -6,6 +6,9 @@ using UnityEngine.AddressableAssets;
 
 namespace PygameZero
 {
+    /// <summary>
+    /// // Surface is a QUAD mesh with left-top pivot point
+    /// </summary>
     public class Surface
     {
         public GameObject _surface;
@@ -23,7 +26,7 @@ namespace PygameZero
         {
             var op = Addressables.LoadAssetAsync<GameObject>("Surface");
             var imageToInstantiate = op.WaitForCompletion(); // force sync!
-            _surface = GameObject.Instantiate(imageToInstantiate, Vector3.zero, Quaternion.identity);
+            _surface = GameObject.Instantiate(imageToInstantiate, ScreenUtility.Position(Vector3.zero), Quaternion.identity);
             _surface.transform.localScale = new Vector3(size.Item1, size.Item2, 1);
 
             if (texture != null)
@@ -40,12 +43,12 @@ namespace PygameZero
 
         public void SetOrigin(Vector2 position)
         {
-            _surface.transform.position = position;
+            _surface.transform.position = ScreenUtility.Position(position);
         }
 
         private void SurfaceInitWithTexture(Texture2D textureInit)
         {
-            meshRenderer = _surface.GetComponent<MeshRenderer>();
+            meshRenderer = _surface.GetComponentInChildren<MeshRenderer>();
 
             texture = new Texture2D(textureInit.width,
                                     textureInit.height,
@@ -61,7 +64,7 @@ namespace PygameZero
 
         private void SurfaceInit((int, int) size)
         {
-            meshRenderer = _surface.GetComponent<MeshRenderer>();
+            meshRenderer = _surface.GetComponentInChildren<MeshRenderer>();
 
             texture = new Texture2D(size.Item1,
                                     size.Item2,
@@ -117,10 +120,10 @@ namespace PygameZero
         {
             Vector2 pos = (new Vector2(coords.Item1, coords.Item2));
 
-            if (_surface.transform.localScale.x > ScreenUtility.GameResolution.x ||
+            /*if (_surface.transform.localScale.x > ScreenUtility.GameResolution.x ||
                _surface.transform.localScale.y > ScreenUtility.GameResolution.y)
                 ReCalculateSurfacePosition(ref pos);
-
+            */
             return GetPixelAt2(pos);
         }
 
@@ -128,6 +131,11 @@ namespace PygameZero
         public (byte, byte, byte, byte) GetAt((int, int) coords)
         {
             Vector2 pos = (new Vector2(coords.Item1, coords.Item2));
+
+           /* if (_surface.transform.localScale.x > ScreenUtility.GameResolution.x ||
+                _surface.transform.localScale.y > ScreenUtility.GameResolution.y)
+                ReCalculateSurfacePosition(ref pos);
+           */
             return GetPixelAt(pos);
         }
 

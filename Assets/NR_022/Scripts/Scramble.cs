@@ -22,16 +22,14 @@ public class Scramble : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        scrambleSurface = new Surface((2800, 600), SRCALPHA: true);
-        scrambleSurface.SetOrigin(new Vector2(1800, 0));
+        scrambleSurface = new Surface((800, 600), SRCALPHA: true);
+        scrambleSurface.SetOrigin(new Vector2(0, 0));
 
 
         jet = new Actor("jet", (400, 300));
 
         jet.SortingOrder = 1;
         space = Instantiate(spacePrefab);
-
-        //DrawLand();
 
         Draw();
     }
@@ -60,9 +58,6 @@ public class Scramble : MonoBehaviour
             crash = true;
 
         Draw();
-
-        if(Input.GetMouseButton(0))
-        print(scrambleSurface.GetAt(((int)Input.mousePosition.x, (int)Input.mousePosition.y)));
     }
 
     void UpdateLand()
@@ -77,7 +72,7 @@ public class Scramble : MonoBehaviour
 
         if (roofLevel > landLevel - 200) roofLevel = landLevel - 200;
 
-        //scrambleSurface.Scroll(-100, 0);
+ 
         DrawLand();
     }
 
@@ -98,8 +93,8 @@ public class Scramble : MonoBehaviour
     int ii = 0;
     void DrawLand()
     {
-        if (ii == 2800)
-        {        
+        if (ii == 800)
+        {
             return;
         }
 
