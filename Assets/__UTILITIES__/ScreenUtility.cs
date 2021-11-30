@@ -45,7 +45,18 @@ public class ScreenUtility
     /// <returns></returns>
     public static Vector2 InversePosition(float x, float y)
     {
-        return new Vector2(Mathf.Abs(TopLeft.x - x), TopLeft.y - y);
+        /*return new Vector2(Mathf.Abs(TopLeft.x - x), TopLeft.y - y);*/
+        return new Vector2(-1*(TopLeft.x - x), TopLeft.y - y);
+    }
+
+    /// <summary>
+    /// it converts Unity coordinates to pygames coordinates
+    /// </summary>
+    /// <param name="position"></param>
+    /// <returns></returns>
+    public static Vector2 InversePosition(Vector2 position)
+    {
+        return InversePosition(position.x, position.y);
     }
 
     /// <summary>

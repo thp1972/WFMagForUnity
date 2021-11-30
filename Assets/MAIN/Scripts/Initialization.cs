@@ -1,8 +1,8 @@
-﻿using UnityEditor;
+using UnityEditor;
 using UnityEngine;
 
 [ExecuteInEditMode]
-public class SurfaceInit : MonoBehaviour
+public class Initialization : MonoBehaviour
 {
     const int WIDTH = 1920;
     const int HEIGHT = 1080;

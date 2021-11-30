@@ -17,27 +17,25 @@ public class Scramble : MonoBehaviour
     Actor jet;
     public GameObject spacePrefab;
     GameObject space;
-
+    int surfaceWidth = 2400;
 
     // Start is called before the first frame update
     void Awake()
     {
-        scrambleSurface = new Surface((800, 600), SRCALPHA: true);
-        scrambleSurface.SetOrigin(new Vector2(0, 0));
-
+        scrambleSurface = new Surface((surfaceWidth, 600), SRCALPHA: true);
+        scrambleSurface.SetOrigin(new Vector2(ScreenUtility.GameResolution.x, 0));
 
         jet = new Actor("jet", (400, 300));
-
         jet.SortingOrder = 1;
-        space = Instantiate(spacePrefab);
 
+        space = Instantiate(spacePrefab);
         Draw();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(crash == false)
+        if (crash == false)
         {
             if (EventsDetector.Keyboard.Up) jet.Y -= speed;
             if (EventsDetector.Keyboard.Down) jet.Y += speed;
@@ -45,19 +43,23 @@ public class Scramble : MonoBehaviour
             if (EventsDetector.Keyboard.Right) speed = Limit(speed + 0.1f, 1f, 10f);
 
             jet.X = 310 + (speed * 30);
+
+            foreach (var _ in Enumerable.Range(0, (int)Mathf.Ceil(speed)))
+            {
+                UpdateLand();
+            }
+
+            var xx = (int)Mathf.Ceil(jet.X + 32);
+            var yy = (int)Mathf.Ceil(jet.Y);
+            Vector2 position = Vector2.zero;
+            if (scrambleSurface.PositionInsideSurface((xx, yy), ref position))
+            {
+                if (scrambleSurface.GetAt(((int)position.x, (int)position.y)) != (0, 0, 0, 0))
+                    crash = true;
+            }
+
+            Draw();
         }
-
-        foreach (var _ in Enumerable.Range(0, (int)Mathf.Ceil(speed)))
-        {
-            UpdateLand();
-        }
-
-        //print($"{jet.X + 32} {jet.Y}");
-
-        if (scrambleSurface.GetAt(((int)Mathf.Ceil(jet.X + 32), (int)Mathf.Ceil(jet.Y))) != (0, 0, 0, 0))
-            crash = true;
-
-        Draw();
     }
 
     void UpdateLand()
@@ -72,7 +74,8 @@ public class Scramble : MonoBehaviour
 
         if (roofLevel > landLevel - 200) roofLevel = landLevel - 200;
 
- 
+        scrambleSurface.Scroll(-100, 0);
+
         DrawLand();
     }
 
@@ -80,7 +83,8 @@ public class Scramble : MonoBehaviour
     {
         if (crash)
         {
-            ScreenUtility.Fill(((byte)Random.Range(100, 200 + 1), 0, 0), useTexture : true);
+            ScreenUtility.Fill(((byte)Random.Range(100, 200 + 1), 0, 0), useTexture: true);
+            scrambleSurface.StopScroll();
         }
         else
         {
@@ -89,12 +93,12 @@ public class Scramble : MonoBehaviour
         }
     }
 
-    public int XX = 0;
-    int ii = 0;
+    int surfaceStep = 0;
     void DrawLand()
     {
-        if (ii == 800)
+        if (scrambleSurface.X <= ScreenUtility.GameResolution.x - scrambleSurface.Width)
         {
+            scrambleSurface.StopScroll();
             return;
         }
 
@@ -113,17 +117,11 @@ public class Scramble : MonoBehaviour
                 c = (255, r, 0, 255);
             }
 
-            scrambleSurface.SetAt((ii, i), c);
-            //scrambleSurface.SetAt((2800, i), c);
+            scrambleSurface.SetAt((surfaceStep, i), c);
         }
         scrambleSurface.Apply();
 
-        ii++;
-        /*if (ii == 2800)
-        {
-            //scrambleSurface.SurfaceClear(); 
-            ii = 0;
-        }*/
+        surfaceStep++;
     }
 
     private int Limit(int n, int minn, int maxn)

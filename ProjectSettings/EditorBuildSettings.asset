@@ -71,5 +71,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/NR_021/Scenes/Supersprint.unity
     guid: b4176605cfcb88047807e10e6f29b258
+  - enabled: 1
+    path: Assets/NR_022/Scenes/Scramble.unity
+    guid: f491856bae8109b4db0ecec4fe35158a
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 4b6f1e7c3f689e544b05a92095354cf9, type: 2}

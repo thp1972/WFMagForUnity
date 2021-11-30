@@ -14,10 +14,20 @@ namespace PygameZero
         public GameObject _surface;
         Texture2D texture;
         MeshRenderer meshRenderer;
-        Coroutine scrollCor;
 
+        // position of the Surface
+        float x;
+        float y;
+        Vector2 pos;
+
+        // sise of the Surface
+        int width;
+        int height;
+
+        Coroutine scrollCor;
         class TimeUtilityImpl : MonoBehaviour { }
         static TimeUtilityImpl ti;
+
 
         // The surface is a QUAD mesh scaled based on size
         // it has a Surface Material wich has a Shader Unlit/Transparent
@@ -28,6 +38,8 @@ namespace PygameZero
             var imageToInstantiate = op.WaitForCompletion(); // force sync!
             _surface = GameObject.Instantiate(imageToInstantiate, ScreenUtility.Position(Vector3.zero), Quaternion.identity);
             _surface.transform.localScale = new Vector3(size.Item1, size.Item2, 1);
+            width = size.Item1;
+            height = size.Item2;
 
             if (texture != null)
                 SurfaceInitWithTexture(texture);
@@ -41,9 +53,49 @@ namespace PygameZero
             ti = go.AddComponent<TimeUtilityImpl>();
         }
 
+
         public void SetOrigin(Vector2 position)
         {
+            x = position.x;
+            y = position.y;
             _surface.transform.position = ScreenUtility.Position(position);
+        }
+
+        public int Width { get => width; }
+        public int Height { get => height; }
+
+        public float X
+        {
+            get
+            {
+                pos = ScreenUtility.InversePosition(_surface.transform.position);
+                x = pos.x;
+                return x;
+            }
+            set
+            {
+                x = value;
+                pos.x = x;
+                pos.y = y;
+                _surface.transform.position = ScreenUtility.Position(pos);
+            }
+        }
+
+        public float Y
+        {
+            get
+            {
+                pos = ScreenUtility.InversePosition(_surface.transform.position);
+                y = pos.y;
+                return y;
+            }
+            set
+            {
+                y = value;
+                pos.x = x;
+                pos.y = y;
+                _surface.transform.position = ScreenUtility.Position(pos);
+            }
         }
 
         private void SurfaceInitWithTexture(Texture2D textureInit)
@@ -90,6 +142,22 @@ namespace PygameZero
             return texSpaceCoord;
         }
 
+        public bool PositionInsideSurface((int, int) coords, ref Vector2 newPosition)
+        {
+            // this is if the Surface is scrolling...
+            var xx = coords.Item1;
+            var yy = coords.Item2;
+            var ox = xx - X;
+            var oy = yy - Y;
+
+            newPosition.x = ox;
+            newPosition.y = oy;
+
+            // I.E. 0, 799 0, 599 if Surface is 800x600
+            // if coords are inside the Surface RECT area
+            return ox >= 0 && ox <= width - 1 && oy >= 0 && oy <= height - 1;
+        }
+
         void SetPixelAt(Vector2 worldPosition, Color c)
         {
             Vector2 texturePosition = BottomLeftToTopLeft(worldPosition);
@@ -109,52 +177,12 @@ namespace PygameZero
             return (c.r, c.g, c.b, c.a);
         }
 
-        (byte, byte, byte, byte) GetPixelAt2(Vector2 worldPosition)
-        {
-            Vector2 texturePosition = worldPosition;// TopLeftToBottomLeft(worldPosition);
-            Color32 c = texture.GetPixel((int)texturePosition.x, (int)texturePosition.y);
-            return (c.r, c.g, c.b, c.a);
-        }
-
-        public (byte, byte, byte, byte) GetAt2((int, int) coords)
-        {
-            Vector2 pos = (new Vector2(coords.Item1, coords.Item2));
-
-            /*if (_surface.transform.localScale.x > ScreenUtility.GameResolution.x ||
-               _surface.transform.localScale.y > ScreenUtility.GameResolution.y)
-                ReCalculateSurfacePosition(ref pos);
-            */
-            return GetPixelAt2(pos);
-        }
-
-
         public (byte, byte, byte, byte) GetAt((int, int) coords)
         {
             Vector2 pos = (new Vector2(coords.Item1, coords.Item2));
-
-           /* if (_surface.transform.localScale.x > ScreenUtility.GameResolution.x ||
-                _surface.transform.localScale.y > ScreenUtility.GameResolution.y)
-                ReCalculateSurfacePosition(ref pos);
-           */
             return GetPixelAt(pos);
         }
 
-
-        // this is important if the texture is wider than screen game resolution
-        // infact this recalculate the object positions that want to test respect this texture pixels
-        private void ReCalculateSurfacePosition(ref Vector2 pos)
-        {
-            var screenWidth = ScreenUtility.GameResolution.x;
-            var screenHeight = ScreenUtility.GameResolution.y;
-
-            var surfaceWidth = _surface.transform.localScale.x;
-            var surfaceHeight = _surface.transform.localScale.y;
-
-            var xPosition = -_surface.transform.position.x;
-            var yPosition = -_surface.transform.position.y;
-
-            pos = new Vector2(pos.x + ((surfaceWidth / 2 - screenWidth / 2) + xPosition), pos.y);
-        }
 
         public void SurfaceClear()
         {
@@ -243,7 +271,11 @@ namespace PygameZero
                 ti.StopCoroutine(scrollCor);
                 yield return null;
             }
+        }
 
+        public void StopScroll()
+        {
+            ti.StopCoroutine(scrollCor);
         }
     }
 }
