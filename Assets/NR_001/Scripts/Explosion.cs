@@ -43,6 +43,9 @@ namespace NR_001
             SetParticlesParent();
             SetParticlesMaterial();
             StartCoroutine(ExplodeRandom());
+
+            print("s");
+
         }
 
         // Update is called once per frame

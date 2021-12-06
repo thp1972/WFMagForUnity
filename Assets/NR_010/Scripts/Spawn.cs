@@ -34,8 +34,8 @@ namespace NR_010
         public override void Destroy()
         {
             // spawn 2 medium-sized enemies when destroying
-            var m1 = new MediumEnemy(pos: new Vector2(pos.x - 40, pos.y + 40));
-            var m2 = new MediumEnemy(pos: new Vector2(pos.x + 40, pos.y - 40));
+            var m1 = new MediumEnemy(pos: new Vector2(pos.x - 40, pos.y - 40));
+            var m2 = new MediumEnemy(pos: new Vector2(pos.x + 40, pos.y + 40));
             base.Destroy();
         }
     }
@@ -48,8 +48,8 @@ namespace NR_010
         public override void Destroy()
         {
             //  spawn 2 small-sized enemies when destroying
-            var s1 = new SmallEnemy(pos: new Vector2(pos.x - 20, pos.y + 20));
-            var s2 = new SmallEnemy(pos: new Vector2(pos.x + 20, pos.y - 20));
+            var s1 = new SmallEnemy(pos: new Vector2(pos.x - 20, pos.y - 20));
+            var s2 = new SmallEnemy(pos: new Vector2(pos.x + 20, pos.y + 20));
             base.Destroy();
         }
     }
@@ -66,8 +66,8 @@ namespace NR_010
         void Start()
         {
             // start with 2 large-sized enemies
-            var l1 = new LargeEnemy(pos: ScreenUtility.Position(300, 150));
-            var l2 = new LargeEnemy(pos: ScreenUtility.Position(150, 300));
+            var l1 = new LargeEnemy(pos: new Vector2(300, 150));
+            var l2 = new LargeEnemy(pos: new Vector2(150, 300));
         }
 
         // Update is called once per frame

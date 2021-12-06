@@ -58,8 +58,8 @@ public class Scramble : MonoBehaviour
                     crash = true;
             }
 
-            Draw();
         }
+        Draw();
     }
 
     void UpdateLand()

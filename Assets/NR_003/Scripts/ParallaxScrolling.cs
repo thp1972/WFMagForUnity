@@ -29,13 +29,6 @@ namespace NR_003
 
         int startPosition = 400;
 
-        private void Awake()
-        {
-#if !UNITY_EDITOR
-        Screen.SetResolution(WIDTH, HEIGHT, true);
-#endif
-        }
-
         // Start is called before the first frame update
         void Start()
         {

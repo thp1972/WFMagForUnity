@@ -15,13 +15,14 @@ public class SpriteUtility
 
     public Texture2D t2;
 
-    public SpriteUtility(SpriteRenderer spriteRenderer)
+    public SpriteUtility(SpriteRenderer spriteRenderer, bool spriteManipulation = false)
     {
         _spriteRenderer = spriteRenderer;
         _spriteSize = GetSpriteSize();
         _material = _spriteRenderer.material;
 
-        InitSpriteAndTexureForPixelManipulation();
+        if (spriteManipulation)
+            InitSpriteAndTexureForPixelManipulation();
     }
 
     private void InitSpriteAndTexureForPixelManipulation()
@@ -240,7 +241,7 @@ public class SpriteUtility
     {
         Vector2 texturePosition = WorldPosToLocalTexturePos(worldPosition);
         _newTexture.SetPixel((int)texturePosition.x, (int)texturePosition.y, c);
-   
+
     }
 
     public void Apply()
@@ -251,16 +252,18 @@ public class SpriteUtility
 
     public void ErasePixels(Vector2 worldPosition, Sprite shape)
     {
-        var sprite = _spriteRenderer.sprite;
-        Vector2 texturePosition = WorldPosToLocalTexturePos(worldPosition);
+
+        /*
+        var sprite = _spriteRenderer.sprite;        
         Texture2D texture = new Texture2D(sprite.texture.width, sprite.texture.height);
         texture.filterMode = FilterMode.Point;
         texture.wrapMode = TextureWrapMode.Clamp; // important else texture shows strange lines
         texture.SetPixels(sprite.texture.GetPixels());
         texture.Apply();
-
         var newSprite = Sprite.Create(texture, new Rect(0, 0, sprite.texture.width, sprite.texture.height), sprite.pivot.normalized, sprite.pixelsPerUnit);
+        */
 
+        Vector2 texturePosition = WorldPosToLocalTexturePos(worldPosition);
         for (int x = 0; x < shape.texture.width; x++)
         {
             for (int y = 0; y < shape.texture.height; y++)
@@ -268,12 +271,12 @@ public class SpriteUtility
                 Color c = shape.texture.GetPixel(x, y);
 
                 if (c.a == 1)
-                    texture.SetPixel((int)texturePosition.x + x, (int)texturePosition.y - shape.texture.height + y, Color.clear);
+                    _newTexture.SetPixel((int)texturePosition.x + x, (int)texturePosition.y - shape.texture.height + y, Color.clear);
             }
         }
 
-        texture.Apply();
-        _spriteRenderer.sprite = newSprite;
+        _newTexture.Apply();
+        //_spriteRenderer.sprite = newSprite;
 
         // if there is a collider, recreate it after new texture setting, so the collider adapts to the new shape of the texure
         PolygonCollider2D coll = _spriteRenderer.gameObject.GetComponent<PolygonCollider2D>();
@@ -296,7 +299,7 @@ public class SpriteUtility
 
         //_material.SetTextureOffset("_MainTex", new Vector2(speedX, 0));
         _spriteRenderer.drawMode = SpriteDrawMode.Tiled;
-  
+
         Vector2 size = _spriteRenderer.size;
         size.x += speedX;
         _spriteRenderer.size = size;

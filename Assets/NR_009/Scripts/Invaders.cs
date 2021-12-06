@@ -22,7 +22,11 @@ namespace NR_009
 
         private void Awake()
         {
-            spriteUtilityForImageShot = new SpriteUtility(imageShot.GetComponent<SpriteRenderer>());
+            // shot placeholder
+            GameObject shot = Instantiate(imageShot);
+            shot.SetActive(false);
+            //---------------------------
+            spriteUtilityForImageShot = new SpriteUtility(shot.GetComponent<SpriteRenderer>());
         }
 
         // Start is called before the first frame update
@@ -101,7 +105,7 @@ namespace NR_009
                             Destroy(shot.sprite);
                             shot.sprite = Instantiate(imageExplode, new Vector2(shot.pos.x, shot.pos.y), Quaternion.identity);
 
-                            SpriteUtility spriteUtility = new SpriteUtility(objCollided.gameObject.GetComponent<SpriteRenderer>());
+                            SpriteUtility spriteUtility = new SpriteUtility(objCollided.gameObject.GetComponent<SpriteRenderer>(), spriteManipulation: true);
                             spriteUtility.ErasePixels(new Vector2(shot.pos.x, shot.pos.y), imageExplode.GetComponent<SpriteRenderer>().sprite);
 
                             shot.exploding = true;

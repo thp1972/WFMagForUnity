@@ -497,8 +497,8 @@ namespace NR_011
             {
                 brick.Draw(brick.Color);
 
-                lines[brick][0].Draw(brick.highlight); // brick.bottomleft, brick.topleft
-                lines[brick][1].Draw(brick.highlight); // brick.topleft, brick.topright
+              //  lines[brick][0].Draw(brick.highlight); // brick.bottomleft, brick.topleft
+               // lines[brick][1].Draw(brick.highlight); // brick.topleft, brick.topright
             }
 
             bat.Draw(new Color32(255, 192, 203, 255)); // pink as from Pygame doc

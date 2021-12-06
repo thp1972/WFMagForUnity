@@ -87,7 +87,7 @@ namespace NR_017
         void Start()
         {
             // store the colour of each pixel in the level image
-            img = new SpriteUtility(levelImage);
+            img = new SpriteUtility(Instantiate(levelImage));
             pixels = (from x in Enumerable.Range(0, WIDTH)
                       select (from y in Enumerable.Range(0, HEIGHT)
                                   // (HEIGHT - 1) - y, cause Unity pixel coordinates start 0,0 at lower bottom

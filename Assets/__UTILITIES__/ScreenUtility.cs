@@ -162,6 +162,7 @@ public class ScreenUtility
                                                                                             color.Item2 / 255f,
                                                                                             color.Item3 / 255f,
                                                                                             0.75f));
+
         }
         else Camera.main.backgroundColor = new Color32(color.Item1, color.Item2, color.Item3, 255);
     }
