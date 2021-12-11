@@ -10,24 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: ADDRESSABLE_NR_016
+  m_Name: __UTILITIES__
   m_EditorClassIdentifier: 
-  m_GroupName: ADDRESSABLE_NR_016
+  m_GroupName: __UTILITIES__
   m_Data:
     m_SerializedData: []
-  m_GUID: c4911d91483a86f419c5d1e512178467
+  m_GUID: be6f80b032729634890e8a3cec538bf1
   m_SerializeEntries:
-  - m_GUID: 9f52faf9dc21cec4185319e3d257ec57
-    m_Address: powerup
+  - m_GUID: b53481e0c2c57fe44adf69ac4cd3540c
+    m_Address: Actor
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 3d440142f8bb767488e9d2b3da8a660c
-    m_Address: spaceship
+  - m_GUID: 0aa0a432a7ea51b43b12bc4348e7cd00
+    m_Address: Image
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: f2751a55290bee545b46fd366dfe6b4f, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: d32f0444a8e59d649860fc5df27befb6, type: 2}
-    - {fileID: 11400000, guid: c4fd86ac16232f74090126f22b474a21, type: 2}
+    - {fileID: 11400000, guid: 28c2d86dd3bc588438511370b770e5af, type: 2}
+    - {fileID: 11400000, guid: 2b8f8d59b2567044e81634330d26293e, type: 2}

@@ -17,23 +17,23 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 2c3808afff292004ea155e9937cfaed5
   m_SerializeEntries:
-  - m_GUID: 26b823cc8146faa40a6c9fd63ed81dc9
+  - m_GUID: 30ff9942ef63d6946bb05f0287eaef3d
     m_Address: walkright2
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: bd56b3951c7ceb442b4f15a593e4aa79
+  - m_GUID: ca22a39b1ebd6e04da054395e4e4bb71
     m_Address: walkright1
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: a0c0fb2bb63a29546b8ef2a237a2a1af
+  - m_GUID: ae21380726512c24b8c86cfd8c02b5cc
     m_Address: walkleft2
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 3f22a9f51df37ff42a044516f659453d
+  - m_GUID: 8fcf3566758136e43a8ad240cd1ae903
     m_Address: walkleft1
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 0f19fa42998e18c48b9ac2eb594e8b7c
+  - m_GUID: 27d154c8a5b9e4e468d2556c4e956f3d
     m_Address: stand1
     m_ReadOnly: 0
     m_SerializedLabels: []

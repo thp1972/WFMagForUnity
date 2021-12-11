@@ -17,20 +17,16 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 8554248eb012d0247ac8c827892667be
   m_SerializeEntries:
-  - m_GUID: af9a9bad20af10d408a5da42a72c525c
-    m_Address: large_enemy
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: fd4bf88a8b1da984ca29d58af515ce43
-    m_Address: medium_enemy
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 1805f3b759ba38d42bbf9c62434abb35
+  - m_GUID: a0f032569996af94084973b71f95831c
     m_Address: small_enemy
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 9dfa2246ede2f3344813e70e82bbe1ab
-    m_Address: Assets/__UTILITIES__/Draw/Sprites/Surface800x600.png
+  - m_GUID: 4c8d49139a398d04c98ba5de5e89cc73
+    m_Address: medium_enemy
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 70e48e4348b4e9548b7fada486a16bdb
+    m_Address: large_enemy
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

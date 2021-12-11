@@ -18,12 +18,15 @@ namespace NR_021
         public GameObject trackPrefab;
         GameObject track;
 
-        Image controlimage1 = new Image();
-        Image controlimage2 = new Image();
+        Image controlimage1;
+        Image controlimage2;
         List<Car> cars;
 
         void Start()
         {
+             controlimage1 = new Image();
+             controlimage2 = new Image();
+
             Application.targetFrameRate = 60;
             track = Instantiate(trackPrefab);
 
@@ -35,6 +38,8 @@ namespace NR_021
             {
                 cars.Add(Actor("car" + c, center: (400, 70 + (30 * c))));
                 cars[c].speed = 0;
+
+                cars[c].SortingOrder = 3; // on top 
             }
         }
 

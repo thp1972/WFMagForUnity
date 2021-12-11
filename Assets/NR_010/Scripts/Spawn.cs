@@ -75,7 +75,7 @@ namespace NR_010
         {
             // draw all enemies in static enemies list
             foreach (var e in Enemy.enemies)
-                e.image?.SetActive(true);
+                e.Draw();
 
             //  destroy the first enemy in the enemies list
             if (Input.anyKeyDown)
