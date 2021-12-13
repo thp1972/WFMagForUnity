@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EventsDetector : MonoBehaviour
 {
+    public static bool areKeysHeldDown = true; 
+
     public static class Keyboard
     {
         public static bool Space { get; set; }
@@ -26,10 +28,10 @@ public class EventsDetector : MonoBehaviour
         Keyboard.Space = Input.GetKeyDown(KeyCode.Space);
         Keyboard.E = Input.GetKeyDown(KeyCode.E);
 
-        Keyboard.Down = Input.GetKey(KeyCode.DownArrow);
-        Keyboard.Up = Input.GetKey(KeyCode.UpArrow);
-        Keyboard.Left = Input.GetKey(KeyCode.LeftArrow);
-        Keyboard.Right = Input.GetKey(KeyCode.RightArrow);
+        Keyboard.Down = areKeysHeldDown ? Input.GetKey(KeyCode.DownArrow) : Input.GetKeyDown(KeyCode.DownArrow);
+        Keyboard.Up = areKeysHeldDown ? Input.GetKey(KeyCode.UpArrow) : Input.GetKeyDown(KeyCode.UpArrow);
+        Keyboard.Left = areKeysHeldDown ? Input.GetKey(KeyCode.LeftArrow) : Input.GetKeyDown(KeyCode.LeftArrow);
+        Keyboard.Right = areKeysHeldDown ? Input.GetKey(KeyCode.RightArrow) : Input.GetKeyDown(KeyCode.RightArrow);
 
         Mouse.Left = Input.GetMouseButtonDown(0);
         Mouse.Right = Input.GetMouseButtonDown(1);

@@ -11,6 +11,7 @@ namespace NR_023
         const int WIDTH = 800;
         const int HEIGHT = 300;
         const float scale = 1;
+        const int frameRate = 60; // this is the Pygame default frame rate
 
         private void Awake()
         {
@@ -21,6 +22,7 @@ namespace NR_023
             UnityEditorUtility.ChangeGameViewScale(scale);
 #endif
             ScreenUtility.GameResolution = new Vector2(WIDTH, HEIGHT);
+            Application.targetFrameRate = frameRate;
         }
     }
 }

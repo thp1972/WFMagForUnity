@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: ADDRESSABLE_NR_023
+  m_EditorClassIdentifier: 
+  m_GroupName: ADDRESSABLE_NR_023
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 16f86df18a3bb274fb12a98d52d5929f
+  m_SerializeEntries:
+  - m_GUID: cf655f1bd41cf4f4a94e1fbfac0346f3
+    m_Address: idle
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d61069c48abd6ec4fb8cd9b09d0a6deb
+    m_Address: run1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 89faecf5939c10b4e82143b242944511
+    m_Address: run2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 73356b6edcf48f3488da2f077e73ec04
+    m_Address: run3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 0a3fd1ffb802e2b4b939317286f2ff7c
+    m_Address: run4
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: fc0208acdbb149b41afffdd38d4f13e8
+    m_Address: run5
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: acba46dcb8148b846bd88348a1d902a2
+    m_Address: run6
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 608ee533ceee27e44957ddf576b6041d
+    m_Address: run7
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4a06306c961143b4c94972c0d3793547
+    m_Address: run8
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e160feb3095686e48a9b84010c8c304b
+    m_Address: run9
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b3313e9d415e3984cbfddb2efc253bd9
+    m_Address: run10
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 73bd45145081ba744bb38d118e23dad8
+    m_Address: run11
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 19bb0050c0e3d264eab53f5903bd2bf3
+    m_Address: run12
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f8f304020bb401d43822e5cdc3c18b3f
+    m_Address: run13
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7db94030480e2944e8ccee547fa9f7f3
+    m_Address: run14
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: fbdf796edac3fb147ac4bda939668701
+    m_Address: run15
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: f2751a55290bee545b46fd366dfe6b4f, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 63c1a9897ff7878428c32ebeeea9fa3f, type: 2}
+    - {fileID: 11400000, guid: 44171e4cf1ef5be418f7c8c336885079, type: 2}
