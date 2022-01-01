@@ -32,8 +32,16 @@ namespace NR_023
         void Start()
         {
             draw = GetComponent<Draw>();
-            distanceText = draw.CreateText(fontSize: 32, color: (255, 255, 255));
-            timeText = draw.CreateText(fontSize: 32, color: (255, 255, 255));
+            distanceText = draw.CreateText(fontSize: 32, color: (255, 255, 255), isActive: false);
+            distanceText.alignment = TextAnchor.MiddleLeft;
+      
+            timeText = draw.CreateText(fontSize: 32, color: (255, 255, 255), isActive : false);
+            timeText.alignment = TextAnchor.MiddleLeft;
+
+            // it seems that Pygame font pixel is non rendered as indicated; i.e fontsize=32 seems not being 32 pixel exactly
+            // so, scaling at 0.68% does render in Unity as Pygame
+            distanceText.transform.localScale = Vector2.one * 0.68f;
+            timeText.transform.localScale = Vector2.one * 0.68f;
 
             sprinter = new Sprinter();
         }
@@ -66,7 +74,6 @@ namespace NR_023
             // draw the current distance and time
             draw.DrawTex(distanceText, topLeft: (20, 20), text: $"Distance (m): {(int)Mathf.Min(100, sprinter.distance)}");
             draw.DrawTex(timeText, topLeft: (250, 20), text: $"Time (s): {System.Math.Round(sprinter.finishTime - sprinter.startTime, 2)}");
-
         }
 
         // a function to display an image at a specific distance along the track

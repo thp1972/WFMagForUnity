@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-
 // By Pellegrino ~thp~ Principe
 namespace NR_023
 {
