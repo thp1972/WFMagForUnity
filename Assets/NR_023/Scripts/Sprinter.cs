@@ -73,9 +73,6 @@ namespace NR_023
             else
                 speed = Mathf.Max(0, speed - Sprint.DECELERATION);
 
-
-            Debug.Log(speed);
-
             // use the sprinter's speed to update the distance            
             distance += speed;
 

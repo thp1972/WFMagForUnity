@@ -151,10 +151,10 @@ namespace com.pellegrinoprincipe
 			EditorSceneManager.OpenScene("Assets/NR_022/Scenes/Scramble.unity");
 		}
 		[MenuItem("Assets/Select Scene/Sprint", false, 0)]
-		static void Scene1762820548()
+		static void Scene1866391146()
 		{
 			EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo();
-			EditorSceneManager.OpenScene("Assets/NR_023/Sprint.unity");
+			EditorSceneManager.OpenScene("Assets/NR_023/Scenes/Sprint.unity");
 		}
 // sceneCount=25
     }
