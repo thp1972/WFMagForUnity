@@ -14,6 +14,7 @@ namespace PygameZero
 
         public Image()
         {
+            // load the default addressable Image
             var op = Addressables.LoadAssetAsync<GameObject>("Image");
             var imageToInstantiate = op.WaitForCompletion(); // force sync!
             _image = GameObject.Instantiate(imageToInstantiate, Vector3.zero, Quaternion.identity);

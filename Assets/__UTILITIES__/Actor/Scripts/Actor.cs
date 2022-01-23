@@ -170,7 +170,7 @@ namespace PygameZero
         {
             spriteStack = new Dictionary<string, Sprite>();
 
-            // load the actor prefab
+            // load the default Actor prefab
             var op = Addressables.LoadAssetAsync<GameObject>("Actor");
             var actorToInstantiate = op.WaitForCompletion(); // force sync!
             actor = GameObject.Instantiate(actorToInstantiate, pos, Quaternion.identity);
