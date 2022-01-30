@@ -383,7 +383,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursorTexture: {fileID: 2800000, guid: 004bbd9e0c7ec03488436c441f4e6cec, type: 3}
   cursorMode: 1
-  hotSpot: {x: 0, y: 0}
+  hotSpot: {x: 1, y: 1}
   definitions:
   - {fileID: 11400000, guid: 9276d94e0c6591f41873da1fc4fa8e18, type: 2}
   - {fileID: 11400000, guid: 50aee85a8e0dcdb49960b9bf304758c5, type: 2}

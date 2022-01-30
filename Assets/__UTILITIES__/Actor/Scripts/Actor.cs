@@ -16,6 +16,8 @@ namespace PygameZero
         string image;
         GameObject actor;
         Sprite sprite;
+        int defaultSortingOrder = 1;
+        SpriteRenderer spriteRenderer;
 
         /// <summary>
         /// Get/Set the current position, but as a Tuple
@@ -58,6 +60,32 @@ namespace PygameZero
             get { return spriteRenderer.sortingOrder; }
             set { spriteRenderer.sortingOrder = value; }
         }
+        public Actor() { }
+
+        public Actor(string image, Vector2 pos = default,
+                     SpriteUtility.PivotPosition anchor = SpriteUtility.PivotPosition.CENTER)
+        {
+            spriteStack = new Dictionary<string, Sprite>();
+
+            // load the default Actor prefab
+            var op = Addressables.LoadAssetAsync<GameObject>("Actor");
+            var actorToInstantiate = op.WaitForCompletion(); // force sync!
+            actor = GameObject.Instantiate(actorToInstantiate, pos, Quaternion.identity);
+            actor.SetActive(false);
+            // ----
+
+            spriteRenderer = actor.GetComponent<SpriteRenderer>();
+
+            SortingOrder = defaultSortingOrder; // actor at least on top of a background...
+            this.pos = pos;
+            Image = image;
+
+            // default is TOPLEFT also in Editor settings
+            if (anchor != SpriteUtility.PivotPosition.CENTER) Anchor = anchor;
+        }
+
+        public Actor(string image, (float, float) pos = default,
+            SpriteUtility.PivotPosition anchor = SpriteUtility.PivotPosition.CENTER) : this(image, new Vector2(pos.Item1, pos.Item2), anchor) { }
 
         /// <summary>
         /// Set a new image, but as a String
@@ -77,9 +105,8 @@ namespace PygameZero
                     spriteStack[value] = spriteToInstantiate;
                 }
 
-                spriteRenderer = actor.GetComponent<SpriteRenderer>();
                 spriteRenderer.sprite = spriteStack[value];
-                SortingOrder = 1; // actor at least on top of a background...
+
                 X = pos.x;
                 Y = pos.y;
             }
@@ -160,32 +187,6 @@ namespace PygameZero
                 actor.transform.position = ScreenUtility.Position(pos);
             }
         }
-
-        private SpriteRenderer spriteRenderer;
-
-        public Actor() { }
-
-        public Actor(string image, Vector2 pos = default,
-                     SpriteUtility.PivotPosition anchor = SpriteUtility.PivotPosition.CENTER)
-        {
-            spriteStack = new Dictionary<string, Sprite>();
-
-            // load the default Actor prefab
-            var op = Addressables.LoadAssetAsync<GameObject>("Actor");
-            var actorToInstantiate = op.WaitForCompletion(); // force sync!
-            actor = GameObject.Instantiate(actorToInstantiate, pos, Quaternion.identity);
-            actor.SetActive(false);
-            // ----
-
-            this.pos = pos;
-            Image = image;
-
-            // default is TOPLEFT also in Editor settings
-            if (anchor != SpriteUtility.PivotPosition.CENTER) Anchor = anchor;
-        }
-
-        public Actor(string image, (float, float) pos = default,
-            SpriteUtility.PivotPosition anchor = SpriteUtility.PivotPosition.CENTER) : this(image, new Vector2(pos.Item1, pos.Item2), anchor) { }
 
         public virtual void Destroy()
         {
