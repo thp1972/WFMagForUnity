@@ -4,63 +4,64 @@ using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
-[CustomEditor(typeof(NRHandler))]
-public class NRHandler_EDITOR : Editor
+namespace Wireframe.EditorUI
 {
-    NRHandler targetNRHandler;
-    string wantedDefinitionNumber;
-    string assetPath = "Assets/MAIN/Data/";
-
-    private void OnEnable()
+    [CustomEditor(typeof(NRHandler))]
+    public class NRHandler_EDITOR : Editor
     {
-        targetNRHandler = target as NRHandler;
-    }
+        NRHandler targetNRHandler;
+        string wantedDefinitionNumber;
+        string assetPath = "Assets/MAIN/Data/";
 
-
-    public override void OnInspectorGUI()
-    {
-        base.OnInspectorGUI();
-
-        GUILayout.Space(20);
-        wantedDefinitionNumber = EditorGUILayout.TextField("Definition Number:", wantedDefinitionNumber);
-        if (GUILayout.Button("Add Last NR. Definition", GUILayout.Height(25)))
+        private void OnEnable()
         {
-            NRDefinitions currentNRDefinition = AssetDatabase.LoadAssetAtPath<NRDefinitions>
-                ($"{assetPath}NRDefinition_0{wantedDefinitionNumber}.asset");
+            targetNRHandler = target as NRHandler;
+        }
+        public override void OnInspectorGUI()
+        {
+            base.OnInspectorGUI();
 
-            if (currentNRDefinition)
+            GUILayout.Space(20);
+            wantedDefinitionNumber = EditorGUILayout.TextField("Definition Number:", wantedDefinitionNumber);
+            if (GUILayout.Button("Add", GUILayout.Height(25)))
             {
-                AddNewNrDefinition(currentNRDefinition);
+                NRDefinitions currentNRDefinition = AssetDatabase.LoadAssetAtPath<NRDefinitions>
+                    ($"{assetPath}NRDefinition_0{wantedDefinitionNumber}.asset");
+
+                if (currentNRDefinition)
+                {
+                    AddNewNrDefinition(currentNRDefinition);
+                }
+                else Debug.LogError($"{assetPath}NRDefinition_0{wantedDefinitionNumber}.asset NOT FOUND!!!");
             }
-            else Debug.LogError($"{assetPath}NRDefinition_0{wantedDefinitionNumber}.asset NOT FOUND!!!");
+            GUILayout.Space(20);
         }
-        GUILayout.Space(20);
-    }
 
-    private void AddNewNrDefinition(NRDefinitions currentNRDefinition)
-    {
-        List<NRDefinitions> tmpDefs = targetNRHandler.definitions.ToList();
-
-        NRDefinitions emptyNRDefinition = AssetDatabase.LoadAssetAtPath<NRDefinitions>($"{assetPath}Empty.asset");
-        int lastIndexElement = targetNRHandler.definitions.Length - 1;
-
-        for (int s = lastIndexElement - 2; s <= lastIndexElement; s++)
+        private void AddNewNrDefinition(NRDefinitions currentNRDefinition)
         {
-            if (targetNRHandler.definitions[s].sceneName == "Empty")
+            List<NRDefinitions> tmpDefs = targetNRHandler.definitions.ToList();
+
+            NRDefinitions emptyNRDefinition = AssetDatabase.LoadAssetAtPath<NRDefinitions>($"{assetPath}Empty.asset");
+            int lastIndexElement = targetNRHandler.definitions.Length - 1;
+
+            for (int s = lastIndexElement - 2; s <= lastIndexElement; s++)
             {
-                tmpDefs[s] = currentNRDefinition;
-                break;
+                if (targetNRHandler.definitions[s].sceneName == "Empty")
+                {
+                    tmpDefs[s] = currentNRDefinition;
+                    break;
+                }
             }
-        }
 
-        if(targetNRHandler.definitions[lastIndexElement].sceneName != "Empty")
-        {
-            tmpDefs.Add(currentNRDefinition);
-            tmpDefs.Add(emptyNRDefinition);
-            tmpDefs.Add(emptyNRDefinition);
+            if (targetNRHandler.definitions[lastIndexElement].sceneName != "Empty")
+            {
+                tmpDefs.Add(currentNRDefinition);
+                tmpDefs.Add(emptyNRDefinition);
+                tmpDefs.Add(emptyNRDefinition);
+            }
+
+            NRDefinitions[] newDefs = tmpDefs.ToArray();
+            targetNRHandler.definitions = newDefs;
         }
- 
-        NRDefinitions[] newDefs = tmpDefs.ToArray();
-        targetNRHandler.definitions = newDefs;
     }
 }
