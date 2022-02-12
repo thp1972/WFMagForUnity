@@ -10,9 +10,11 @@ namespace Wireframe.EditorUI
     public class NewMagStructure_EDITOR
     {
         static string dataPath = "/MAIN/Data/";
-        static string imgPath = "/MAIN/Images/";
-        static string imgLastPath = "/MAIN/Images/_LAST_/";
+
+        // this path is for AssetDatabase API: it requires relative path from Project
         static string assetPath = "Assets/MAIN/Data/";
+        static string imgLastPath = "Assets/MAIN/Images/_LAST_/";
+        static string imgPath = "Assets/MAIN/Images";
 
         [MenuItem("Wireframe Mag Tools/Create Init Structure")]
         public static void CreatInitStructure()
@@ -30,29 +32,42 @@ namespace Wireframe.EditorUI
             // create scriptable asset
             NRDefinitions newNrDef = ScriptableObject.CreateInstance<NRDefinitions>();
 
-            // open a Window to get data
+            // open a Window to get data: this is a modal window
             NRDefinition_EDITOR.LaunchSetupWindow(newNrDef);
+
+            if(NRDefinition_EDITOR.exitWithoutData)
+            {
+                Debug.LogWarning("No data setted!");
+                return;
+            }
 
             AssetDatabase.CreateAsset(newNrDef, $"{finalPath}/NRDefinition_0{lastNumber + 1}.asset");
 
-            // create img folder
-            Directory.CreateDirectory($"{appPath}{imgPath}/NR_0{lastNumber + 1}");
+            var guid = AssetDatabase.CreateFolder(imgPath, $"NR_0{lastNumber + 1}");
 
-            File.Move($"{appPath}{imgLastPath}{newNrDef.cover}.png",
-                      $"{appPath}{imgPath}/NR_0{lastNumber + 1}{newNrDef.cover.name}.png");
-            File.Move($"{appPath}{imgLastPath}{newNrDef.coverSwap}.png",
-                      $"{appPath}{imgPath}/NR_0{lastNumber + 1}{newNrDef.coverSwap.name}.png");
+            if (string.IsNullOrEmpty(guid))
+            {
+                Debug.LogError($"Folder NR_0{lastNumber + 1} not created!");
+                return;
+            }
+
+            AssetDatabase.MoveAsset($"{imgLastPath}{newNrDef.cover.name}.png",
+                                    $"{imgPath}/NR_0{lastNumber + 1}/{newNrDef.cover.name }.png");
+
+            AssetDatabase.MoveAsset($"{imgLastPath}{newNrDef.coverSwap.name}.png",
+                                    $"{imgPath}/NR_0{lastNumber + 1}/{newNrDef.coverSwap.name}.png");
 
             AssetDatabase.Refresh();
 
             AddNewNrDefinition(newNrDef);
 
-            AddSceneInBuild(lastNumber + 1);
+            var scenePath = $"Assets/NR_0{lastNumber + 1}/Scenes/";
+            AddSceneInBuild($"{scenePath}{newNrDef.sceneName}.unity");
         }
-                
-        static void AddSceneInBuild(int v)
+
+        static void AddSceneInBuild(string sceneAsset)
         {
-            
+            UnityEditorUtility.AddSceneToBuildSettings(sceneAsset);
         }
 
         static int GetLastNumberId(string dataPath)

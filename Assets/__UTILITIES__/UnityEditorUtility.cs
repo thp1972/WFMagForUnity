@@ -2,6 +2,7 @@
 using System.Reflection;
 using UnityEditor;
 using UnityEngine;
+using System.Collections.Generic;
 
 #if UNITY_EDITOR
 
@@ -46,6 +47,28 @@ public class UnityEditorUtility
         SceneView.lastActiveSceneView.in2DMode = in2D;
         SceneView.lastActiveSceneView.camera.orthographic = in2D;
         GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>().orthographic = in2D;
+    }
+
+    public static void AddSceneToBuildSettings(string scenePath)
+    {
+        // scenes containts all the scenes already in the build settings
+        List<EditorBuildSettingsScene> scenes = new List<EditorBuildSettingsScene>(EditorBuildSettings.scenes);
+
+        // only bother adding scenes we don't have already.
+        foreach (EditorBuildSettingsScene scene in scenes)
+        {
+            if (scene.path == scenePath)
+            {
+                Debug.LogWarning("Scene already inserted!");
+                return;
+            }
+        }
+
+        EditorBuildSettingsScene newScene = new EditorBuildSettingsScene();
+        newScene.path = scenePath;
+        newScene.enabled = true;
+        scenes.Add(newScene);
+        EditorBuildSettings.scenes = scenes.ToArray();
     }
 }
 

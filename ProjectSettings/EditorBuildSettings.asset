@@ -77,5 +77,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/NR_023/Scenes/Sprint.unity
     guid: ca4510ef644c541408323228e4a3a7df
+  - enabled: 1
+    path: Assets/NR_024/Scenes/DonkeyKong.unity
+    guid: 00000000000000000000000000000000
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 4b6f1e7c3f689e544b05a92095354cf9, type: 2}

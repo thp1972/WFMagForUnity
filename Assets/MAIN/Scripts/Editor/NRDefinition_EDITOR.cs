@@ -7,6 +7,7 @@ public class NRDefinition_EDITOR : EditorWindow
 {
     static NRDefinition_EDITOR win;
     static NRDefinitions data;
+    public static bool exitWithoutData;
 
     int width;
     int height;
@@ -52,7 +53,14 @@ public class NRDefinition_EDITOR : EditorWindow
         data.NrAndDate = nrAndDate;
 
         if (GUILayout.Button("Set data"))
-        {   win.Close();
+        {
+            win.Close();
+        }
+
+        if (GUILayout.Button("Exit from setting"))
+        {
+            exitWithoutData = true;
+            win.Close();
         }
     }
 }
