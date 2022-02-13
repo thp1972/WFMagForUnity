@@ -3,64 +3,101 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-public class NRDefinition_EDITOR : EditorWindow
+namespace Wireframe.EditorUI
 {
-    static NRDefinition_EDITOR win;
-    static NRDefinitions data;
-    public static bool exitWithoutData;
-
-    int width;
-    int height;
-    float scale;
-    bool in3D;
-    Sprite cover;
-    Sprite coverSwap;
-    string sceneName;
-    string nrAndDate;
-
-    public static void LaunchSetupWindow(NRDefinitions nRDefinitions)
+    public class NRDefinition_EDITOR : EditorWindow
     {
-        data = nRDefinitions;
-        win = NRDefinition_EDITOR.GetWindow<NRDefinition_EDITOR>(true, "NRDefinition Setup");
-        win.ShowModal();
-    }
+        static NRDefinition_EDITOR win;
+        static NRDefinitions nrDefdata;
+        static INITDefinitions initDefData;
+        public static bool exitWithoutData;
 
-    private void OnGUI()
-    {
-        width = EditorGUILayout.IntField("Width:", width);
-        data.width = width;
-        height = EditorGUILayout.IntField("Height:", height);
-        data.height = height;
-        scale = EditorGUILayout.FloatField("Scale:", scale);
-        data.scale = scale;
-        in3D = EditorGUILayout.Toggle("In 3D:", in3D);
-        data.in3D = in3D;
+        int width;
+        int height;
+        float scale;
+        int frameRate;
+        bool in3D;
+        Sprite cover;
+        Sprite coverSwap;
+        string sceneName;
+        string nrAndDate;
 
-        EditorGUILayout.BeginHorizontal();
-        EditorGUILayout.PrefixLabel("Cover:");
-        cover = EditorGUILayout.ObjectField(cover, typeof(Sprite), allowSceneObjects: false) as Sprite;
-        data.cover = cover;
-        EditorGUILayout.EndHorizontal();
-        EditorGUILayout.BeginHorizontal();
-        EditorGUILayout.PrefixLabel("Cover Swap:");
-        coverSwap = EditorGUILayout.ObjectField(coverSwap, typeof(Sprite), allowSceneObjects: false) as Sprite;
-        data.coverSwap = coverSwap;
-        EditorGUILayout.EndHorizontal();
+        enum WindowType { END, INIT };
+        static WindowType windowType;
 
-        sceneName = EditorGUILayout.TextField("Scene Name:", sceneName);
-        data.sceneName = sceneName;
-        nrAndDate = EditorGUILayout.TextField("Nr And Date:", nrAndDate);
-        data.NrAndDate = nrAndDate;
-
-        if (GUILayout.Button("Set data"))
+        public static void LaunchEndStructureSetupWindow(NRDefinitions nRDefinitions)
         {
-            win.Close();
+            nrDefdata = nRDefinitions;
+            win = NRDefinition_EDITOR.GetWindow<NRDefinition_EDITOR>(true, "NRDefinition End Structure Setup");
+
+            windowType = WindowType.END;
+            win.ShowModal();
+        }
+        public static void LaunchInitStructureSetupWindow(INITDefinitions initDef)
+        {
+            initDefData = initDef;
+            win = NRDefinition_EDITOR.GetWindow<NRDefinition_EDITOR>(true, "NRDefinition Init Structure Setup");
+
+            windowType = WindowType.INIT;
+            win.ShowModal();
         }
 
-        if (GUILayout.Button("Exit from setting"))
+        private void OnGUI()
         {
-            exitWithoutData = true;
-            win.Close();
+            switch (windowType)
+            {
+                case WindowType.END:
+                    width = EditorGUILayout.IntField("Width:", width);
+                    nrDefdata.width = width;
+                    height = EditorGUILayout.IntField("Height:", height);
+                    nrDefdata.height = height;
+                    scale = EditorGUILayout.FloatField("Scale:", scale);
+                    nrDefdata.scale = scale;
+                    in3D = EditorGUILayout.Toggle("In 3D:", in3D);
+                    nrDefdata.in3D = in3D;
+
+                    EditorGUILayout.BeginHorizontal();
+                    EditorGUILayout.PrefixLabel("Cover:");
+                    cover = EditorGUILayout.ObjectField(cover, typeof(Sprite), allowSceneObjects: false) as Sprite;
+                    nrDefdata.cover = cover;
+                    EditorGUILayout.EndHorizontal();
+                    EditorGUILayout.BeginHorizontal();
+                    EditorGUILayout.PrefixLabel("Cover Swap:");
+                    coverSwap = EditorGUILayout.ObjectField(coverSwap, typeof(Sprite), allowSceneObjects: false) as Sprite;
+                    nrDefdata.coverSwap = coverSwap;
+                    EditorGUILayout.EndHorizontal();
+
+                    sceneName = EditorGUILayout.TextField("Scene Name:", sceneName);
+                    nrDefdata.sceneName = sceneName;
+                    nrAndDate = EditorGUILayout.TextField("Nr And Date:", nrAndDate);
+                    nrDefdata.NrAndDate = nrAndDate;
+                    break;
+
+                case WindowType.INIT:
+
+                    sceneName = EditorGUILayout.TextField("Scene Name:", sceneName);
+                    initDefData.sceneName = sceneName;
+                    width = EditorGUILayout.IntField("Width:", width);
+                    initDefData.width = width;
+                    height = EditorGUILayout.IntField("Height:", height);
+                    initDefData.height = height;
+                    scale = EditorGUILayout.FloatField("Scale:", scale);
+                    initDefData.scale = scale;
+                    frameRate = EditorGUILayout.IntField("Frame Rate:", frameRate);
+                    initDefData.frameRate = frameRate;
+                    break;
+            }
+
+            if (GUILayout.Button("Set data"))
+            {
+                win.Close();
+            }
+
+            if (GUILayout.Button("Exit from setting"))
+            {
+                exitWithoutData = true;
+                win.Close();
+            }
         }
     }
 }
